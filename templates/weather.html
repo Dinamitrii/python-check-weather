@@ -5,18 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{ title }} Weather</title>
+    <title>{{ title }} времетоr</title>
 
     <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet"/>
 
 </head>
 
 <body>
-<h1>В град {{ title }} времето към момента е</h1>
+<h1>В град {{ title }} времето към момента е...</h1>
+
+<p>&nbsp;</p>
 
 <p>{{ status }} при {{ temp }} &#8451;</p>
 <p>Усеща се като {{ feels_like }} &#8451;</p>
 <p>Вятърът е със скорост от {{ wind }} &#13223;</p>
+<p>&nbsp;</p>
 
 <form action="/weather">
     <label for="city"></label>
@@ -27,7 +30,12 @@
     <button type="submit">Submit</button>
 </form>
 
+<p>&nbsp;</p>
 <p>Абревиатура на държавата {{ country_code }}</p>
-
+<p>&nbsp;</p>
+<p><font color="white">Координати в десетични градуси</font><br>
+<font color="green">Географска ширина: {{ geo_latitude }} </font><br>
+<font color="red">Географска дължина: {{ geo_longitude }}</font></p>
+<p>&nbsp;</p>
 </body>
 </html>
