@@ -34,7 +34,7 @@ def get_weather():
         wind=f"{weather_data['wind']['speed']:.1f}",
         country_code=weather_data["sys"]["country"],
         geo_latitude=weather_data["coord"]["lat"],
-        geo_longitude=weather_data["coord"]["lon"]
+        geo_longitude=weather_data["coord"]["lon"],
     )
 
 
