@@ -4,14 +4,14 @@ from waitress import serve
 
 app = Flask(__name__)
 
+
 @app.route("/")
 @app.route("/index")
-
 def index():
     return render_template("index.html")
 
-@app.route("/weather")
 
+@app.route("/weather")
 def get_weather():
     city = request.args.get("city")
 
@@ -30,8 +30,11 @@ def get_weather():
         title=weather_data["name"],
         status=weather_data["weather"][0]["description"].capitalize(),
         temp=f"{weather_data['main']['temp']:.1f}",
-        feels_like=f"{weather_data['main']['feels_like']:.1f}"
+        feels_like=f"{weather_data['main']['feels_like']:.1f}",
+        wind=f"{weather_data['wind']['speed']:.1f}",
+        country_code=weather_data["sys"]["country"],
     )
+
 
 if __name__ == "__main__":
     serve(app, host="0.0.0.0", port=8000)

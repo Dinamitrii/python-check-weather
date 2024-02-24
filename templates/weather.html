@@ -4,24 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>{{ title }} Weather</title>
-    
-    <link href="{{ url_for('static', filename='styles/style.css')}}"rel="stylesheet"/>
+
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet"/>
 
 </head>
 
 <body>
-    <h1>{{ title }} Weather</h1>
+<h1>В град {{ title }} времето към момента е</h1>
 
-    <p>{{ status }} and {{ temp }} &deg;</p>
-    <p>Feels like {{ feels_like }} &deg;</p>
-    
-    <form action="/weather">
-        <input type="text" name="city" id="city"
-        placeholder="Enter a city" />
-        <button type="submit">submit</button>
-    </form>
+<p>{{ status }} при {{ temp }} &#8451;</p>
+<p>Усеща се като {{ feels_like }} &#8451;</p>
+<p>Вятърът е със скорост от {{ wind }} &#13223;</p>
+
+<form action="/weather">
+    <label for="city"></label>
+
+    <input type="text" name="city" id="city"
+                                     placeholder="Enter a city"/>
+
+    <button type="submit">Submit</button>
+</form>
+
+<p>Абревиатура на държавата {{ country_code }}</p>
 
 </body>
 </html>

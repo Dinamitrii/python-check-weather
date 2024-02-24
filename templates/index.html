@@ -7,7 +7,7 @@
     
     <title>Get Weather Conditions</title>
     
-    <link href="{{ url_for('static', filename='styles/style.css')}}"rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet"/>
 
 </head>
 
@@ -15,8 +15,11 @@
     <h1>Get Weather Conditions</h1>
     
     <form action="/weather">
+        <label for="city"></label>
+
         <input type="text" name="city" id="city"
-        placeholder="Enter a city" />
+                                         placeholder="Enter a city" />
+
         <button type="submit">submit</button>
     </form>
 
