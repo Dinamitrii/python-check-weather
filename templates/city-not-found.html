@@ -5,19 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>City Was Not Found</title>
+    <title>City That You`re Searching For Was Not Found!</title>
     
-    <link href="{{ url_for('static', filename='styles/style.css')}}"rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet"/>
 
 </head>
 
 <body>
-    <h1>City Was Not Found!</h1>
-    <h2>Want To Try Again?</h2>
+    <h1>City That You`re Searching For Was Not Found!</h1>
+    <h2>Do You Want To Try Again?</h2>
     
     <form action="/weather">
+        <label for="city"></label>
+
         <input type="text" name="city" id="city"
-        placeholder="Enter a city" />
+                                         placeholder="Enter a city" />
+
         <button type="submit">Submit</button>
     </form>
 
