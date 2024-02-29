@@ -1,0 +1,1348 @@
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 05:12:14 2024] ***
+compiled with version: 11.4.0 on 28 February 2024 17:49:01
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address server.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x557fc2528840
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291616 bytes (284 KB) for 3 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x557fc2528840 pid: 1545 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1545)
+spawned uWSGI worker 1 (pid: 1546, cores: 1)
+spawned uWSGI worker 2 (pid: 1547, cores: 1)
+spawned uWSGI worker 3 (pid: 1548, cores: 1)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket server.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 05:31:12 2024] ***
+compiled with version: 11.4.0 on 28 February 2024 17:49:01
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address server.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x563dd3670840
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291616 bytes (284 KB) for 3 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x563dd3670840 pid: 710 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 710)
+spawned uWSGI worker 1 (pid: 831, cores: 1)
+spawned uWSGI worker 2 (pid: 832, cores: 1)
+spawned uWSGI worker 3 (pid: 833, cores: 1)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket server.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 05:52:32 2024] ***
+compiled with version: 11.4.0 on 28 February 2024 17:49:01
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address server.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x558b82b3f840
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291616 bytes (284 KB) for 3 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 5 seconds on interpreter 0x558b82b3f840 pid: 703 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 703)
+spawned uWSGI worker 1 (pid: 945, cores: 1)
+spawned uWSGI worker 2 (pid: 946, cores: 1)
+spawned uWSGI worker 3 (pid: 947, cores: 1)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket server.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 06:01:07 2024] ***
+compiled with version: 11.4.0 on 28 February 2024 17:49:01
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address server.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x56205b639840
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x56205b639840 pid: 1366 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1366)
+spawned uWSGI worker 1 (pid: 1367, cores: 1)
+spawned uWSGI worker 2 (pid: 1368, cores: 1)
+spawned uWSGI worker 3 (pid: 1369, cores: 1)
+spawned uWSGI worker 4 (pid: 1370, cores: 1)
+spawned uWSGI worker 5 (pid: 1371, cores: 1)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket server.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 06:03:19 2024] ***
+compiled with version: 11.4.0 on 28 February 2024 17:49:01
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address server.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55da00a4c840
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 5 seconds on interpreter 0x55da00a4c840 pid: 711 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 711)
+spawned uWSGI worker 1 (pid: 832, cores: 1)
+spawned uWSGI worker 2 (pid: 833, cores: 1)
+spawned uWSGI worker 3 (pid: 834, cores: 1)
+spawned uWSGI worker 4 (pid: 835, cores: 1)
+spawned uWSGI worker 5 (pid: 836, cores: 1)
+SIGINT/SIGTERM received...killing workers...
+worker 3 buried after 0 seconds
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket server.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 06:06:34 2024] ***
+compiled with version: 11.4.0 on 28 February 2024 17:49:01
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address server.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x564fdea9f840
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x564fdea9f840 pid: 1142 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1142)
+spawned uWSGI worker 1 (pid: 1143, cores: 1)
+spawned uWSGI worker 2 (pid: 1144, cores: 1)
+spawned uWSGI worker 3 (pid: 1145, cores: 1)
+spawned uWSGI worker 4 (pid: 1146, cores: 1)
+spawned uWSGI worker 5 (pid: 1147, cores: 1)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 0 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket server.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 06:14:07 2024] ***
+compiled with version: 11.4.0 on 28 February 2024 17:49:01
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address server.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x56472217b840
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x56472217b840 pid: 1472 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1472)
+spawned uWSGI worker 1 (pid: 1475, cores: 1)
+spawned uWSGI worker 2 (pid: 1476, cores: 1)
+spawned uWSGI worker 3 (pid: 1477, cores: 1)
+spawned uWSGI worker 4 (pid: 1478, cores: 1)
+spawned uWSGI worker 5 (pid: 1479, cores: 1)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket server.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 06:24:56 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address server.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5612420b7ad0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5612420b7ad0 pid: 2660 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2660)
+spawned uWSGI worker 1 (pid: 2662, cores: 1)
+spawned uWSGI worker 2 (pid: 2663, cores: 1)
+spawned uWSGI worker 3 (pid: 2664, cores: 1)
+spawned uWSGI worker 4 (pid: 2665, cores: 1)
+spawned uWSGI worker 5 (pid: 2666, cores: 1)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket server.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 06:26:16 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address server.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55b175aa3ad0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x55b175aa3ad0 pid: 710 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 710)
+spawned uWSGI worker 1 (pid: 946, cores: 1)
+spawned uWSGI worker 2 (pid: 947, cores: 1)
+spawned uWSGI worker 3 (pid: 948, cores: 1)
+spawned uWSGI worker 4 (pid: 949, cores: 1)
+spawned uWSGI worker 5 (pid: 950, cores: 1)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 0 seconds
+worker 2 buried after 0 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket server.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 07:12:12 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address server.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x556ff990fc90
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x556ff990fc90 pid: 2384 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2384)
+spawned uWSGI worker 1 (pid: 2386, cores: 2)
+spawned uWSGI worker 2 (pid: 2387, cores: 2)
+spawned uWSGI worker 3 (pid: 2389, cores: 2)
+spawned uWSGI worker 4 (pid: 2390, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 0 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket server.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 07:18:27 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x559ec444be90
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x559ec444be90 pid: 2450 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2450)
+spawned uWSGI worker 1 (pid: 2453, cores: 2)
+spawned uWSGI worker 2 (pid: 2454, cores: 2)
+spawned uWSGI worker 3 (pid: 2455, cores: 2)
+spawned uWSGI worker 4 (pid: 2457, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 07:20:25 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x558ea5f55e90
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x558ea5f55e90 pid: 705 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 705)
+spawned uWSGI worker 1 (pid: 828, cores: 2)
+spawned uWSGI worker 2 (pid: 829, cores: 2)
+spawned uWSGI worker 3 (pid: 830, cores: 2)
+spawned uWSGI worker 4 (pid: 831, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 0 seconds
+worker 2 buried after 0 seconds
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 07:23:03 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x5651831ade90
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5651831ade90 pid: 1202 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1202)
+spawned uWSGI worker 1 (pid: 1203, cores: 2)
+spawned uWSGI worker 2 (pid: 1204, cores: 2)
+spawned uWSGI worker 3 (pid: 1205, cores: 2)
+spawned uWSGI worker 4 (pid: 1206, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 07:33:50 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x55a5d8e08e90
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55a5d8e08e90 pid: 1461 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1461)
+spawned uWSGI worker 1 (pid: 1463, cores: 2)
+spawned uWSGI worker 2 (pid: 1464, cores: 2)
+spawned uWSGI worker 3 (pid: 1465, cores: 2)
+spawned uWSGI worker 4 (pid: 1467, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 07:34:29 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x559750c84e90
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x559750c84e90 pid: 1510 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1510)
+spawned uWSGI worker 1 (pid: 1512, cores: 2)
+spawned uWSGI worker 2 (pid: 1513, cores: 2)
+spawned uWSGI worker 3 (pid: 1514, cores: 2)
+spawned uWSGI worker 4 (pid: 1516, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 07:37:54 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x5613614b5e90
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5613614b5e90 pid: 1579 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1579)
+spawned uWSGI worker 1 (pid: 1580, cores: 2)
+spawned uWSGI worker 2 (pid: 1581, cores: 2)
+spawned uWSGI worker 3 (pid: 1582, cores: 2)
+spawned uWSGI worker 4 (pid: 1583, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 07:44:00 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x560272fcbd10
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x560272fcbd10 pid: 1700 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1700)
+spawned uWSGI worker 1 (pid: 1702, cores: 2)
+spawned uWSGI worker 2 (pid: 1703, cores: 2)
+spawned uWSGI worker 3 (pid: 1704, cores: 2)
+spawned uWSGI worker 4 (pid: 1706, cores: 2)
+{address space usage: 155414528 bytes/148MB} {rss usage: 28020736 bytes/26MB} [pid: 1702|app: 0|req: 1/1] 192.168.1.100 () {40 vars in 740 bytes} [Thu Feb 29 07:44:33 2024] GET / => generated 574 bytes in 47 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 156463104 bytes/149MB} {rss usage: 28909568 bytes/27MB} [pid: 1702|app: 0|req: 2/2] 192.168.1.100 () {40 vars in 670 bytes} [Thu Feb 29 07:44:34 2024] GET /static/styles/style.css => generated 359 bytes in 57 msecs via sendfile() (HTTP/1.1 200) 7 headers in 279 bytes (0 switches on core 1)
+{address space usage: 155414528 bytes/148MB} {rss usage: 27156480 bytes/25MB} [pid: 1703|app: 0|req: 1/3] 192.168.1.100 () {40 vars in 692 bytes} [Thu Feb 29 07:44:34 2024] GET /favicon.ico => generated 207 bytes in 9 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 156598272 bytes/149MB} {rss usage: 29138944 bytes/27MB} [pid: 1706|app: 0|req: 1/4] 192.168.1.100 () {42 vars in 811 bytes} [Thu Feb 29 07:44:44 2024] GET /weather?city=Omaha => generated 1105 bytes in 201 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 156618752 bytes/149MB} {rss usage: 28372992 bytes/27MB} [pid: 1704|app: 0|req: 1/5] 192.168.1.100 () {44 vars in 800 bytes} [Thu Feb 29 07:44:45 2024] GET /static/styles/style.css => generated 0 bytes in 40 msecs (HTTP/1.1 304) 4 headers in 183 bytes (0 switches on core 0)
+{address space usage: 155414528 bytes/148MB} {rss usage: 28069888 bytes/26MB} [pid: 1703|app: 0|req: 2/6] 46.10.204.54 () {44 vars in 801 bytes} [Thu Feb 29 07:44:57 2024] GET / => generated 574 bytes in 24 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+{address space usage: 156618752 bytes/149MB} {rss usage: 28372992 bytes/27MB} [pid: 1704|app: 0|req: 2/7] 46.10.204.54 () {44 vars in 731 bytes} [Thu Feb 29 07:44:57 2024] GET /static/styles/style.css => generated 359 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 279 bytes (0 switches on core 1)
+{address space usage: 156598272 bytes/149MB} {rss usage: 29220864 bytes/27MB} [pid: 1706|app: 0|req: 2/8] 46.10.204.54 () {40 vars in 691 bytes} [Thu Feb 29 07:44:58 2024] GET /favicon.ico => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 156463104 bytes/149MB} {rss usage: 28909568 bytes/27MB} [pid: 1702|app: 0|req: 3/9] 65.154.226.171 () {42 vars in 778 bytes} [Thu Feb 29 07:52:02 2024] GET / => generated 574 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 156463104 bytes/149MB} {rss usage: 28909568 bytes/27MB} [pid: 1702|app: 0|req: 4/10] 65.154.226.171 () {42 vars in 715 bytes} [Thu Feb 29 07:52:02 2024] GET /static/styles/style.css => generated 359 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 279 bytes (0 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 07:57:19 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x556b7c008d10
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x556b7c008d10 pid: 714 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 714)
+spawned uWSGI worker 1 (pid: 836, cores: 2)
+spawned uWSGI worker 2 (pid: 837, cores: 2)
+spawned uWSGI worker 3 (pid: 838, cores: 2)
+spawned uWSGI worker 4 (pid: 840, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 08:01:15 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x5619f9930d10
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5619f9930d10 pid: 1312 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1312)
+spawned uWSGI worker 1 (pid: 1313, cores: 2)
+spawned uWSGI worker 2 (pid: 1314, cores: 2)
+spawned uWSGI worker 3 (pid: 1315, cores: 2)
+spawned uWSGI worker 4 (pid: 1316, cores: 2)
+{address space usage: 155414528 bytes/148MB} {rss usage: 27922432 bytes/26MB} [pid: 1313|app: 0|req: 1/1] 34.224.218.99 () {40 vars in 760 bytes} [Thu Feb 29 08:01:37 2024] GET / => generated 574 bytes in 51 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 156463104 bytes/149MB} {rss usage: 28704768 bytes/27MB} [pid: 1313|app: 0|req: 2/2] 34.224.218.99 () {40 vars in 697 bytes} [Thu Feb 29 08:01:37 2024] GET /static/styles/style.css => generated 359 bytes in 39 msecs via sendfile() (HTTP/1.1 200) 7 headers in 279 bytes (0 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 08:03:46 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x5559901f1d10
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5559901f1d10 pid: 1436 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1436)
+spawned uWSGI worker 1 (pid: 1438, cores: 2)
+spawned uWSGI worker 2 (pid: 1439, cores: 2)
+spawned uWSGI worker 3 (pid: 1440, cores: 2)
+spawned uWSGI worker 4 (pid: 1442, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 08:06:29 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x56531ba89d10
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x56531ba89d10 pid: 713 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 713)
+spawned uWSGI worker 1 (pid: 836, cores: 2)
+spawned uWSGI worker 2 (pid: 837, cores: 2)
+spawned uWSGI worker 3 (pid: 838, cores: 2)
+spawned uWSGI worker 4 (pid: 839, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 08:13:26 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+bind(): Permission denied [core/socket.c line 769]
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 08:14:08 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+uwsgi shared socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x562d1a833d10
+python threads support enabled
+The -s/--socket option is missing and stdin is not a socket.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 08:15:07 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+bind(): Permission denied [core/socket.c line 769]
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 08:15:14 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+bind(): Permission denied [core/socket.c line 769]
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 08:15:35 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+bind(): Permission denied [core/socket.c line 769]
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 08:16:27 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x55e59084ed10
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55e59084ed10 pid: 1312 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1312)
+spawned uWSGI worker 1 (pid: 1313, cores: 2)
+spawned uWSGI worker 2 (pid: 1314, cores: 2)
+spawned uWSGI worker 3 (pid: 1315, cores: 2)
+spawned uWSGI worker 4 (pid: 1317, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 08:17:20 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x5622525fdd10
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5622525fdd10 pid: 1365 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1365)
+spawned uWSGI worker 1 (pid: 1367, cores: 2)
+spawned uWSGI worker 2 (pid: 1368, cores: 2)
+spawned uWSGI worker 3 (pid: 1369, cores: 2)
+spawned uWSGI worker 4 (pid: 1371, cores: 2)
+{address space usage: 155414528 bytes/148MB} {rss usage: 28061696 bytes/26MB} [pid: 1367|app: 0|req: 1/1] 5.164.29.116 () {34 vars in 537 bytes} [Thu Feb 29 08:22:06 2024] GET / => generated 574 bytes in 55 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 155414528 bytes/148MB} {rss usage: 28135424 bytes/26MB} [pid: 1367|app: 0|req: 2/2] 5.164.29.116 () {34 vars in 559 bytes} [Thu Feb 29 08:22:06 2024] GET /favicon.ico => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 155414528 bytes/148MB} {rss usage: 28061696 bytes/26MB} [pid: 1368|app: 0|req: 1/3] 5.164.29.116 () {34 vars in 541 bytes} [Thu Feb 29 08:27:44 2024] GET / => generated 574 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 155414528 bytes/148MB} {rss usage: 27287552 bytes/26MB} [pid: 1371|app: 0|req: 1/4] 5.164.29.116 () {34 vars in 563 bytes} [Thu Feb 29 08:27:44 2024] GET /favicon.ico => generated 207 bytes in 9 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 155414528 bytes/148MB} {rss usage: 28061696 bytes/26MB} [pid: 1368|app: 0|req: 2/5] 198.44.128.202 () {58 vars in 1131 bytes} [Thu Feb 29 08:31:46 2024] GET / => generated 574 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+{address space usage: 155414528 bytes/148MB} {rss usage: 27287552 bytes/26MB} [pid: 1369|app: 0|req: 1/6] 198.44.128.202 () {58 vars in 1153 bytes} [Thu Feb 29 08:31:46 2024] GET /favicon.ico => generated 207 bytes in 9 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 08:35:11 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x564cedf9ed10
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x564cedf9ed10 pid: 717 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 717)
+spawned uWSGI worker 1 (pid: 837, cores: 2)
+spawned uWSGI worker 2 (pid: 838, cores: 2)
+spawned uWSGI worker 3 (pid: 839, cores: 2)
+spawned uWSGI worker 4 (pid: 840, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 08:57:28 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x55a9a4cd6d10
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55a9a4cd6d10 pid: 1490 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1490)
+spawned uWSGI worker 1 (pid: 1492, cores: 2)
+spawned uWSGI worker 2 (pid: 1493, cores: 2)
+spawned uWSGI worker 3 (pid: 1494, cores: 2)
+spawned uWSGI worker 4 (pid: 1495, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 09:00:08 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x56286c65fd10
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x56286c65fd10 pid: 714 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 714)
+spawned uWSGI worker 1 (pid: 838, cores: 2)
+spawned uWSGI worker 2 (pid: 839, cores: 2)
+spawned uWSGI worker 3 (pid: 840, cores: 2)
+spawned uWSGI worker 4 (pid: 841, cores: 2)
+{address space usage: 155414528 bytes/148MB} {rss usage: 27598848 bytes/26MB} [pid: 839|app: 0|req: 2/1] 65.21.146.168 () {40 vars in 716 bytes} [Thu Feb 29 09:09:09 2024] GET /.well-known/acme-challenge/letsdebug-test => generated 207 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 155414528 bytes/148MB} {rss usage: 28065792 bytes/26MB} [pid: 839|app: 0|req: 2/2] 65.21.146.168 () {36 vars in 447 bytes} [Thu Feb 29 09:09:09 2024] GET / => generated 574 bytes in 54 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 155414528 bytes/148MB} {rss usage: 27369472 bytes/26MB} [pid: 838|app: 0|req: 1/3] 66.133.109.36 () {40 vars in 787 bytes} [Thu Feb 29 09:09:11 2024] GET /.well-known/acme-challenge/ke3RZ1bvWJFRxZgLNcqPxrc-eVu_l71sW4dnT60t88A => generated 207 bytes in 9 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 155414528 bytes/148MB} {rss usage: 28053504 bytes/26MB} [pid: 841|app: 0|req: 1/4] 65.21.146.168 () {36 vars in 447 bytes} [Thu Feb 29 09:10:21 2024] GET / => generated 574 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 155414528 bytes/148MB} {rss usage: 27369472 bytes/26MB} [pid: 840|app: 0|req: 1/5] 65.21.146.168 () {40 vars in 716 bytes} [Thu Feb 29 09:10:21 2024] GET /.well-known/acme-challenge/letsdebug-test => generated 207 bytes in 9 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 155414528 bytes/148MB} {rss usage: 27439104 bytes/26MB} [pid: 840|app: 0|req: 2/6] 66.133.109.36 () {40 vars in 787 bytes} [Thu Feb 29 09:10:23 2024] GET /.well-known/acme-challenge/4waZyN2r5jRnWmA558FbkrrSPkdZhk3NeC2lv3qFpvM => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 155414528 bytes/148MB} {rss usage: 27439104 bytes/26MB} [pid: 838|app: 0|req: 2/7] 193.32.162.87 () {38 vars in 592 bytes} [Thu Feb 29 09:41:52 2024] GET /.git/config => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 155414528 bytes/148MB} {rss usage: 28053504 bytes/26MB} [pid: 841|app: 0|req: 2/8] 43.128.68.127 () {50 vars in 936 bytes} [Thu Feb 29 10:13:44 2024] GET / => generated 574 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 10:32:26 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x55b4a39d1d10
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x55b4a39d1d10 pid: 712 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 712)
+spawned uWSGI worker 1 (pid: 836, cores: 2)
+spawned uWSGI worker 2 (pid: 837, cores: 2)
+spawned uWSGI worker 3 (pid: 838, cores: 2)
+spawned uWSGI worker 4 (pid: 839, cores: 2)
+{address space usage: 155414528 bytes/148MB} {rss usage: 28049408 bytes/26MB} [pid: 839|app: 0|req: 1/1] 195.211.77.140 () {38 vars in 574 bytes} [Thu Feb 29 10:34:36 2024] HEAD / => generated 0 bytes in 57 msecs (HTTP/1.1 200) 2 headers in 80 bytes (0 switches on core 0)
+{address space usage: 155414528 bytes/148MB} {rss usage: 28049408 bytes/26MB} [pid: 836|app: 0|req: 1/2] 195.211.77.142 () {38 vars in 573 bytes} [Thu Feb 29 10:35:04 2024] GET / => generated 574 bytes in 30 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 155414528 bytes/148MB} {rss usage: 28049408 bytes/26MB} [pid: 836|app: 0|req: 2/3] 43.159.63.75 () {50 vars in 943 bytes} [Thu Feb 29 10:47:09 2024] GET / => generated 574 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 0 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 10:47:18 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x55f743f7cd10
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f743f7cd10 pid: 1349 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1349)
+spawned uWSGI worker 1 (pid: 1350, cores: 2)
+spawned uWSGI worker 2 (pid: 1351, cores: 2)
+spawned uWSGI worker 3 (pid: 1352, cores: 2)
+spawned uWSGI worker 4 (pid: 1354, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 0 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 11:36:50 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+bind(): Permission denied [core/socket.c line 769]
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 11:37:20 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+bind(): Permission denied [core/socket.c line 769]
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 11:38:20 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+uwsgi shared socket 0 bound to UNIX address 443 fd 3
+chdir() to /var/www/weather
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 4
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x55d8c220af40
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+ModuleNotFoundError: No module named 'wsgi'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1974)
+spawned uWSGI worker 1 (pid: 1975, cores: 2)
+spawned uWSGI worker 2 (pid: 1976, cores: 2)
+spawned uWSGI worker 3 (pid: 1977, cores: 2)
+spawned uWSGI worker 4 (pid: 1978, cores: 2)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 137723904 bytes/131MB} {rss usage: 11493376 bytes/10MB} [pid: 1975|app: -1|req: -1/1] 170.106.159.160 () {50 vars in 946 bytes} [Thu Feb 29 12:02:52 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 137723904 bytes/131MB} {rss usage: 11493376 bytes/10MB} [pid: 1976|app: -1|req: -1/2] 64.62.197.24 () {36 vars in 485 bytes} [Thu Feb 29 12:18:49 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 137723904 bytes/131MB} {rss usage: 11493376 bytes/10MB} [pid: 1978|app: -1|req: -1/3] 64.62.197.19 () {36 vars in 507 bytes} [Thu Feb 29 12:22:14 2024] GET /webui/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 137723904 bytes/131MB} {rss usage: 11493376 bytes/10MB} [pid: 1977|app: -1|req: -1/4] 64.62.197.19 () {36 vars in 505 bytes} [Thu Feb 29 12:25:24 2024] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 137723904 bytes/131MB} {rss usage: 11493376 bytes/10MB} [pid: 1976|app: -1|req: -1/5] 64.62.197.25 () {36 vars in 485 bytes} [Thu Feb 29 12:26:39 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 137723904 bytes/131MB} {rss usage: 11493376 bytes/10MB} [pid: 1975|app: -1|req: -1/6] 64.62.197.21 () {36 vars in 523 bytes} [Thu Feb 29 12:28:59 2024] GET /geoserver/web/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 137723904 bytes/131MB} {rss usage: 11493376 bytes/10MB} [pid: 1978|app: -1|req: -1/7] 64.62.197.29 () {36 vars in 556 bytes} [Thu Feb 29 12:29:47 2024] GET /.git/config => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 137723904 bytes/131MB} {rss usage: 11493376 bytes/10MB} [pid: 1977|app: -1|req: -1/8] 154.28.229.217 () {44 vars in 847 bytes} [Thu Feb 29 13:11:06 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 137723904 bytes/131MB} {rss usage: 11493376 bytes/10MB} [pid: 1975|app: -1|req: -1/9] 154.28.229.53 () {44 vars in 857 bytes} [Thu Feb 29 13:11:06 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 137723904 bytes/131MB} {rss usage: 11493376 bytes/10MB} [pid: 1976|app: -1|req: -1/10] 43.135.129.233 () {50 vars in 937 bytes} [Thu Feb 29 13:37:58 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 137723904 bytes/131MB} {rss usage: 11493376 bytes/10MB} [pid: 1978|app: -1|req: -1/11] 129.226.158.26 () {50 vars in 937 bytes} [Thu Feb 29 13:49:01 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 137723904 bytes/131MB} {rss usage: 11493376 bytes/10MB} [pid: 1977|app: -1|req: -1/12] 170.106.171.77 () {50 vars in 945 bytes} [Thu Feb 29 14:02:54 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 137723904 bytes/131MB} {rss usage: 11493376 bytes/10MB} [pid: 1976|app: -1|req: -1/13] 82.146.44.21 () {36 vars in 444 bytes} [Thu Feb 29 14:10:13 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 137723904 bytes/131MB} {rss usage: 11493376 bytes/10MB} [pid: 1975|app: -1|req: -1/14] 82.146.44.21 () {36 vars in 444 bytes} [Thu Feb 29 14:10:13 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 137723904 bytes/131MB} {rss usage: 11493376 bytes/10MB} [pid: 1978|app: -1|req: -1/15] 192.241.212.39 () {36 vars in 438 bytes} [Thu Feb 29 14:14:47 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 2 buried after 0 seconds
+worker 1 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 14:28:12 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+uwsgi shared socket 0 bound to UNIX address 443 fd 3
+chdir() to /var/www/weather
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 4
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x55d2c9b4ff40
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+ModuleNotFoundError: No module named 'wsgi'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3452)
+spawned uWSGI worker 1 (pid: 3454, cores: 2)
+spawned uWSGI worker 2 (pid: 3455, cores: 2)
+spawned uWSGI worker 3 (pid: 3456, cores: 2)
+spawned uWSGI worker 4 (pid: 3457, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 14:33:33 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+uwsgi shared socket 0 bound to UNIX address 443 fd 3
+chdir() to /var/www/weather
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+bind(): Permission denied [core/socket.c line 769]
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Feb 29 14:34:03 2024] ***
+compiled with version: 11.4.0 on 29 February 2024 06:22:57
+os: Linux-5.15.0-97-generic #107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+uwsgi shared socket 0 bound to UNIX address 443 fd 3
+chdir() to /var/www/weather
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 4
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x55a9bb4acf40
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+ModuleNotFoundError: No module named 'wsgi'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3525)
+spawned uWSGI worker 1 (pid: 3527, cores: 2)
+spawned uWSGI worker 2 (pid: 3528, cores: 2)
+spawned uWSGI worker 3 (pid: 3529, cores: 2)
+spawned uWSGI worker 4 (pid: 3530, cores: 2)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 137723904 bytes/131MB} {rss usage: 11288576 bytes/10MB} [pid: 3527|app: -1|req: -1/1] 43.130.32.224 () {50 vars in 944 bytes} [Thu Feb 29 14:34:38 2024] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
