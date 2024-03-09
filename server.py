@@ -6,12 +6,12 @@ app = Flask(__name__)
 
 
 @app.route("/")
-@app.route("/index")
+@app.route("/index/")
 def index():
     return render_template("index.html")
 
 
-@app.route("/weather")
+@app.route("/weather/")
 def get_weather():
     city = request.args.get("city")
 
@@ -39,4 +39,4 @@ def get_weather():
 
 
 if __name__ == "__main__":
-    serve(app, host="0.0.0.0")
+    serve(app, host="0.0.0.0", port="8000")
