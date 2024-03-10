@@ -1,4 +1,4 @@
-Simple Flask Web App to keep you informed to the current weather conditions in major cities of your choice worldwide that you like to check out.Simply type your city of choice (can be used cyrillic names style) need to be typed as official name of chosen city has to be typed (or cyrillic style).
+Simple Flask Web App to keep you informed to the current weather conditions in major cities of your choice worldwide that you like to check out.Simply type your city of choice (can be used cyrillic names style) need to be typed as official name of chosen city has to be typed (including cyrillic style names).
 
 ## How to use
 Start the server with "python server.py" open the browser and navigate to http://127.0.0.1:8000 or corresponding port it is the number after the ":" in the URL.
