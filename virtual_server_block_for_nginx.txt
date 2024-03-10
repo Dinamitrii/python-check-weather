@@ -10,6 +10,8 @@
     location / {
         include uwsgi_params;
         uwsgi_pass unix:///var/www/weather/weather.sock;
+        include proxy_params;
+        proxy_pass 0.0.0.0;
         }
 
 	location /.well-known/acme-challenge/ {
@@ -35,11 +37,7 @@ server {
         listen 80;
         listen [::]:80;
 
-    # server_name predictorian.online www.predictorian.online;
-
-
-
-        server_name predictorian.online www.predictorian.online;
+    server_name predictorian.online www.predictorian.online;
     return 404; # managed by Certbot
 
 }
