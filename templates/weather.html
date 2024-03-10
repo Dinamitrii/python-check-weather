@@ -8,11 +8,11 @@
     <title>{{ title }} времето</title>
 
     <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet"/>
-
+    <script src="/static/scripts/script.js"></script>
 </head>
 
 <body>
-<h1>В град {{ title }} {{ country_code }} времето към момента е...</h1>
+<h1 id="header">В град {{ title }} {{ country_code }} времето към момента е...</h1>
 
 <p>&nbsp;</p>
 
@@ -27,7 +27,7 @@
     <input type="text" name="city" id="city"
                                      placeholder="Enter a city"/>
 
-    <button type="submit">Request weather conditions</button>
+    <button type="submit" id="buttons">Request weather conditions</button>
 </form>
 
 <p>&nbsp;</p>
