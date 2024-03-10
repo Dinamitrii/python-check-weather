@@ -2,6 +2,11 @@
 #
 # You can move that to a different file under sites-available/ and symlink that
 # to sites-enabled/ to enable it.
+
+# In order of things next to be added is
+#
+# location /favicon.ico {
+#            }
     server {
 
     root /home/dinamitrii/python-check-weather/;
