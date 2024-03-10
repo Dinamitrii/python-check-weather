@@ -19,7 +19,7 @@ def get_weather():
     if not bool(city.strip()):
         city = "Sofia"
 
-    weather_data = get_current_weather(city)
+    weather_data = get_current_weather()
 
     # If city not found by API
     if weather_data["cod"] != 200:
@@ -39,4 +39,4 @@ def get_weather():
 
 
 if __name__ == "__main__":
-    serve(app, host="0.0.0.0", port="8000")
+    serve(app, host="0.0.0.0", port=8000)

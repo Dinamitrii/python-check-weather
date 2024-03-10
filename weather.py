@@ -6,7 +6,7 @@ import os
 load_dotenv()
 
 
-def get_current_weather(city="Sofia"):
+def get_current_weather():
 
     request_url = (f'http://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={city}&lang=bg'
                    f'&units=metric')
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     if not bool(city.strip()):
         city = "Sofia"
 
-    weather_data = get_current_weather(city)
+    weather_data = get_current_weather()
 
     print("\n")
     pprint(weather_data)
