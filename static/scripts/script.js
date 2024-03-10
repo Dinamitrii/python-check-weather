@@ -1,3 +1,3 @@
 function changeButtonText() {
-    frameElement.getElementById("buttons").textContent="Delivered info"
+    frameElement.getElementById("buttons").textContent="Delivered requested info"
 }
