@@ -13,8 +13,9 @@ def get_current_weather(city="Sofia"):
     return requests.get(request_url).json()
 
 
-def get_current_forecast():
-    request_url = f"https://api.openweathermap.org/data/3.0/onecall?{'lat=33.44'}&{'lon=-94.04'}&appid={os.getenv('API_KEY')}"
+def get_current_forecast(latitude, longitude, city="Sofia"):
+
+    request_url = f"https://api.openweathermap.org/data/3.0/onecall?{latitude}&{longitude}&appid={os.getenv('API_KEY')}"
 
     return requests.get(request_url).json()
 

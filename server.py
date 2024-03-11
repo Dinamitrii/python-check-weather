@@ -1,7 +1,7 @@
 import os
 
 from flask import Flask, render_template, request
-from weather import get_current_weather
+from weather import get_current_weather, get_current_forecast
 from waitress import serve
 
 app = Flask(__name__)
@@ -53,9 +53,11 @@ def get_forecast():
     request_url = (f"https://api.openweathermap.org/data/3.0/onecall?{latitude}&{longitude}&appid"
                    f"={os.getenv('API_KEY')}")
 
-    forecast_data = get_current_forecast
+    forecast_data = get_current_forecast()
 
-    return request.get(request_url).json()
+    return render_template(
+        "forecast.html",
+                           )
 
 
 
