@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>City That You`re Searching For Was Not Found!</title>
-    
+
+    <title>Get Weather Forecast</title>
+
+
     <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet"/>
+
+    <script src="/static/scripts/script.js"></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -18,17 +21,16 @@
 </head>
 
 <body>
-    <h1>City That You`re Searching For Was Not Found!</h1>
-    <h2>Do You Want To Try Again?</h2>
-    <h3>Please Don't Be Shy...Try Again!</h3>
-    
+
+<h1>Get Forecast Info</h1>
+
     <form action="/weather">
         <label for="city"></label>
 
         <input type="text" name="city" id="city"
                                          placeholder="Enter a city" />
 
-        <button type="submit">Request Weather Conditions Info</button>
+        <button type="submit">Request Weather Forecast Info</button>
     </form>
 
 </body>

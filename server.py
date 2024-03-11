@@ -40,8 +40,17 @@ def get_weather():
     )
 
 
-# @app.route("/forecast/")
-# def get_forecast():
+@app.route("/forecast/")
+def get_forecast():
+
+    geo_latitude = request.args.get("lat")
+    geo_longitude = request.args.get("lon")
+
+    request_url = (f"https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&appid"
+                   f"=0091f7b9679beb8d58a0623071c81094")
+
+    return render_template(forecast.html)
+
 
 
 if __name__ == "__main__":
