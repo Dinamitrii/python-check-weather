@@ -10,7 +10,7 @@ body {
     color: whitesmoke;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 2rem;
     font-size: 2rem;
