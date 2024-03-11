@@ -3,7 +3,7 @@ from pprint import pprint
 import requests
 import os
 
-load_dotenv()
+load_dotenv(override=False)
 
 
 def get_current_weather(city="Sofia"):
