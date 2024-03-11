@@ -39,22 +39,23 @@ def get_weather():
         sea_level=f"{weather_data['main']['sea_level']:.2f}",
         humidity=f"{weather_data['main']['humidity']}",
         pressure=f"{weather_data['main']['pressure']}",
-        country_code=weather_data["sys"]["country"],
-        geo_latitude=weather_data["coord"]["lat"],
-        geo_longitude=weather_data["coord"]["lon"],
+        country_code=f"{weather_data['sys']['country']}",
+        geo_latitude=f"{weather_data['coord']['lat']}",
+        geo_longitude=f"{weather_data['coord']['lon']}",
     )
 
 
 @app.route("/forecast/")
 def get_forecast():
+    latitude = request.args.get("lat")
+    longitude = request.args.get("lon")
 
-    geo_latitude = request.args.get("lat")
-    geo_longitude = request.args.get("lon")
+    request_url = (f"https://api.openweathermap.org/data/3.0/onecall?{latitude}&{longitude}&appid"
+                   f"={os.getenv('API_KEY')}")
 
-    request_url = (f"https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&appid"
-                   f"=0091f7b9679beb8d58a0623071c81094")
+    forecast_data = get_current_forecast
 
-    return render_template(forecast.html)
+    return request.get(request_url).json()
 
 
 

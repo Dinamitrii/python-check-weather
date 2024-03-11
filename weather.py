@@ -7,9 +7,14 @@ load_dotenv(override=False)
 
 
 def get_current_weather(city="Sofia"):
-
     request_url = (f'http://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={city}&lang=bg'
                    f'&units=metric')
+
+    return requests.get(request_url).json()
+
+
+def get_current_forecast():
+    request_url = f"https://api.openweathermap.org/data/3.0/onecall?{'lat=33.44'}&{'lon=-94.04'}&appid={os.getenv('API_KEY')}"
 
     return requests.get(request_url).json()
 
