@@ -2,11 +2,8 @@
 #
 # You can move that to a different file under sites-available/ and symlink that
 # to sites-enabled/ to enable it.
+#######################################################################################
 
-# In order of things next to be added is
-#
-# location /favicon.ico {
-#            }
     server {
 
     root /home/dinamitrii/python-check-weather/;
@@ -15,14 +12,17 @@
     location / {
         include uwsgi_params;
         uwsgi_pass unix:///var/www/weather/weather.sock;
-        include proxy_params;
-        proxy_pass 0.0.0.0;
         }
 
 	location /.well-known/acme-challenge/ {
  	    alias /home/dinamitrii/python-check-weather/.well-known/acme-challenge/;
 	    allow all;
 		}
+#############################################################################################
+    location /favicon.ico {
+          alias /home/dinamitrii/python-check-weather/favicon.ico
+           }
+##############################################################################################
 
     listen [::]:443 ssl ipv6only=on; # managed by Certbot
     listen 443 ssl; # managed by Certbot
