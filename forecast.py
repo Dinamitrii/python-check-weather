@@ -7,36 +7,36 @@ load_dotenv()
 
 
 def get_current_forecast(lat=42.6975, lon=23.3242):
-    forecast_request = (f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={longitude}&appid="
+    forecast_request = (f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&appid="
                         f"{os.getenv('API_KEY')}&units=metric&lang=bg")
-
-    print(forecast_request)
 
     return requests.get(forecast_request).json()
 
 
-get_current_forecast(lat=, lon=)
+get_current_forecast(lat=42.6975, lon=23.3242)
 
 print("\n*** Get Current Weather Forecast ***\n")
 
 latitude = input(f"\nPlease enter a latitude in degrees(float): ")
 longitude = input("\nPlease enter a longitude in degrees(float): ")
 
+print(type(latitude), type(longitude))
 # Check for empty strings or string with only spaces
-if not bool(latitude.strip() or not bool(longitude.strip())):
+if not latitude == "" and not longitude == "":
 
     lat = float(latitude)
     lon = float(longitude)
+
+    print(type(latitude), type(longitude))
 
 else:
-    lat = float(latitude)
-    lon = float(longitude)
+    latitude = float(42.6975)
+    longitude = float(23.3242)
 
+    # if latitude is None and longitude is None:
+    #     lat, lon = 42.6975, 23.3242
 
-    if lat is None or lon is None:
-        lat, lon = 42.6975, 23.3242
-
-    forecast_data = get_current_forecast(lat, lon)
+    forecast_data = get_current_forecast(latitude, longitude)
 
     print("\n")
     pprint(forecast_data)
