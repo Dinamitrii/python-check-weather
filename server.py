@@ -54,12 +54,12 @@ def get_forecast():
 
     forecast_data = get_current_forecast(latitude, longitude)
 
-    # if forecast_data["cod"] != 200:
-    #     return render_template("city-not-found.html")
+    if forecast_data["cod"] != 200:
+        return render_template("city-not-found.html")
 
     return render_template(
         "forecast.html",
-        timezone=forecast_data["current"]["dew_point"]
+        timezone=forecast_data
 
     )
 
