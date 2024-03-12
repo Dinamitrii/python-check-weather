@@ -8,7 +8,7 @@ load_dotenv()
 
 def get_current_forecast(lat=42.6975, lon=23.3242):
     forecast_request = (f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&appid="
-                        f"{os.getenv('API_KEY')}&units=metric&lang=bg")
+                        f"{os.getenv('API_KEY')}&units=metric")
 
     return requests.get(forecast_request).json()
 
