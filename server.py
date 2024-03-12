@@ -50,13 +50,10 @@ def get_forecast():
     latitude = request.args.get("lat")
     longitude = request.args.get("lon")
 
-    request_url = (f"https://api.openweathermap.org/data/3.0/onecall?{latitude}&{longitude}&appid"
-                   f"={os.getenv('API_KEY')}")
-
-    forecast_data = get_current_forecast(latitude, longitude)
-
     return render_template(
         "forecast.html",
+
+
     )
 
 
