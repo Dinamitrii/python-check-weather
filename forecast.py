@@ -28,6 +28,11 @@ if not bool(latitude.strip() or not bool(longitude.strip())):
     lat = float(latitude)
     lon = float(longitude)
 
+else:
+    lat = float(latitude)
+    lon = float(longitude)
+
+
     if lat is None or lon is None:
         lat, lon = 42.6975, 23.3242
 
