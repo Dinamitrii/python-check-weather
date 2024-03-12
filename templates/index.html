@@ -20,21 +20,21 @@
 </head>
 
 <body>
-    <h1>Get Weather Conditions</h1>
+    <h1>Get Weather Conditions And Forecast Info</h1>
     
     <form action="/weather">
         <label for="city"></label>
 
-        <input type="text" name="city" id="city"
+        <input type="text" name="city_textbox" id="city"
                                          placeholder="Enter a city" />
 
         <button type="submit">Request Weather Conditions Info</button>
     </form>
 
     <form action="/forecast">
-        <label for="latitude" name="latitude" id="latitude"></label>
+        <label for="latitude" name="latitude_textbox" id="latitude"></label>
 
-        <label for="longitude" name="longitude" id="longitude"></label>
+        <label for="longitude" name="longitude_textbox" id="longitude"></label>
 
         <button type="submit">Request 3 Days Forecast</button>
     </form>
