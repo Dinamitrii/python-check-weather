@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Get Weather Conditions</title>
-    
 
-    <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet"/>
+    <title>Get Weather Conditions</title>
+
+
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet"/>
 
     <script src="/static/scripts/script.js"></script>
 
@@ -20,24 +20,29 @@
 </head>
 
 <body>
-    <h1>Get Weather Conditions And Forecast Info</h1>
-    
-    <form action="/weather">
-        <label for="city"></label>
+<h1>Get Weather Conditions And Forecast Info</h1>
 
-        <input type="text" name="city" id="city"
-                                         placeholder="Enter a city" />
+<form action="/weather">
+    <label for="city"></label>
 
-        <button type="submit">Request Weather Conditions Info</button>
-    </form>
+    <input type="text" name="city" id="city"
+           placeholder="Enter a city"/>
 
-    <form action="/forecast">
-        <label for="latitude" name="latitude_textbox" id="latitude"></label>
+    <button type="submit">Request Weather Conditions Info</button>
+</form>
 
-        <label for="longitude" name="longitude_textbox" id="longitude"></label>
+<form action="/forecast">
+    <label for="latitude"></label>
 
-        <button type="submit">Request 3 Days Forecast</button>
-    </form>
+    <input type="text" name="latitude" id="latitude" placeholder="Enter latitude"/>
+
+
+    <label for="longitude"></label>
+
+    <input type="text" name="longitude" id="longitude" placeholder="Enter longitude"/>
+
+    <button type="submit">Request 3 Days Forecast</button>
+</form>
 
 </body>
 </html>
