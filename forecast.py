@@ -12,16 +12,15 @@ def get_current_forecast(lat, lon):
 
     return requests.get(forecast_request).json()
 
+    # here TO DO:
+    # if emtpy string is given or some gibberish to give output for default location Sofia
+
 
 if __name__ == "__main__":
-
     print("\n*** Get Current Weather Forecast ***")
 
     latitude = float(input("\nPlease enter a latitude in degrees: "))
     longitude = float(input("\nPlease enter a longitude in degrees: "))
-
-    # here TO DO:
-    # if emtpy string is given or some gibberish to give output for default location Sofia
 
     forecast_data = get_current_forecast(latitude, longitude)
 
