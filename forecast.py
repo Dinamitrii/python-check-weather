@@ -12,20 +12,18 @@ def get_current_forecast(latitude=42.6975, longitude=23.3242):
 
     return requests.get(forecast_request).json()
 
-    # here TO DO:
-    # if emtpy string is given or some gibberish to give output for default location Sofia
 
+get_current_forecast(latitude=42.6975, longitude=23.3242)
 
-if __name__ == get_current_forecast(latitude=42.6975, longitude=23.3242):
-    print("\n*** Get Current Weather Forecast ***\n")
+print("\n*** Get Current Weather Forecast ***\n")
 
-    latitude = float(input("\nPlease enter a latitude in degrees(float): "))
-    longitude = float(input("\nPlease enter a longitude in degrees(float): "))
+latitude = float(input("\nPlease enter a latitude in degrees(float): "))
+longitude = float(input("\nPlease enter a longitude in degrees(float): "))
 
-    if latitude == 0 and longitude == 0:
-        latitude, longitude = 42.6975, 23.3242
+if latitude == 0 and longitude is None:
+    latitude, longitude = 42.6975, 23.3242
 
-        forecast_data = get_current_forecast(latitude, longitude)
+    forecast_data = get_current_forecast(latitude, longitude)
 
-        print("\n")
-        pprint(forecast_data)
+    print("\n")
+    pprint(forecast_data)
