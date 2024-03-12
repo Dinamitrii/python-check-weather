@@ -14,7 +14,7 @@ def index():
 
 @app.route("/weather/")
 def get_weather():
-    city = request.args.get("city_textbox")
+    city = request.args.get("city")
 
     # Check for empty strings or string with only spaces
     if not bool(city.strip()):
