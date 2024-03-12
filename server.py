@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from weather import get_current_weather
-from forecast import forecast_data
+from forecast import get_current_forecast
 from waitress import serve
 
 app = Flask(__name__)
@@ -45,9 +45,14 @@ def get_weather():
 
 
 @app.route("/forecast/")
-def get_forecast():
-    latitude = request.args.get("lat")
-    longitude = request.args.get("lon")
+def get_forecast(latitude, longitude):
+    if latitude and longitude == 0:
+        latitude, longitude = 42.6975, 23.3242
+
+    forecast_data = get_current_forecast(latitude, longitude)
+
+    # latitude = request.args.get("lat")
+    # longitude = request.args.get("lon")
 
     return render_template(
         "forecast.html",
