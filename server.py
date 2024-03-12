@@ -1,7 +1,5 @@
-import os
-
 from flask import Flask, render_template, request
-from weather import get_current_weather,
+from weather import get_current_weather
 from forecast import get_current_forecast
 from waitress import serve
 
@@ -51,12 +49,9 @@ def get_forecast():
     latitude = request.args.get("lat")
     longitude = request.args.get("lon")
 
-    forecast_data = get_current_forecast(latitude, longitude)
-
     return render_template(
         "forecast.html",
         forecast_data=['timezone']
-
 
     )
 
