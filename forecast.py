@@ -27,5 +27,5 @@ if __name__ == get_current_forecast(latitude=42.6975, longitude=23.3242):
 
         forecast_data = get_current_forecast(latitude, longitude)
 
-        # print("\n")
-        # pprint(forecast_data)
+        print("\n")
+        pprint(forecast_data)
