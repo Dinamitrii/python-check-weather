@@ -34,14 +34,22 @@
 <p>&nbsp;</p>
 
 <form action="/weather">
+
     <label for="city"></label>
+    <input type="text" name="city" id="city" placeholder="Enter a city"/>
 
-    <input type="text" name="city" id="city"
-                                     placeholder="Enter a city"/>
-
+    <label for="button_weather_weather"></label>
     <button type="submit" id="button_weather_weather">Request Weather Conditions Info</button>
 </form>
 <form action="/forecast">
+
+    <label for="latitude"></label>
+    <input type="text" name="latitude" id="latitude" placeholder="Enter latitude"/>
+
+    <label for="longitude"></label>
+    <input type="text" name="longitude" id="longitude" placeholder="Enter longitude"/>
+
+    <label for="button_forecast_weather"></label>
     <button type="submit" id="button_forecast_weather">Or Request 3 Days Weather Forecast</button>
 
 </form>

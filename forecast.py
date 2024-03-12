@@ -27,16 +27,16 @@ if not latitude == "" and not longitude == "":
     lat = float(latitude)
     lon = float(longitude)
 
-    print(type(latitude), type(longitude))
+    print(type(lat), type(lon))
 
 else:
-    latitude = float(42.6975)
-    longitude = float(23.3242)
+    lat = float(42.6975)
+    lon = float(23.3242)
 
     # if latitude is None and longitude is None:
     #     lat, lon = 42.6975, 23.3242
 
-    forecast_data = get_current_forecast(latitude, longitude)
+    forecast_data = get_current_forecast(lat, lon)
 
     print("\n")
     pprint(forecast_data)
