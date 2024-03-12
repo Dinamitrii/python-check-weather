@@ -6,7 +6,7 @@ import os
 load_dotenv()
 
 
-def get_current_forecast(lat, lon):
+def get_current_forecast(latitude, longitude):
     forecast_request = (f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&appid="
                         f"{os.getenv('API_KEY')}&units=metric&lang=bg")
 
@@ -15,16 +15,14 @@ def get_current_forecast(lat, lon):
     # here TO DO:
     # if emtpy string is given or some gibberish to give output for default location Sofia
 
-    # if __name__ == get_current_forecast(lat=42.6975, lon=23.3242):
-print("\n*** Get Current Weather Forecast ***")
 
-latitude = float(input("\nPlease enter a latitude in degrees: "))
-longitude = float(input("\nPlease enter a longitude in degrees: "))
+if __name__ == get_current_forecast(latitude=42.6975, longitude=23.3242):
 
-if latitude and longitude == 0:
-    lat, lon = 42.6975, 23.3242
+    print("\n*** Get Current Weather Forecast ***")
 
-    forecast_data = get_current_forecast(latitude, longitude)
+    latitude = float(input("\nPlease enter a latitude in degrees: "))
+    longitude = float(input("\nPlease enter a longitude in degrees: "))
+    
 
     print("\n")
     pprint(forecast_data)
