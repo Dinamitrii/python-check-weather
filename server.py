@@ -51,7 +51,7 @@ def get_forecast():
 
     return render_template(
         "forecast.html",
-        forecast_data=['timezone']
+        timezone=forecast_data['timezone']
 
     )
 
