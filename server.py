@@ -59,7 +59,7 @@ def get_forecast():
 
     return render_template(
         "forecast.html",
-        timezone=forecast_data["cod"]
+        timezone=forecast_data["current"]["dew_point"]
 
     )
 
