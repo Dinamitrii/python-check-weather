@@ -20,14 +20,13 @@ print("\n*** Get Current Weather Forecast ***\n")
 latitude = input(f"\nPlease enter a latitude in degrees(float): ")
 longitude = input("\nPlease enter a longitude in degrees(float): ")
 
-print(type(latitude), type(longitude))
+
 # Check for empty strings or string with only spaces
 if not latitude == "" and not longitude == "":
 
     lat = float(latitude)
     lon = float(longitude)
 
-    print(type(lat), type(lon))
 
 else:
     lat = float(42.6975)
