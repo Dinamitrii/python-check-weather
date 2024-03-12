@@ -16,8 +16,7 @@ def get_current_forecast(lat, lon):
     # if emtpy string is given or some gibberish to give output for default location Sofia
 
 
-if __name__ == __build_class__(get_current_forecast(lat=42.6975, lon=23.3242),
-                               get_current_forecast(lat=42.6975, lon=23.3242)):
+if __name__ == __import__(get_current_forecast(lat=42.6975, lon=23.3242)):
 
     print("\n*** Get Current Weather Forecast ***")
 
