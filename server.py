@@ -46,13 +46,18 @@ def get_weather():
 
 @app.route("/forecast/")
 def get_forecast(latitude, longitude):
+    
     if latitude and longitude == 0:
         latitude, longitude = 42.6975, 23.3242
 
     forecast_data = get_current_forecast(latitude, longitude)
 
-    # latitude = request.args.get("lat")
-    # longitude = request.args.get("lon")
+    latitude = request.args.get("lat")
+    longitude = request.args.get("lon")
+    
+    if forecast_data["cod"] != 200:
+        return render_template("city-not-found.html")
+
 
     return render_template(
         "forecast.html",
