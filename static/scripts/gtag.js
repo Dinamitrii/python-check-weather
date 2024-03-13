@@ -31,5 +31,7 @@ fetch(`https://www.google-analytics.com/debug/mp/collect?measurement_id=${measur
             params : {},
         }]
     })
-}).then(r =>{});
+}).then(r =>{
+    let response_from_gtag;
+    response_from_gtag});
 
