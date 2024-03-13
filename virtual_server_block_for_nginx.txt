@@ -42,7 +42,7 @@ server {
         listen 80;
         listen [::]:80;
 
-    server_name predictorian.online www.predictorian.online;
+    server_name predictorian.online www.predictorian.online 46.10.204.54;
     return 404; # managed by Certbot
 
 }
