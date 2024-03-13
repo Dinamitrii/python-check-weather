@@ -50,7 +50,7 @@ def get_forecast():
     longitude = request.args.get("lon")
 
     if latitude and longitude is None:
-        latitude, longitude = 42.6975, 23.3242
+        print(latitude, longitude)
 
     forecast_data = get_current_forecast(latitude, longitude)
 

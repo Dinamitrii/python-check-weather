@@ -9,7 +9,7 @@
 
     <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet"/>
 
-    <script src="/static/scripts/script.js"></script>
+    <script src="/static/scripts/gtag.js"></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -60,5 +60,9 @@
 <font color="green">Географска ширина: {{ geo_latitude }} </font><br>
 <font color="red">Географска дължина: {{ geo_longitude }}</font></p>
 <p>&nbsp;</p>
+
+<!-- Invoke your consent function when a user interacts with your banner -->
+<button onClick="allConsentGranted()">Yes</button>
+
 </body>
 </html>
