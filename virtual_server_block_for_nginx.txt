@@ -20,7 +20,7 @@
 		}
 #############################################################################################
     location /favicon.ico {
-          alias /home/dinamitrii/python-check-weather/favicon.ico;
+          alias /home/dinamitrii/python-check-weather/favicon/;
            }
 ##############################################################################################
 
