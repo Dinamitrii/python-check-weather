@@ -18,4 +18,18 @@ function allConsentGranted() {
         'analytics_storage': 'granted'
     });
 }
+const measurement_id = `G-49D9STDEKG`;
+const api_secret = `wMKCSzRbTWCmylcb4o-omg`;
+
+fetch(`https://www.google-analytics.com/debug/mp/collect?measurement_id=${measurement_id}&api_secret=${api_secret}`, {
+    method: "POST",
+    body: JSON.stringify({
+        client_id: 'XXXXXXXXXX.YYYYYYYYYY',
+        events: [{
+            // Event names must start with an alphabetic character.
+            name: '_badEventName',
+            params : {},
+        }]
+    })
+}).then(r =>{});
 
