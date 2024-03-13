@@ -24,7 +24,7 @@ const api_secret = `wMKCSzRbTWCmylcb4o-omg`;
 fetch(`https://www.google-analytics.com/debug/mp/collect?measurement_id=${measurement_id}&api_secret=${api_secret}`, {
     method: "POST",
     body: JSON.stringify({
-        client_id: 'XXXXXXXXXX.YYYYYYYYYY',
+        client_id: '604768883345-a3pud6hri3772rbn97thb1lp0pvfh2t2.apps.googleusercontent.com',
         events: [{
             // Event names must start with an alphabetic character.
             name: '_badEventName',
@@ -33,5 +33,5 @@ fetch(`https://www.google-analytics.com/debug/mp/collect?measurement_id=${measur
     })
 }).then(r =>{
     let response_from_gtag;
-    response_from_gtag});
+    console.log(response_from_gtag)});
 
