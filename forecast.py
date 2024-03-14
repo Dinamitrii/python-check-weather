@@ -31,7 +31,7 @@ if __name__ == "__main__":
         lat = float(42.6975)
         lon = float(23.3242)
 
-       forecast_data = get_current_forecast(lat, lon)
+    forecast_data = get_current_forecast(lat, lon)
 
     print("\n")
     pprint(forecast_data)
