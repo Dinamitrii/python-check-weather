@@ -18,8 +18,8 @@
  	    alias /home/dinamitrii/python-check-weather/.well-known/acme-challenge/;
 	    allow all;
 		}
-#############################################################################################
-    location /favicon.ico {
+##############################################################################################
+    location /favicon/ {
           alias /home/dinamitrii/python-check-weather/favicon/;
            }
 ##############################################################################################
@@ -43,6 +43,6 @@ server {
         listen [::]:80;
 
     server_name predictorian.online www.predictorian.online 46.10.204.54;
-    return 404; # managed by Certbot
+    return 301 https://$host$request_uri; # managed by Certbot
 
 }
