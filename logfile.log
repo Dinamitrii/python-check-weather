@@ -7620,3 +7620,96 @@ detected max file descriptor number: 1024
 lock engine: pthread robust mutexes
 thunder lock: enabled
 bind(): No such file or directory [core/socket.c line 230]
+*** Starting uWSGI 2.0.24 (64bit) on [Mon Mar 18 19:52:43 2024] ***
+compiled with version: 11.4.0 on 17 March 2024 17:34:07
+os: Linux-5.15.0-100-generic #110-Ubuntu SMP Wed Feb 7 13:27:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.flaskenv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22973
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+bind(): No such file or directory [core/socket.c line 230]
+*** Starting uWSGI 2.0.24 (64bit) on [Mon Mar 18 19:53:14 2024] ***
+compiled with version: 11.4.0 on 17 March 2024 17:34:07
+os: Linux-5.15.0-100-generic #110-Ubuntu SMP Wed Feb 7 13:27:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.flaskenv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22973
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+bind(): No such file or directory [core/socket.c line 230]
+*** Starting uWSGI 2.0.24 (64bit) on [Mon Mar 18 19:54:05 2024] ***
+compiled with version: 11.4.0 on 17 March 2024 17:34:07
+os: Linux-5.15.0-100-generic #110-Ubuntu SMP Wed Feb 7 13:27:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.flaskenv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22973
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+bind(): No such file or directory [core/socket.c line 230]
+*** Starting uWSGI 2.0.20-debian (64bit) on [Mon Mar 18 23:06:41 2024] ***
+compiled with version: 11.2.0 on 21 March 2022 11:00:44
+os: Linux-5.15.0-100-generic #110-Ubuntu SMP Wed Feb 7 13:27:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /usr/bin/uwsgi-core
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22973
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address 0.0.0.0 fd 3
+bind(): No such file or directory [core/socket.c line 230]
+VACUUM: unix socket 0.0.0.0 removed.
+*** Starting uWSGI 2.0.20-debian (64bit) on [Mon Mar 18 23:06:56 2024] ***
+compiled with version: 11.2.0 on 21 March 2022 11:00:44
+os: Linux-5.15.0-100-generic #110-Ubuntu SMP Wed Feb 7 13:27:48 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /usr/bin/uwsgi-core
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22973
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address 0.0.0.0 fd 3
+bind(): No such file or directory [core/socket.c line 230]
+VACUUM: unix socket 0.0.0.0 removed.
