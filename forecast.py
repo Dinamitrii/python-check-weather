@@ -6,7 +6,7 @@ import os
 load_dotenv()
 
 
-def get_current_forecast(lat=42.6975, lon=23.3242):
+def get_current_forecast(lat, lon):
     forecast_request = (f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&appid="
                         f"{os.getenv('API_KEY')}&units=metric&lang=bg")
 
@@ -14,24 +14,17 @@ def get_current_forecast(lat=42.6975, lon=23.3242):
 
 
 if __name__ == "__main__":
-    
-    # get_current_forecast(lat=42.6975, lon=23.3242)
     print("\n*** Get Current Weather Forecast ***\n")
 
     latitude = input(f"\nPlease enter a latitude in degrees(float): ")
     longitude = input("\nPlease enter a longitude in degrees(float): ")
 
     # Check for empty strings or string with only spaces
-    if not latitude == "" and not longitude == "":
+    if not bool(latitude.strip()) and not bool(longitude.strip()):
+        latitude = 42.6975
+        longitude = 23.3242
 
-        lat = float(latitude)
-        lon = float(longitude)
-
-    else:
-        lat = float(42.6975)
-        lon = float(23.3242)
-
-    forecast_data = get_current_forecast(lat, lon)
+    forecast_data = get_current_forecast(latitude, longitude)
 
     print("\n")
     pprint(forecast_data)
