@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: yowsup
+Version: 3.3.0
+Summary: The WhatsApp lib
+Home-page: http://github.com/tgalal/yowsup/
+Author: Tarek Galal
+Author-email: tare2.galal@gmail.com
+License: GPL-3+
+Platform: any
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 4 - Beta
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE
+Requires-Dist: consonance (==0.1.5)
+Requires-Dist: argparse
+Requires-Dist: python-axolotl (==0.2.2)
+Requires-Dist: six (==1.10)
+Requires-Dist: appdirs
+Requires-Dist: protobuf (>=3.6.0)
+Requires-Dist: readline
+
+UNKNOWN
+
