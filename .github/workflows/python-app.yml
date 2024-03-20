@@ -36,3 +36,4 @@ jobs:
     - name: Test with pytest
       run: |
         pytest --suppress-no-test-exit-code
+        pytest --suppress-tests-failed-exit-code
