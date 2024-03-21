@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: consonance
+Version: 0.1.5
+Summary: WhatsApp's handshake implementation using Noise Protocol
+Home-page: UNKNOWN
+Author: Tarek Galal
+Author-email: tare2.galal@gmail.com
+License: GPL-3+
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.5
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE
+Requires-Dist: dissononce (>=0.34.3)
+Requires-Dist: python-axolotl-curve25519
+Requires-Dist: transitions
+Requires-Dist: protobuf (>=3.6.0)
+
+This library implements WhatsApp's handshake process which makes use of Noise Pipes with Curve25519, AES-GCM, and SHA256 from Noise Protocol
+
