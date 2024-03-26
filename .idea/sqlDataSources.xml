@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="5ad5dbd0-a697-41b0-a59b-12006f54bd05" name="weather@localhost Mapping">
+      <data-sources db="7f8396a7-6839-44b6-84b5-4eb958df3cca" />
+      <scope>
+        <node kind="database" qname="@" />
+      </scope>
+    </mapping>
+  </component>
+</project>
