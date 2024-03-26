@@ -26,5 +26,7 @@ if __name__ == "__main__":
 
     forecast_data = get_current_forecast(latitude, longitude)
 
+    insert_statement = f"INSERT INTO weather_forecast VALUES ('{forecast_data['current']}"
+
     print("\n")
     pprint(forecast_data)
