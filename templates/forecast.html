@@ -35,15 +35,18 @@
 <h1>The Weather Forecast Info Is....</h1>
 <p>*** {{ timezone }} ***</p>
 <p>*** {{ timezone_offset }} ***</p>
+<p>*** {{ sea_level }} ***</p>
 
     <form action="/forecast">
+        <label for="latitude"></label>
         <label for="lat"></label>
-        <input type="text" name="latitude_textbox" id="lat"
+        <input type="text" name="latitude_textbox" id="latitude"
                                         placeholder="Enter a latitude" />
 
 
+        <label for="longitude"></label>
         <label for="lon"></label>
-        <input type="text" name="longitude_textbox" id="lon"
+        <input type="text" name="longitude_textbox" id="longitude"
                                         placeholder="Enter a longitude" />
 
         <button type="submit">Request Weather Forecast Info</button>

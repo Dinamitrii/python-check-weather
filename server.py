@@ -35,7 +35,7 @@ def get_weather():
         temp_max=f"{weather_data['main']['temp_max']:.1f}",
         feels_like=f"{weather_data['main']['feels_like']:.1f}",
         wind=f"{weather_data['wind']['speed']:.1f}",
-        # sea_level=f"{weather_data['main']['sea_level']:.2f}",
+
         humidity=f"{weather_data['main']['humidity']}",
         pressure=f"{weather_data['main']['pressure']}",
         country_code=f"{weather_data['sys']['country']}",
@@ -62,6 +62,7 @@ def get_forecast():
         "forecast.html",
         timezone_offset=forecast_data['timezone_offset'],
         timezone=forecast_data['timezone'],
+        # sea_level=f"{forecast_data['sea_level']:.2f}",
     )
 
 
