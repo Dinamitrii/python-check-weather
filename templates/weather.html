@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{ title }} {{ country_code }}времето</title>
+    <title>{{ title }} {{{ country_code }}} времето</title>
 
     <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet"/>
 
 </head>
 
 <body>
-<h1>В град {{ title }} {{ country_code }} времето към момента е...</h1>
+<h1>В град {{ title }} {{{ country_code }}} времето към момента е...</h1>
 
 <p>&nbsp;</p>
 
@@ -31,7 +31,7 @@
 </form>
 
 <p>&nbsp;</p>
-<p>Абревиатура на държавата {{ country_code }}</p>
+<p>Абревиатура на държавата {{{ country_code }}}</p>
 <p>&nbsp;</p>
 <p><font color="white">Координати в десетични градуси</font><br>
 <font color="green">Географска ширина: {{ geo_latitude }} </font><br>
