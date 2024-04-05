@@ -39,4 +39,4 @@ def get_weather():
 
 
 if __name__ == "__main__":
-    serve(app.run(host="0.0.0.0", port=443))
+    serve(app.run(host="0.0.0.0"))
