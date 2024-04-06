@@ -14,6 +14,10 @@ server {
     alias /home/dinamitrii/python-check-weather/sitemap;
     }
 
+    location /favicon.ico {
+    alias /home/dinamitrii/python-check-weather/images/favicon;
+    }
+
 
     listen [::]:443 ssl ipv6only=on; # managed by Certbot
     listen 443 ssl; # managed by Certbot
