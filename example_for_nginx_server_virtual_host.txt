@@ -10,12 +10,12 @@ server {
 		uwsgi_pass unix:///var/www/weather/weather.sock;
         }
 
-    location /sitemap.xml {
-    alias /home/dinamitrii/python-check-weather/sitemap;
+    location /sitemap {
+    alias /home/dinamitrii/python-check-weather/sitemap/;
     }
 
-    location /favicon.ico {
-    alias /home/dinamitrii/python-check-weather/images/favicon;
+    location /favicon {
+    alias /home/dinamitrii/python-check-weather/images/favicon/;
     }
 
 
