@@ -4,10 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-bcrypt = "==4.1.2"
+bcrypt = "*"
 cmakelang = "==0.6.13"
 six = "==1.16.0"
-uwsgi = "==2.0.24"
+uwsgi = "*"
 blinker = "==1.7.0"
 certifi = "==2024.2.2"
 charset-normalizer = "==3.3.2"
