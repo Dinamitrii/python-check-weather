@@ -31,6 +31,8 @@ def get_weather():
         title=weather_data["name"],
         status=weather_data["weather"][0]["description"].capitalize(),
         temp=f"{weather_data['main']['temp']:.1f}",
+        temp_min=f"{weather_data['main']['temp_min']:.1f}",
+        temp_max=f"{weather_data['main']['temp_max']:.1f}",
         feels_like=f"{weather_data['main']['feels_like']:.1f}",
         wind=f"{weather_data['wind']['speed']:.1f}",
         country_code=weather_data["sys"]["country"],
