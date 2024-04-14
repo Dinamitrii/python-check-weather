@@ -25,7 +25,8 @@ def get_weather():
     # Getting local datetime and corresponding timestamp
     now_localized_readable = datetime.now()
     now_localized_timestamp = datetime.timestamp(now_localized_readable)
-
+    # Insert into database
+    # insert_into =
     # If city not found by API
     if weather_data["cod"] != 200:
         return render_template("city-not-found.html")
