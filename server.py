@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from weather import get_current_weather
 from waitress import serve
+from _datetime import datetime
 
 app = Flask(__name__)
 
@@ -21,6 +22,10 @@ def get_weather():
 
     weather_data = get_current_weather(city)
 
+    # Getting local datetime and corresponding timestamp
+    now_localized_readable = datetime.now()
+    now_localized_timestamp = datetime.timestamp(now_localized_readable)
+
     # If city not found by API
     if weather_data["cod"] != 200:
         return render_template("city-not-found.html")
@@ -34,8 +39,14 @@ def get_weather():
         temp_min=f"{weather_data['main']['temp_min']:.1f}",
         temp_max=f"{weather_data['main']['temp_max']:.1f}",
         feels_like=f"{weather_data['main']['feels_like']:.1f}",
+        humidity=f"{weather_data['main']['humidity']}",
+        atmos_pressure=f"{weather_data['main']['pressure']}",
         wind=f"{weather_data['wind']['speed']:.1f}",
         country_code=weather_data["sys"]["country"],
+        sunrise=weather_data["sys"]["sunrise"],
+        sunset=weather_data["sys"]["sunset"],
+        targets_daytime=weather_data["dt"],
+        targets_tz=weather_data["timezone"],
         geo_latitude=weather_data["coord"]["lat"],
         geo_longitude=weather_data["coord"]["lon"],
     )

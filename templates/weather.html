@@ -31,10 +31,11 @@
 
 <p>&nbsp;</p>
 
-<p>{{ status }} при {{ temp }} &#8451;</p>
 <p>Очаквани минимални {{ temp_min }}  &#8451; и максимални {{ temp_max }}  &#8451; температури</p>
+<p>{{ status }} при {{ temp }} &#8451;</p>
 <p>Усеща се като {{ feels_like }} &#8451;</p>
 <p>Вятърът е със скорост от {{ wind }} &#13223;</p>
+<p>Атмосферно налягане {{ atmos_pressure }} hPa</p>
 <p>&nbsp;</p>
 
 <form action="/weather">
@@ -49,6 +50,9 @@
 <p>&nbsp;</p>
 <p>Абревиатура на държавата [{{ country_code }}]</p>
 <p>&nbsp;</p>
+<p>Слънцето изгрява в {{ sunrise }} часа и залязва в {{ sunset }} часа </p>
+<p>Часови пояс {{ targets_tz }}</p>
+<p>Локалното време при обновяването на информацията {{ targets_daytime }}</p>
 <p><font color="white">Координати в десетични градуси</font><br>
 <font color="green">Географска ширина: {{ geo_latitude }} </font><br>
 <font color="red">Географска дължина: {{ geo_longitude }}</font></p>
