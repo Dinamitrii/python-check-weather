@@ -15,10 +15,5 @@ def contacts():
     return render_template("contacts.html")
 
 
-@app.route("/not-found/")
-def not_found():
-    return render_template("not-found.html")
-
-
 if __name__ == "__main__":
     serve(app.run(host="0.0.0.0", port=8000))
