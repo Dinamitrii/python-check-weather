@@ -1,4 +1,5 @@
 .venv
+.velinovenv
 .env
 __pycache__
 /venv
