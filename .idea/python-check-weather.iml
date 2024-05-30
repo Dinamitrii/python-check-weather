@@ -8,8 +8,11 @@
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
       <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
+      <excludeFolder url="file://$MODULE_DIR$/.velinovenv" />
+      <excludeFolder url="file://$MODULE_DIR$/.velinovenv/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/.velinovenv/lib" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.12 (python-check-weather)" jdkType="Python SDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PackageRequirementsSettings">
