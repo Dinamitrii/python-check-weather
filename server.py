@@ -51,6 +51,7 @@ def get_weather():
         geo_longitude=weather_data["coord"]["lon"],
     )
 
+
 @app.route("/favicon.ico")
 def favicon():
     return (url_for('static', filename='images/favicon/favicon.ico'),
