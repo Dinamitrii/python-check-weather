@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, url_for
 from weather import get_current_weather
 from waitress import serve
+from dotenv import load_dotenv
 
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -56,5 +58,4 @@ def favicon():
 
 
 if __name__ == "__main__":
-    config = load_config()
-    serve(app, host="0.0.0.0")
+    serve(app.run(host="0.0.0.0", port=8000))
