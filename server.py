@@ -51,6 +51,10 @@ def get_weather():
         geo_longitude=weather_data["coord"]["lon"],
     )
 
+@app.route("/favicon.ico")
+def favicon():
+
+
 
 if __name__ == "__main__":
     serve(app.run(host="0.0.0.0"))
