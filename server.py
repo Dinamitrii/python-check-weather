@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, url_for
 from weather import get_current_weather
 from waitress import serve
-from datetime import datetime
+
 
 app = Flask(__name__)
 
@@ -14,24 +14,12 @@ def index():
 
 @app.route("/weather")
 def get_weather():
-    city = request.args.get("city")
-
-    # Check for empty strings or string with only spaces
-    if not bool(city.strip()):
-        city = "Sofia"
+    city = request.args.get("city", default="Sofia").strip()
 
     weather_data = get_current_weather(city)
-
-    # Getting local datetime and corresponding timestamp
-    now_localized_readable = datetime.now()
-    now_localized_timestamp = datetime.timestamp(now_localized_readable)
-    # Insert into database
-    # insert_into =
-    # If city not found by API
     if weather_data["cod"] != 200:
         return render_template("city-not-found.html")
 
-    # If city is found by API
     return render_template(
         "weather.html",
         title=weather_data["name"],
@@ -68,4 +56,5 @@ def favicon():
 
 
 if __name__ == "__main__":
-    serve(app.run(host="0.0.0.0"))
+    config = load_config()
+    serve(app, host="0.0.0.0")
