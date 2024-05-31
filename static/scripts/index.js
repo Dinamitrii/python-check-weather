@@ -1,1 +1,1 @@
-//just for check out index.js
+//just for checking in for index.js
