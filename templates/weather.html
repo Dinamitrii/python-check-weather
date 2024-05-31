@@ -8,14 +8,13 @@
 
     <meta name="author" content="Камен Караиванов, Вестерос БГ ЕООД" />
 
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet"/>
 
     <title>{{ title }} {{ country_code }} времето</title>
 
 
     <link rel="canonical" href="https://www.predictorian.online/weather.html">
 
-
-    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet"/>
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}"/>
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}"/>
