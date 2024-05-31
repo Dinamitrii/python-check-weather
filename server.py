@@ -53,7 +53,16 @@ def get_weather():
 
 @app.route("/favicon.ico")
 def favicon():
-
+    return (url_for('static', filename='images/favicon/favicon.ico'),
+            url_for('static', filename='images/favicon/favicon-16x16.png'),
+            url_for('static', filename='images/favicon/favicon-32x32.png'),
+            url_for('static', filename='images/favicon/android-chrome-192x192.png'),
+            url_for('static', filename='images/favicon/android-chrome-256x256.png'),
+            url_for('static', filename='images/favicon/apple-touch-icon.png'),
+            url_for('static', filename='images/favicon/safari-pinned-tab.svg'),
+            url_for('static', filename='images/favicon/mstile-150x150.png'),
+            url_for('static', filename='images/favicon/browserconfig.xml'),
+            url_for('static', filename='images/favicon/site.webmanifest'))
 
 
 if __name__ == "__main__":
