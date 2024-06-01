@@ -16,7 +16,7 @@ def index():
 
 @app.route("/weather")
 def get_weather():
-    city = request.args.get("city").strip()
+    city = request.args.get("city")
 
     weather_data = get_current_weather(city)
     if weather_data["cod"] != 200:
