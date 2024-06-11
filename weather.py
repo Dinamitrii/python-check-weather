@@ -7,7 +7,7 @@ load_dotenv()
 
 
 def get_current_weather(city="Sofia"):
-    request_url = (f'http://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={city}&lang=bg'
+    request_url = (f'https://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={city}&lang=bg'
                    f'&units=metric')
 
     return requests.get(request_url).json()
