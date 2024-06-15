@@ -33,8 +33,8 @@ def get_weather():
     # If city is found by API
     sunrise_timestamp = weather_data['sys']['sunrise']
     sunset_timestamp = weather_data['sys']['sunset']
-    sunrise_date = fromtimestamp(sunrise_timestamp)
-    sunset_date = fromtimestamp(sunset_timestamp)
+    sunrise_date = datetime.fromtimestamp(sunrise_timestamp)
+    sunset_date = datetime.fromtimestamp(sunset_timestamp)
     return render_template(
         "weather.html",
         title=weather_data["name"],
