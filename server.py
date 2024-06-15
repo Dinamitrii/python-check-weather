@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, url_for
-from datetime import datetime, timezone
+from datetime import datetime
 from weather import get_current_weather
 from waitress import serve
 from dotenv import load_dotenv
