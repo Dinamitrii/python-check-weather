@@ -1,0 +1,51 @@
+[console_scripts]
+paster = paste.script.command:run
+
+[distutils.setup_keywords]
+paster_plugins = setuptools.dist:assert_string_list
+
+[egg_info.writers]
+paster_plugins.txt = setuptools.command.egg_info:write_arg
+
+[paste.app_factory]
+test = paste.script.testapp:make_test_application
+
+[paste.entry_point_description]
+console_scripts = paste.script.epdesc:ConsoleScriptsDescription
+distutils.commands = paste.script.epdesc:DistutilsCommandsDescription
+distutils.setup_keywords = paste.script.epdesc:SetupKeywordsDescription
+egg_info.writers = paste.script.epdesc:EggInfoWriters
+paste.app_install = paste.script.epdesc:AppInstallDescription
+paste.entry_point_description = paste.script.epdesc:MetaEntryPointDescription
+paste.global_paster_command = paste.script.epdesc:GlobalPasterCommandDescription
+paste.paster_command = paste.script.epdesc:PasterCommandDescription
+paste.paster_create_template = paste.script.epdesc:CreateTemplateDescription
+
+[paste.global_paster_command]
+create = paste.script.create_distro:CreateDistroCommand [Templating]
+exe = paste.script.exe:ExeCommand
+help = paste.script.help:HelpCommand
+make-config = paste.script.appinstall:MakeConfigCommand
+points = paste.script.entrypoints:EntryPointCommand
+post = paste.script.request:RequestCommand [Config]
+request = paste.script.request:RequestCommand [Config]
+serve = paste.script.serve:ServeCommand [Config]
+setup-app = paste.script.appinstall:SetupCommand
+
+[paste.paster_command]
+grep = paste.script.grep:GrepCommand
+
+[paste.paster_create_template]
+basic_package = paste.script.templates:BasicPackage
+
+[paste.server_runner]
+cgi = paste.script.cgi_server:paste_run_cgi
+cherrypy = paste.script.cherrypy_server:cpwsgi_server
+flup_ajp_fork = paste.script.flup_server:run_ajp_fork [Flup]
+flup_ajp_thread = paste.script.flup_server:run_ajp_thread [Flup]
+flup_fcgi_fork = paste.script.flup_server:run_fcgi_fork [Flup]
+flup_fcgi_thread = paste.script.flup_server:run_fcgi_thread [Flup]
+flup_scgi_fork = paste.script.flup_server:run_scgi_fork [Flup]
+flup_scgi_thread = paste.script.flup_server:run_scgi_thread [Flup]
+twisted = paste.script.twisted_web2_server:run_twisted
+wsgiutils = paste.script.wsgiutils_server:run_server [WSGIUtils]

@@ -1,0 +1,37 @@
+# Virtual Host configuration for www.predictorian.online
+#
+# You can move that to a different file under sites-available/ and symlink that
+# to sites-enabled/ to enable it.
+#######################################################################################
+
+    server {
+
+    root /home/dinamitrii/python-check-weather/;
+    index index.html;
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:///var/www/weather/weather.sock;
+        }
+
+	location /.well-known/acme-challenge/ {
+ 	    alias /home/dinamitrii/python-check-weather/.well-known/acme-challenge/;
+	    allow all;
+		}
+##############################################################################################
+    location /favicon/ {
+          alias /home/dinamitrii/python-check-weather/favicon/;
+           }
+##############################################################################################
+
+    if ($host = $host) {
+	return 301 https://$host$request_uri;
+    }
+
+        listen 80;
+        listen [::]:80;
+
+    server_name predictorian.online www.predictorian.online;
+
+}
+

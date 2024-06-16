@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49D9STDEKG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-49D9STDEKG');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Get Weather Forecast Info</title>
+
+
+    <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet"/>
+
+    <script src="/static/scripts/gtag.js"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+
+    <link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<body>
+
+<h1>The Weather Forecast Info Is....</h1>
+<p>*** {{ timezone }} ***</p>
+<p>*** {{ timezone_offset }} ***</p>
+<p>*** {{ sea_level }} ***</p>
+
+    <form action="/forecast">
+        <label for="latitude"></label>
+        <label for="lat"></label>
+        <input type="text" name="latitude_textbox" id="latitude"
+                                        placeholder="Enter a latitude" />
+
+
+        <label for="longitude"></label>
+        <label for="lon"></label>
+        <input type="text" name="longitude_textbox" id="longitude"
+                                        placeholder="Enter a longitude" />
+
+        <button type="submit">Request Weather Forecast Info</button>
+    </form>
+
+<!-- Invoke your consent function when a user interacts with your banner -->
+<button onClick="allConsentGranted()">Yes</button>
+
+</body>
+
+</html>

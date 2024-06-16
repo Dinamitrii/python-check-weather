@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: python-axolotl
+Version: 0.2.2
+Summary: Python port of libaxolotl-android, originally written by Moxie Marlinspik
+Home-page: https://github.com/tgalal/python-axolotl
+Author: Tarek Galal
+Author-email: tare2.galal@gmail.com
+License: GPLv3 License
+Download-URL: https://github.com/tgalal/python-axolotl/releases
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: cryptography
+Requires-Dist: python-axolotl-curve25519 (>=0.4.1)
+Requires-Dist: protobuf (>=3.0.0.b2)
+
+UNKNOWN
+
+
