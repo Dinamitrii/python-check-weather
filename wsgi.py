@@ -1,5 +1,5 @@
 from server import app
-from waitress import serve
+from waitress import serve # type: ignore
 
 
 if __name__ == "__main__":
