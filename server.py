@@ -32,8 +32,12 @@ def get_weather():
     # If city is found by API
     sunrise_timestamp = weather_data['sys']['sunrise']
     sunset_timestamp = weather_data['sys']['sunset']
+    targets_dt_timestamp = weather_data["dt"]
+    targets_tz = weather_data["timezone"]
     sunrise_date = datetime.fromtimestamp(sunrise_timestamp)
     sunset_date = datetime.fromtimestamp(sunset_timestamp)
+    targets_date = datetime.fromtimestamp(targets_dt_timestamp)
+    targets_tz_hrf = int(targets_tz / 3600)
     return render_template(
         "weather.html",
         title=weather_data["name"],
@@ -48,8 +52,8 @@ def get_weather():
         country_code=weather_data["sys"]["country"],
         sunrise=sunrise_date.isoformat(),
         sunset=sunset_date.isoformat(),
-        targets_daytime=weather_data["dt"],
-        targets_tz=weather_data["timezone"],
+        targets_daytime=targets_date.isoformat(),
+        targets_tz=targets_tz_hrf,
         geo_latitude=weather_data["coord"]["lat"],
         geo_longitude=weather_data["coord"]["lon"],
     )
