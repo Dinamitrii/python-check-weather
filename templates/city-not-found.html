@@ -2,37 +2,36 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-49D9STDEKG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-49D9STDEKG');
-</script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+    <meta name="author" content="Камен Караиванов, Вестерос БГ ЕООД" />
+
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet"/>
+
     <title>City That You`re Searching For Was Not Found!</title>
-    
-    <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet"/>
 
-    <script src="/static/scripts/gtag.js"></script>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
 
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}"/>
+    <link rel="icon" type="image/png" sizes="16x16" href=" {{ url_for('static', filename='images/favicon/favicon-16x16.png') }}"/>
+    <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}"/>
+    <link rel="mask-icon" href="{{ url_for('static', filename='images/favicon/safari-pinned-tab.svg', color='#5bbad5') }}"/>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon/favicon.ico') }}"/>
+
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="static/images/favicon/browserconfig.xml"/>
+    <meta name="theme-color" content="#ffffff">
+
+
 
 </head>
 
 <body>
-    <h1>City That You`re Searching For Was Not Found!</h1>
-    <h2>Do You Want To Try Again?</h2>
-    <h3>Please Don't Be Shy...Try Again!</h3>
+    <h1>The City That You`re Searching For Was Not Found!</h1>
+
+    <h2>Do You Want To Try Again With Different Search?</h2>
     
     <form action="/weather">
         <label for="city"></label>
@@ -40,12 +39,8 @@
         <input type="text" name="city" id="city"
                                          placeholder="Enter a city" />
 
-        <button type="submit">Request Weather Conditions Info</button>
+        <button type="submit">Request Info</button>
     </form>
 
-<!-- Invoke your consent function when a user interacts with your banner -->
-<button onClick="allConsentGranted()">Yes</button>
-
 </body>
-
 </html>

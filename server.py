@@ -1,18 +1,21 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
+from datetime import datetime
 from weather import get_current_weather
-from forecast import get_current_forecast
 from waitress import serve
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
 
 @app.route("/")
-@app.route("/index/")
+@app.route("/index")
 def index():
     return render_template("index.html")
 
 
-@app.route("/weather/")
+@app.route("/weather")
 def get_weather():
     city = request.args.get("city")
 
@@ -26,6 +29,15 @@ def get_weather():
     if weather_data["cod"] != 200:
         return render_template("city-not-found.html")
 
+    # If city is found by API
+    sunrise_timestamp = weather_data['sys']['sunrise']
+    sunset_timestamp = weather_data['sys']['sunset']
+    targets_dt_timestamp = weather_data["dt"]
+    targets_tz = weather_data["timezone"]
+    sunrise_date = datetime.fromtimestamp(sunrise_timestamp)
+    sunset_date = datetime.fromtimestamp(sunset_timestamp)
+    targets_date = datetime.fromtimestamp(targets_dt_timestamp)
+    targets_tz_hrf = int(targets_tz / 3600)
     return render_template(
         "weather.html",
         title=weather_data["name"],
@@ -34,36 +46,31 @@ def get_weather():
         temp_min=f"{weather_data['main']['temp_min']:.1f}",
         temp_max=f"{weather_data['main']['temp_max']:.1f}",
         feels_like=f"{weather_data['main']['feels_like']:.1f}",
-        wind=f"{weather_data['wind']['speed']:.1f}",
-
         humidity=f"{weather_data['main']['humidity']}",
-        pressure=f"{weather_data['main']['pressure']}",
-        country_code=f"{weather_data['sys']['country']}",
-        geo_latitude=f"{weather_data['coord']['lat']}",
-        geo_longitude=f"{weather_data['coord']['lon']}",
+        atmos_pressure=f"{weather_data['main']['pressure']}",
+        wind=f"{weather_data['wind']['speed']:.1f}",
+        country_code=weather_data["sys"]["country"],
+        sunrise=sunrise_date.isoformat(),
+        sunset=sunset_date.isoformat(),
+        targets_daytime=targets_date.isoformat(),
+        targets_tz=targets_tz_hrf,
+        geo_latitude=weather_data["coord"]["lat"],
+        geo_longitude=weather_data["coord"]["lon"],
     )
 
 
-@app.route("/forecast/")
-def get_forecast():
-    latitude = request.args.get('lat', default='42.6975')
-    longitude = request.args.get('lon', default='23.3242')
-
-    if not bool(latitude.strip()) and not bool(longitude.strip()):
-        latitude = 42.6975
-        longitude = 23.3242
-
-    forecast_data = get_current_forecast(latitude, longitude)
-
-    # if forecast_data['cod'] != 200:
-    #     return render_template("city-not-found.html")
-
-    return render_template(
-        "forecast.html",
-        timezone_offset=forecast_data['timezone_offset'],
-        timezone=forecast_data['timezone'],
-        # sea_level=f"{forecast_data['sea_level']:.2f}",
-    )
+@app.route("/favicon.ico")
+def favicon():
+    return (url_for('static', filename='images/favicon/favicon.ico'),
+            url_for('static', filename='images/favicon/favicon-16x16.png'),
+            url_for('static', filename='images/favicon/favicon-32x32.png'),
+            url_for('static', filename='images/favicon/android-chrome-192x192.png'),
+            url_for('static', filename='images/favicon/android-chrome-256x256.png'),
+            url_for('static', filename='images/favicon/apple-touch-icon.png'),
+            url_for('static', filename='images/favicon/safari-pinned-tab.svg'),
+            url_for('static', filename='images/favicon/mstile-150x150.png'),
+            url_for('static', filename='images/favicon/browserconfig.xml'),
+            url_for('static', filename='images/favicon/site.webmanifest'))
 
 
 if __name__ == "__main__":

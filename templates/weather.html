@@ -1,78 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-49D9STDEKG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-49D9STDEKG');
-</script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{ title }} времето</title>
+    <meta name="author" content="Камен Караиванов, Вестерос БГ ЕООД" />
 
     <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet"/>
 
-    <script src="/static/scripts/gtag.js"></script>
+    <title>{{ title }} {{ country_code }} времето</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="canonical" href="https://www.predictorian.online/weather.html">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}"/>
+    <link rel="icon" type="image/png" sizes="16x16" href=" {{ url_for('static', filename='images/favicon/favicon-16x16.png') }}"/>
+    <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}"/>
+    <link rel="mask-icon" href="{{ url_for('static', filename='images/favicon/safari-pinned-tab.svg', color='#5bbad5') }}"/>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon/favicon.ico') }}"/>
+
+    <meta name="msapplication-TileColor" content="#00aba9"/>
+    <meta name="msapplication-config" content="static/images/favicon/browserconfig.xml"/>
+    <meta name="theme-color" content="#ffffff"/>
 
 </head>
 
 <body>
-<h1>В град {{ title }} *{{ country_code }}* времето към момента е...</h1>
+<h1>В град {{ title }} [{{ country_code }}] времето към момента е...</h1>
 
 <p>&nbsp;</p>
 
+<p>Очаквани минимални {{ temp_min }}  &#8451; и максимални {{ temp_max }}  &#8451; температури</p>
 <p>{{ status }} при {{ temp }} &#8451;</p>
 <p>Усеща се като {{ feels_like }} &#8451;</p>
-<p>Минимална {{ temp_min }} &#8451; и максимална {{ temp_max }} &#8451;</p>
-<p>измерени температури към момента на справката.</p>
 <p>Вятърът е със скорост от {{ wind }} &#13223;</p>
-<p>Относителна влажност на въздуха {{ humidity }} %</p>
-<p>Въздушно налягане {{ pressure }} hPa</p>
-<p>Надморско равнище {{ sea_level }} метра</p>
+<p>Атмосферно налягане {{ atmos_pressure }} hPa</p>
+
 <p>&nbsp;</p>
+
+<hr>
 
 <form action="/weather">
-
     <label for="city"></label>
-    <input type="text" name="city" id="city" placeholder="Enter a city"/>
 
-    <label for="button_weather_weather"></label>
-    <button type="submit" id="button_weather_weather">Request Weather Conditions Info</button>
+    <input type="text" name="city" id="city"
+                                     placeholder="Enter a city"/>
+
+    <button type="submit">Request Info</button>
 </form>
-<form action="/forecast">
 
-    <label for="latitude"></label>
-    <input type="text" name="latitude" id="latitude" placeholder="Enter latitude"/>
+<hr>
 
-    <label for="longitude"></label>
-    <input type="text" name="longitude" id="longitude" placeholder="Enter longitude"/>
-
-    <label for="button_forecast_weather"></label>
-    <button type="submit" id="button_forecast_weather">Or Request 3 Days Weather Forecast</button>
-
-</form>
 <p>&nbsp;</p>
-<p>Абревиатура на държавата *{{ country_code }}*</p>
+<p>Абревиатура на държавата [{{ country_code }}]</p>
 <p>&nbsp;</p>
+<p>Слънцето изгрява в {{ sunrise }} часа и залязва в {{ sunset }} часа локално време</p>
+<p>Time zone {{ targets_tz }} hours offset by UTC</p>
+<p>Локалното време при обновяването на информацията {{ targets_daytime }}</p>
+
+<hr>
+
 <p><font color="white">Координати в десетични градуси</font><br>
 <font color="green">Географска ширина: {{ geo_latitude }} </font><br>
 <font color="red">Географска дължина: {{ geo_longitude }}</font></p>
-<p>&nbsp;</p>
 
-<!-- Invoke your consent function when a user interacts with your banner -->
-<button onClick="allConsentGranted()">Yes</button>
+<hr>
 
 </body>
 </html>

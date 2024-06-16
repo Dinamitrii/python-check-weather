@@ -1,0 +1,48 @@
+server {
+
+	server_name predictorian.online www.predictorian.online;
+
+	root /home/dinamitrii/python-check-weather;
+	index index.html;
+
+	location / {
+		include uwsgi_params;
+		uwsgi_pass unix:///var/www/weather/weather.sock;
+        }
+
+    location /sitemap {
+    alias /home/dinamitrii/python-check-weather/sitemap/;
+    }
+
+    location /favicon {
+    alias /home/dinamitrii/python-check-weather/images/favicon/;
+    }
+
+
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/www.predictorian.online/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/www.predictorian.online/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+
+
+
+}
+server {
+    if ($host = predictorian.online) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = www.predictorian.online) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+        listen 80;
+        listen [::]:80;
+
+	server_name predictorian.online www.predictorian.online;
+    return 404; # managed by Certbot

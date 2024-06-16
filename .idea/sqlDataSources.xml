@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DdlMappings">
-    <mapping uuid="5ad5dbd0-a697-41b0-a59b-12006f54bd05" name="weather@localhost Mapping">
-      <data-sources db="7f8396a7-6839-44b6-84b5-4eb958df3cca" />
+    <mapping uuid="bab12006-db17-4bca-a91a-1c2f71427449" name="postgres@localhost Mapping">
+      <data-sources db="e7e95fb4-2295-4da0-862b-9f1b98103b5f" ddl="675f0609-8d6f-4fe4-b45b-650f0092df80" />
       <scope>
-        <node kind="database" qname="@" />
+        <node kind="database" qname="postgres">
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="information_schema" />
+            <name qname="pg_catalog" />
+            <name qname="public" />
+          </node>
+        </node>
       </scope>
     </mapping>
+  </component>
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="675f0609-8d6f-4fe4-b45b-650f0092df80" />
+          <option name="name" value="postgres@localhost (DDL)" />
+          <option name="dbmsName" value="POSTGRES" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/venv/Lib/site-packages/flask/json" />
+            </array>
+          </option>
+          <option name="outLayout" value="File per object by schema.groovy" />
+        </State>
+      </list>
+    </option>
   </component>
 </project>

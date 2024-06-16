@@ -1,62 +1,43 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="bg">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-49D9STDEKG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-49D9STDEKG');
-</script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Get Weather Conditions</title>
-
+    <meta name="author" content="Камен Караиванов, Вестерос БГ ЕООД" />
 
     <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet"/>
 
-    <script src="/static/scripts/gtag.js"></script>
+    <title>Проверете времето в избран от вас град</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="canonical" href="https://www.predictorian.online/index.html">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}"/>
+    <link rel="icon" type="image/png" sizes="16x16" href=" {{ url_for('static', filename='images/favicon/favicon-16x16.png') }}"/>
+    <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}"/>
+    <link rel="mask-icon" href="{{ url_for('static', filename='images/favicon/safari-pinned-tab.svg', color='#5bbad5') }}"/>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon/favicon.ico') }}"/>
+
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="static/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
 </head>
 
 <body>
-<h1>Get Weather Conditions And Forecast Info</h1>
+    <h1>Get Weather Conditions</h1>
+    
+    <form action="/weather">
+        <label for="city"></label>
 
-<form action="/weather">
-    <label for="city"></label>
+        <input type="text" name="city" id="city"
+                                         placeholder="Enter a city" />
 
-    <input type="text" name="city" id="city"
-           placeholder="Enter a city"/>
-
-    <button type="submit">Request Weather Conditions Info</button>
-</form>
-
-<form action="/forecast">
-    <label for="latitude"></label>
-
-    <input type="text" name="latitude" id="latitude" placeholder="Enter latitude"/>
-
-
-    <label for="longitude"></label>
-
-    <input type="text" name="longitude" id="longitude" placeholder="Enter longitude"/>
-
-    <button type="submit">Request 3 Days Forecast</button>
-</form>
-
-<!-- Invoke your consent function when a user interacts with your banner -->
-<button onClick="allConsentGranted()">Yes</button>
+        <button type="submit">Request Info</button>
+    </form>
 
 </body>
-
 </html>
