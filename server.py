@@ -29,7 +29,7 @@ def get_weather():
     if weather_data["cod"] != 200:
         return render_template("city-not-found.html")
 
-    # If city is found by API
+    # If city is found by API and some enhancements implemented
     sunrise_timestamp = weather_data['sys']['sunrise']
     sunset_timestamp = weather_data['sys']['sunset']
     targets_dt_timestamp = weather_data["dt"]
@@ -38,6 +38,7 @@ def get_weather():
     sunset_date = datetime.fromtimestamp(sunset_timestamp)
     targets_date = datetime.fromtimestamp(targets_dt_timestamp)
     targets_tz_hrf = int(targets_tz / 3600)
+
     return render_template(
         "weather.html",
         title=weather_data["name"],
