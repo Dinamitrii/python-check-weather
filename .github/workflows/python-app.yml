@@ -20,6 +20,10 @@ jobs:
     steps:
     
     - uses: actions/checkout@v4
+
+    - name: Attest Build Provenance
+    - uses: actions/attest-build-provenance@v1.3.2
+            
     
     - name: Set up Python 3.x
       with:
@@ -36,4 +40,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest
+        pytest           
