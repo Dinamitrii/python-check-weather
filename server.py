@@ -4,6 +4,7 @@ from weather import get_current_weather
 from waitress import serve
 from dotenv import load_dotenv
 
+
 load_dotenv()
 
 app = Flask(__name__)
