@@ -38,6 +38,7 @@ def get_weather():
     sunset_date = datetime.fromtimestamp(sunset_timestamp)
     targets_date = datetime.fromtimestamp(targets_dt_timestamp)
     targets_tz_hrf = int(targets_tz / 3600)
+
     return render_template(
         "weather.html",
         title=weather_data["name"],
