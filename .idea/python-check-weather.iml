@@ -17,6 +17,7 @@
   </component>
   <component name="PackageRequirementsSettings">
     <option name="removeUnused" value="true" />
+    <option name="modifyBaseFiles" value="true" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
