@@ -1,7 +1,11 @@
 from flask import Flask, render_template, request, url_for
 from datetime import datetime
+
+
+from qr_code import generate
 from weather import get_current_weather
 from waitress import serve
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -12,11 +16,13 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("index.html")
+
+    return render_template("index.html"), url_for('static', filename='qr_link.png')
 
 
 @app.route("/weather")
 def get_weather():
+
     city = request.args.get("city")
 
     # Check for empty strings or string with only spaces
@@ -57,6 +63,7 @@ def get_weather():
         targets_tz=targets_tz_hrf,
         geo_latitude=weather_data["coord"]["lat"],
         geo_longitude=weather_data["coord"]["lon"],
+        qr_to_link=generate('URL'),
     )
 
 
