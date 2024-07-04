@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request, url_for
 from datetime import datetime
-
-
 from qr_code import generate
 from weather import get_current_weather
 from waitress import serve
@@ -16,8 +14,11 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index")
 def index():
+    link = url_for('templates', filename='index.html')
+    generate(link)
+    qr_code = url_for('static', filename='images/qr/qr_code.png')
 
-    return render_template("index.html"), url_for('static', filename='qr_link.png')
+    return render_template("index.html"), link, qr_code
 
 
 @app.route("/weather")
@@ -33,7 +34,9 @@ def get_weather():
 
     # If city not found by API
     if weather_data["cod"] != 200:
-        return render_template("city-not-found.html")
+        link = url_for('templates', filename='city-not-found.html')
+        qr_code = url_for('static', filename='images/qr/qr_code.png')
+        return render_template("city-not-found.html"), link, qr_code
 
     # If city is found by API
     sunrise_timestamp = weather_data['sys']['sunrise']
@@ -44,6 +47,9 @@ def get_weather():
     sunset_date = datetime.fromtimestamp(sunset_timestamp)
     targets_date = datetime.fromtimestamp(targets_dt_timestamp)
     targets_tz_hrf = int(targets_tz / 3600)
+
+    link = url_for('templates', filename='weather.html')
+    qr_code = url_for('static', filename='images/qr/qr_code.png')
 
     return render_template(
         "weather.html",
@@ -63,8 +69,9 @@ def get_weather():
         targets_tz=targets_tz_hrf,
         geo_latitude=weather_data["coord"]["lat"],
         geo_longitude=weather_data["coord"]["lon"],
-        qr_to_link=generate('URL'),
-    )
+
+        qr_to_link='qr_code.png',
+    ), link, qr_code
 
 
 @app.route("/favicon.ico")
