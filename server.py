@@ -15,7 +15,7 @@ app = Flask(__name__)
 @app.route("/index")
 def index():
 
-    link = "/index"
+    link = "/index.html"
     generate(link)
     link = url_for('static', filename='images/qr/qr_code.png')
 
@@ -33,7 +33,7 @@ def get_weather():
 
     weather_data = get_current_weather(city)
 
-    link = "/weather"
+    link = "/weather.html?city=" + city
     generate(link)
     link = url_for('static', filename='images/qr/qr_code.png')
 
