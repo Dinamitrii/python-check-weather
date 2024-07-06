@@ -14,11 +14,11 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index")
 def index():
-    link = url_for('templates', filename='index.html')
+    link = "/index.html"
     generate(link)
     qr_code = url_for('static', filename='images/qr/qr_code.png')
 
-    return render_template("index.html"), link, qr_code
+    return render_template("index.html"), qr_code
 
 
 @app.route("/weather")
@@ -70,8 +70,8 @@ def get_weather():
         geo_latitude=weather_data["coord"]["lat"],
         geo_longitude=weather_data["coord"]["lon"],
 
-        qr_to_link='qr_code.png',
-    ), link, qr_code
+        qr_to_link=qr_code,
+    ),
 
 
 @app.route("/favicon.ico")
