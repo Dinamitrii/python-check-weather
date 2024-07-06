@@ -19,7 +19,7 @@ def index():
     generate(link)
     link = url_for('static', filename='images/qr/qr_code.png')
 
-    return render_template("index.html")
+    return render_template("index.html"), link
 
 
 @app.route("/weather")
@@ -42,9 +42,9 @@ def get_weather():
 
         link = "/weather"
         generate(link)
-        link = url_for('templates', filename='city-not-found.html')
+        link = url_for('static', filename='images/qr/qr_code.png')
 
-        return render_template("city-not-found.html")
+        return render_template("city-not-found.html"), link
 
     # If city is found by API
     sunrise_timestamp = weather_data['sys']['sunrise']
@@ -55,7 +55,7 @@ def get_weather():
     sunset_date = datetime.fromtimestamp(sunset_timestamp)
     targets_date = datetime.fromtimestamp(targets_dt_timestamp)
     targets_tz_hrf = int(targets_tz / 3600)
-
+    page_link = link
     return render_template(
         "weather.html",
         title=weather_data["name"],
@@ -75,8 +75,8 @@ def get_weather():
         geo_latitude=weather_data["coord"]["lat"],
         geo_longitude=weather_data["coord"]["lon"],
 
-        qr_to_link=link,
-    ),
+        qr_to_link=page_link,
+    )
 
 
 @app.route("/favicon.ico")
