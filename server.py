@@ -14,11 +14,12 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index")
 def index():
-    link = "/index.html"
-    generate(link)
-    qr_code = url_for('static', filename='images/qr/qr_code.png')
 
-    return render_template("index.html"), qr_code
+    link = "/index"
+    generate(link)
+    link = url_for('static', filename='images/qr/qr_code.png')
+
+    return render_template("index.html")
 
 
 @app.route("/weather")
@@ -32,11 +33,18 @@ def get_weather():
 
     weather_data = get_current_weather(city)
 
+    link = "/weather"
+    generate(link)
+    link = url_for('static', filename='images/qr/qr_code.png')
+
     # If city not found by API
     if weather_data["cod"] != 200:
+
+        link = "/weather"
+        generate(link)
         link = url_for('templates', filename='city-not-found.html')
-        qr_code = url_for('static', filename='images/qr/qr_code.png')
-        return render_template("city-not-found.html"), link, qr_code
+
+        return render_template("city-not-found.html")
 
     # If city is found by API
     sunrise_timestamp = weather_data['sys']['sunrise']
@@ -47,9 +55,6 @@ def get_weather():
     sunset_date = datetime.fromtimestamp(sunset_timestamp)
     targets_date = datetime.fromtimestamp(targets_dt_timestamp)
     targets_tz_hrf = int(targets_tz / 3600)
-
-    link = url_for('templates', filename='weather.html')
-    qr_code = url_for('static', filename='images/qr/qr_code.png')
 
     return render_template(
         "weather.html",
@@ -70,7 +75,7 @@ def get_weather():
         geo_latitude=weather_data["coord"]["lat"],
         geo_longitude=weather_data["coord"]["lon"],
 
-        qr_to_link=qr_code,
+        qr_to_link=link,
     ),
 
 
