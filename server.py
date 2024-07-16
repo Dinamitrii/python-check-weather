@@ -15,9 +15,8 @@ app = Flask(__name__)
 @app.route("/index")
 def index():
 
-    link = "/index.html"
-    generate(link)
-    link = url_for('static', filename='images/qr/qr_code.png')
+    generate("www.predictorian.online/index")
+    link = 'images/qr/qr_code.png'
 
     return render_template("index.html"), link
 
@@ -33,16 +32,16 @@ def get_weather():
 
     weather_data = get_current_weather(city)
 
-    link = "/weather.html?city=" + city
+    link = weather_data
     generate(link)
-    link = url_for('static', filename='images/qr/qr_code.png')
+    link = 'images/qr/qr_code.png'
 
     # If city not found by API
     if weather_data["cod"] != 200:
 
-        link = "/weather"
+        link = weather_data
         generate(link)
-        link = url_for('static', filename='images/qr/qr_code.png')
+        link = 'images/qr/qr_code.png'
 
         return render_template("city-not-found.html"), link
 
@@ -55,7 +54,7 @@ def get_weather():
     sunset_date = datetime.fromtimestamp(sunset_timestamp)
     targets_date = datetime.fromtimestamp(targets_dt_timestamp)
     targets_tz_hrf = int(targets_tz / 3600)
-    page_link = link
+
     return render_template(
         "weather.html",
         title=weather_data["name"],
@@ -73,10 +72,8 @@ def get_weather():
         targets_daytime=targets_date.isoformat(),
         targets_tz=targets_tz_hrf,
         geo_latitude=weather_data["coord"]["lat"],
-        geo_longitude=weather_data["coord"]["lon"],
-
-        qr_to_link=page_link,
-    )
+        geo_longitude=weather_data["coord"]["lon"]
+    ), link
 
 
 @app.route("/favicon.ico")
