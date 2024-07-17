@@ -6,7 +6,7 @@ import requests
 load_dotenv()
 
 
-def forecast_info():
+def forecast_info(x, y):
 
     forecast_url = (
         f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&appid={os.getenv("API_KEY")}&units"
@@ -21,7 +21,7 @@ if __name__ == '__main__':
     lat = input("\nPlease enter a latitude: ")
     lon = input("\nPlease enter a longitude: ")
 
-    forecast_data = forecast_info()
+    forecast_data = forecast_info(x=lon, y=lat)
 
     print("\n")
     pprint(forecast_data)
