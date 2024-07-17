@@ -16,11 +16,26 @@ def forecast_info():
 
 
 if __name__ == '__main__':
+    
     print("\n*** Get Weather Forecast Info ***\n")
 
     lat = input("\nPlease enter a latitude: ")
     lon = input("\nPlease enter a longitude: ")
 
+     # Check for empty strings or string with only spaces
+    if not bool(lat.strip()):
+        lat = ""
+     # Check for empty strings or string with only spaces
+    if not bool(lon.strip()):
+        lon = ""
+
+    # weather_data = get_current_weather(city)
+
+    # print("\n")
+    # pprint(weather_data)
+
+
+    
     forecast_data = forecast_info()
 
     print("\n")
