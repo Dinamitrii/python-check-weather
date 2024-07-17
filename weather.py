@@ -6,8 +6,8 @@ import os
 load_dotenv()
 
 
-def get_current_weather(city=""):
-    request_url = (f'https://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={city}&lang=bg'
+def get_current_weather(town=""):
+    request_url = (f'https://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={town}&lang=bg'
                    f'&units=metric')
 
     return requests.get(request_url).json()
