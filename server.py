@@ -2,8 +2,8 @@ from flask import Flask, render_template, request, url_for
 from datetime import datetime
 from qr_code import generate
 from weather import get_current_weather
+from forecast import forecast_info
 from waitress import serve
-
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -14,7 +14,6 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index")
 def index():
-
     generate("www.predictorian.online/index")
     link = 'images/qr/qr_code.png'
 
@@ -23,7 +22,6 @@ def index():
 
 @app.route("/weather")
 def get_weather():
-
     city = request.args.get("city")
 
     # Check for empty strings or string with only spaces
@@ -38,7 +36,6 @@ def get_weather():
 
     # If city not found by API
     if weather_data["cod"] != 200:
-
         link = weather_data
         generate(link)
         link = 'images/qr/qr_code.png'
@@ -53,7 +50,7 @@ def get_weather():
     sunrise_date = datetime.fromtimestamp(sunrise_timestamp)
     sunset_date = datetime.fromtimestamp(sunset_timestamp)
     targets_date = datetime.fromtimestamp(targets_dt_timestamp)
-    targets_tz_hrf = int(targets_tz / 3600)
+    targets_tz_human_readable_format = int(targets_tz / 3600)
 
     return render_template(
         "weather.html",
@@ -70,10 +67,16 @@ def get_weather():
         sunrise=sunrise_date.isoformat(),
         sunset=sunset_date.isoformat(),
         targets_daytime=targets_date.isoformat(),
-        targets_tz=targets_tz_hrf,
+        targets_tz=targets_tz_human_readable_format,
         geo_latitude=weather_data["coord"]["lat"],
         geo_longitude=weather_data["coord"]["lon"]
     ), link
+
+
+@app.route("/forecast")
+def get_forecast():
+
+    return render_template("forecast.html")
 
 
 @app.route("/favicon.ico")
