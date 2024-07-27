@@ -40,24 +40,8 @@
     </form>
 
 
-
-    <h1>Get Forecast Info</h1>
-
-    <form action="/forecast">
-        <label for="lat"></label>
-
-        <input type="text" name="lat" id="lat"
-                                         placeholder="Enter a latitude" />
-
-        <label for="lon"></label>
-
-        <input type="text" name="lon" id="lon"
-                                         placeholder="Enter a longitude" />
-
-
-        <button type="submit">Request Forecast Info</button>
-    </form>
-
-
 </body>
+<footer>
+     <img src= "{{url_for('static', filename='images/qr/qr_code.png')}}"  alt="qr_code_on_page"/>
+</footer>
 </html>
