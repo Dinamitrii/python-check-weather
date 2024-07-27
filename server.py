@@ -15,7 +15,7 @@ app = Flask(__name__)
 def index():
     link_to_qr_code("www.predictorian.online/index")
 
-    return render_template("index.html"), url_for('static', filename='images/qr/qr_code.png')
+    return render_template("index.html")
 
 
 @app.route("/weather")
@@ -34,7 +34,7 @@ def get_weather():
     if weather_data["cod"] != 200:
         link_to_qr_code("www.predictorian.online/weather" + "?city=" + city)
 
-        return render_template("city-not-found.html"), url_for('static', filename='images/qr/qr_code.png')
+        return render_template("city-not-found.html")
 
     # If city is found by API
     sunrise_timestamp = weather_data['sys']['sunrise']
@@ -66,7 +66,7 @@ def get_weather():
         targets_tz=targets_tz_human_readable_format,
         geo_latitude=weather_data["coord"]["lat"],
         geo_longitude=weather_data["coord"]["lon"]
-    ), url_for('static', filename='images/qr/qr_code.png')
+    )
 
 
 # @app.route("/forecast")
