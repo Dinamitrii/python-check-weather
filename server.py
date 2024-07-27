@@ -1,10 +1,9 @@
 from flask import Flask, render_template, request, url_for
 from datetime import datetime
-import segno
 from weather import get_current_weather
 from waitress import serve
+import segno
 from dotenv import load_dotenv
-
 
 load_dotenv()
 
@@ -14,7 +13,10 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    generate("www.predictorian.online/index")
+    link = 'images/qr/qr_code.png'
+
+    return render_template("index.html"), link
 
 
 @app.route("/weather")
@@ -27,11 +29,19 @@ def get_weather():
 
     weather_data = get_current_weather(city)
 
+    link = weather_data
+    generate(link)
+    link = 'images/qr/qr_code.png'
+
     # If city not found by API
     if weather_data["cod"] != 200:
-        return render_template("city-not-found.html")
+        link = weather_data
+        generate(link)
+        link = 'images/qr/qr_code.png'
 
-    # If city is found by API and some enhancements implemented
+        return render_template("city-not-found.html"), link
+
+    # If city is found by API
     sunrise_timestamp = weather_data['sys']['sunrise']
     sunset_timestamp = weather_data['sys']['sunset']
     targets_dt_timestamp = weather_data["dt"]
@@ -39,7 +49,7 @@ def get_weather():
     sunrise_date = datetime.fromtimestamp(sunrise_timestamp)
     sunset_date = datetime.fromtimestamp(sunset_timestamp)
     targets_date = datetime.fromtimestamp(targets_dt_timestamp)
-    targets_tz_hrf = int(targets_tz / 3600)
+    targets_tz_human_readable_format = int(targets_tz / 3600)
 
     return render_template(
         "weather.html",
@@ -56,10 +66,16 @@ def get_weather():
         sunrise=sunrise_date.isoformat(),
         sunset=sunset_date.isoformat(),
         targets_daytime=targets_date.isoformat(),
-        targets_tz=targets_tz_hrf,
+        targets_tz=targets_tz_human_readable_format,
         geo_latitude=weather_data["coord"]["lat"],
-        geo_longitude=weather_data["coord"]["lon"],
-    )
+        geo_longitude=weather_data["coord"]["lon"]
+    ), link
+
+
+@app.route("/forecast")
+def get_forecast():
+
+    return render_template("forecast.html")
 
 
 @app.route("/favicon.ico")
