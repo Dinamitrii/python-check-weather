@@ -13,7 +13,7 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index")
 def index():
-    link_to_qr_code("www.predictorian.online/index")
+    link_to_qr_code("https://www.predictorian.online/index")
 
     return render_template("index.html")
 
@@ -28,11 +28,11 @@ def get_weather():
 
     weather_data = get_current_weather(city)
 
-    link_to_qr_code("www.predictorian.online/weather" + "?city=" + city)
+    link_to_qr_code("https://www.predictorian.online/weather" + "?city=" + city)
 
     # If city not found by API
     if weather_data["cod"] != 200:
-        link_to_qr_code("www.predictorian.online/weather" + "?city=" + city)
+        link_to_qr_code("https://www.predictorian.online/weather" + "?city=" + city)
 
         return render_template("city-not-found.html")
 
@@ -46,7 +46,7 @@ def get_weather():
     targets_date = datetime.fromtimestamp(targets_dt_timestamp)
     targets_tz_human_readable_format = int(targets_tz / 3600)
 
-    link_to_qr_code("www.predictorian.online/weather" + "?city=" + city)
+    link_to_qr_code("https://www.predictorian.online/weather" + "?city=" + city)
 
     return render_template(
         "weather.html",
