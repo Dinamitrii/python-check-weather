@@ -6476,3 +6476,82 @@ spawned uWSGI worker 4 (pid: 1094, cores: 2)
 {address space usage: 161632256 bytes/154MB} {rss usage: 36950016 bytes/35MB} [pid: 1094|app: 0|req: 23/93] 149.62.206.201 () {58 vars in 1060 bytes} [Thu Aug  1 16:41:13 2024] GET /static/images/favicon/apple-touch-icon.png => generated 73120 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 7 headers in 280 bytes (0 switches on core 0)
 {address space usage: 161775616 bytes/154MB} {rss usage: 37269504 bytes/35MB} [pid: 1092|app: 0|req: 23/94] 149.62.206.201 () {58 vars in 1054 bytes} [Thu Aug  1 16:41:13 2024] GET /static/images/favicon/favicon-32x32.png => generated 3043 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 275 bytes (0 switches on core 0)
 {address space usage: 161775616 bytes/154MB} {rss usage: 37269504 bytes/35MB} [pid: 1092|app: 0|req: 24/95] 149.62.206.201 () {58 vars in 991 bytes} [Thu Aug  1 16:41:13 2024] GET /static/images/favicon/site.webmanifest => generated 263 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 288 bytes (0 switches on core 1)
+{address space usage: 161632256 bytes/154MB} {rss usage: 36950016 bytes/35MB} [pid: 1094|app: 0|req: 24/96] 213.226.14.58 () {56 vars in 987 bytes} [Thu Aug  1 16:46:25 2024] GET / => generated 1642 bytes in 54 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 162332672 bytes/154MB} {rss usage: 36548608 bytes/34MB} [pid: 1089|app: 0|req: 25/97] 213.226.14.58 () {56 vars in 961 bytes} [Thu Aug  1 16:46:26 2024] GET /static/styles/style.css => generated 360 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 279 bytes (0 switches on core 1)
+{address space usage: 162332672 bytes/154MB} {rss usage: 36548608 bytes/34MB} [pid: 1089|app: 0|req: 26/98] 213.226.14.58 () {56 vars in 1017 bytes} [Thu Aug  1 16:46:26 2024] GET /static/images/qr/qr_code.png => generated 307 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 267 bytes (0 switches on core 0)
+{address space usage: 159772672 bytes/152MB} {rss usage: 30244864 bytes/28MB} [pid: 1090|app: 0|req: 25/99] 213.226.14.58 () {56 vars in 1039 bytes} [Thu Aug  1 16:46:27 2024] GET /static/images/favicon/favicon-32x32.png => generated 3043 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 275 bytes (0 switches on core 0)
+{address space usage: 159772672 bytes/152MB} {rss usage: 30244864 bytes/28MB} [pid: 1090|app: 0|req: 26/100] 213.226.14.58 () {56 vars in 1045 bytes} [Thu Aug  1 16:46:27 2024] GET /static/images/favicon/apple-touch-icon.png => generated 73120 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 280 bytes (0 switches on core 1)
+{address space usage: 161632256 bytes/154MB} {rss usage: 36950016 bytes/35MB} [pid: 1094|app: 0|req: 25/101] 213.226.14.58 () {56 vars in 976 bytes} [Thu Aug  1 16:46:27 2024] GET /static/images/favicon/site.webmanifest => generated 263 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 288 bytes (0 switches on core 0)
+{address space usage: 161775616 bytes/154MB} {rss usage: 37269504 bytes/35MB} [pid: 1092|app: 0|req: 25/102] 149.62.208.180 () {56 vars in 1047 bytes} [Thu Aug  1 16:46:38 2024] GET / => generated 1642 bytes in 55 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 161775616 bytes/154MB} {rss usage: 37269504 bytes/35MB} [pid: 1092|app: 0|req: 26/103] 149.62.208.180 () {54 vars in 963 bytes} [Thu Aug  1 16:46:38 2024] GET /static/styles/style.css => generated 360 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 279 bytes (0 switches on core 1)
+{address space usage: 161632256 bytes/154MB} {rss usage: 36950016 bytes/35MB} [pid: 1094|app: 0|req: 26/104] 149.62.208.180 () {54 vars in 1019 bytes} [Thu Aug  1 16:46:38 2024] GET /static/images/qr/qr_code.png => generated 307 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 267 bytes (0 switches on core 1)
+{address space usage: 162332672 bytes/154MB} {rss usage: 36548608 bytes/34MB} [pid: 1089|app: 0|req: 27/105] 149.62.208.180 () {54 vars in 1029 bytes} [Thu Aug  1 16:46:38 2024] GET /static/images/favicon/favicon.ico => generated 15406 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 1)
+{address space usage: 162332672 bytes/154MB} {rss usage: 36548608 bytes/34MB} [pid: 1089|app: 0|req: 28/106] 149.62.208.180 () {54 vars in 978 bytes} [Thu Aug  1 16:46:39 2024] GET /static/images/favicon/site.webmanifest => generated 263 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 288 bytes (0 switches on core 0)
+{address space usage: 159772672 bytes/152MB} {rss usage: 30244864 bytes/28MB} [pid: 1090|app: 0|req: 27/107] 149.62.208.180 () {54 vars in 1015 bytes} [Thu Aug  1 16:46:39 2024] GET /android-chrome-192x192.png => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+{address space usage: 159772672 bytes/152MB} {rss usage: 30244864 bytes/28MB} [pid: 1090|app: 0|req: 28/108] 149.62.208.180 () {54 vars in 1015 bytes} [Thu Aug  1 16:46:39 2024] GET /android-chrome-512x512.png => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 161812480 bytes/154MB} {rss usage: 36950016 bytes/35MB} [pid: 1094|app: 0|req: 27/109] 149.62.208.180 () {58 vars in 1135 bytes} [Thu Aug  1 16:46:44 2024] GET /weather?city=Vienna => generated 2658 bytes in 315 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 161775616 bytes/154MB} {rss usage: 37269504 bytes/35MB} [pid: 1092|app: 0|req: 27/110] 149.62.208.180 () {58 vars in 1094 bytes} [Thu Aug  1 16:46:45 2024] GET /static/styles/style.css => generated 0 bytes in 2 msecs (HTTP/1.1 304) 4 headers in 183 bytes (0 switches on core 0)
+{address space usage: 161775616 bytes/154MB} {rss usage: 37269504 bytes/35MB} [pid: 1092|app: 0|req: 28/111] 149.62.208.180 () {58 vars in 1150 bytes} [Thu Aug  1 16:46:45 2024] GET /static/images/qr/qr_code.png => generated 308 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 267 bytes (0 switches on core 1)
+{address space usage: 161812480 bytes/154MB} {rss usage: 36950016 bytes/35MB} [pid: 1094|app: 0|req: 28/112] 149.62.208.180 () {58 vars in 1109 bytes} [Thu Aug  1 16:46:45 2024] GET /static/images/favicon/site.webmanifest => generated 0 bytes in 3 msecs (HTTP/1.1 304) 4 headers in 190 bytes (0 switches on core 1)
+{address space usage: 162332672 bytes/154MB} {rss usage: 36548608 bytes/34MB} [pid: 1089|app: 0|req: 29/113] 149.62.208.180 () {54 vars in 1066 bytes} [Thu Aug  1 16:46:45 2024] GET /static/images/favicon/apple-touch-icon.png => generated 73120 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 280 bytes (0 switches on core 1)
+{address space usage: 162332672 bytes/154MB} {rss usage: 36548608 bytes/34MB} [pid: 1089|app: 0|req: 30/114] 213.226.14.58 () {60 vars in 1098 bytes} [Thu Aug  1 16:47:07 2024] GET /weather?city=Plovdiv+ => generated 2636 bytes in 494 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 159772672 bytes/152MB} {rss usage: 30244864 bytes/28MB} [pid: 1090|app: 0|req: 30/115] 213.226.14.58 () {60 vars in 1094 bytes} [Thu Aug  1 16:47:08 2024] GET /static/styles/style.css => generated 0 bytes in 4 msecs (HTTP/1.1 304) 4 headers in 183 bytes (0 switches on core 0)
+{address space usage: 159772672 bytes/152MB} {rss usage: 30244864 bytes/28MB} [pid: 1090|app: 0|req: 30/116] 213.226.14.58 () {60 vars in 1150 bytes} [Thu Aug  1 16:47:08 2024] GET /static/images/qr/qr_code.png => generated 306 bytes in 5 msecs via sendfile() (HTTP/1.1 200) 7 headers in 267 bytes (0 switches on core 1)
+{address space usage: 161812480 bytes/154MB} {rss usage: 36950016 bytes/35MB} [pid: 1094|app: 0|req: 29/117] 213.226.14.58 () {60 vars in 1109 bytes} [Thu Aug  1 16:47:08 2024] GET /static/images/favicon/site.webmanifest => generated 0 bytes in 3 msecs (HTTP/1.1 304) 4 headers in 190 bytes (0 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+[deadlock-detector] a process holding a robust mutex died. recovering...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.24 (64bit) on [Thu Aug  1 16:48:49 2024] ***
+compiled with version: 11.4.0 on 04 April 2024 12:41:03
+os: Linux-5.15.0-117-generic #127-Ubuntu SMP Fri Jul 5 20:13:28 UTC 2024
+nodename: landscape.predictorian.online
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22969
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Jul 29 2024, 16:56:48) [GCC 11.4.0]
+Python main interpreter initialized at 0x55f5aaef5b30
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 12 seconds on interpreter 0x55f5aaef5b30 pid: 755 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 755)
+spawned uWSGI worker 1 (pid: 1044, cores: 2)
+spawned uWSGI worker 2 (pid: 1045, cores: 2)
+spawned uWSGI worker 3 (pid: 1047, cores: 2)
+spawned uWSGI worker 4 (pid: 1048, cores: 2)
+{address space usage: 159399936 bytes/152MB} {rss usage: 28876800 bytes/27MB} [pid: 1044|app: 0|req: 1/1] 77.78.9.211 () {58 vars in 1075 bytes} [Thu Aug  1 16:49:04 2024] GET / => generated 1642 bytes in 66 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 159354880 bytes/151MB} {rss usage: 28958720 bytes/27MB} [pid: 1048|app: 0|req: 1/2] 77.78.9.211 () {54 vars in 1016 bytes} [Thu Aug  1 16:49:04 2024] GET /static/images/qr/qr_code.png => generated 307 bytes in 64 msecs via sendfile() (HTTP/1.1 200) 7 headers in 267 bytes (0 switches on core 0)
+{address space usage: 159354880 bytes/151MB} {rss usage: 28958720 bytes/27MB} [pid: 1047|app: 0|req: 1/3] 77.78.9.211 () {54 vars in 960 bytes} [Thu Aug  1 16:49:04 2024] GET /static/styles/style.css => generated 360 bytes in 77 msecs via sendfile() (HTTP/1.1 200) 7 headers in 279 bytes (0 switches on core 0)
+{address space usage: 159354880 bytes/151MB} {rss usage: 28958720 bytes/27MB} [pid: 1045|app: 0|req: 1/4] 77.78.9.211 () {54 vars in 1026 bytes} [Thu Aug  1 16:49:05 2024] GET /static/images/favicon/favicon.ico => generated 15406 bytes in 36 msecs via sendfile() (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+{address space usage: 159354880 bytes/151MB} {rss usage: 28958720 bytes/27MB} [pid: 1047|app: 0|req: 2/5] 77.78.9.211 () {54 vars in 975 bytes} [Thu Aug  1 16:49:05 2024] GET /static/images/favicon/site.webmanifest => generated 263 bytes in 10 msecs via sendfile() (HTTP/1.1 200) 7 headers in 288 bytes (0 switches on core 1)
+{address space usage: 160428032 bytes/152MB} {rss usage: 35708928 bytes/34MB} [pid: 1048|app: 0|req: 2/6] 77.78.9.211 () {58 vars in 1128 bytes} [Thu Aug  1 16:49:11 2024] GET /weather?city=Ruse => generated 2634 bytes in 494 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 159354880 bytes/151MB} {rss usage: 29167616 bytes/27MB} [pid: 1045|app: 0|req: 2/7] 77.78.9.211 () {58 vars in 1089 bytes} [Thu Aug  1 16:49:12 2024] GET /static/styles/style.css => generated 0 bytes in 4 msecs (HTTP/1.1 304) 4 headers in 183 bytes (0 switches on core 1)
+{address space usage: 159399936 bytes/152MB} {rss usage: 29818880 bytes/28MB} [pid: 1044|app: 0|req: 2/8] 77.78.9.211 () {58 vars in 1145 bytes} [Thu Aug  1 16:49:12 2024] GET /static/images/qr/qr_code.png => generated 303 bytes in 32 msecs via sendfile() (HTTP/1.1 200) 7 headers in 266 bytes (0 switches on core 1)
+{address space usage: 159399936 bytes/152MB} {rss usage: 30031872 bytes/28MB} [pid: 1044|app: 0|req: 3/9] 77.78.9.211 () {58 vars in 1104 bytes} [Thu Aug  1 16:49:12 2024] GET /static/images/favicon/site.webmanifest => generated 0 bytes in 3 msecs (HTTP/1.1 304) 4 headers in 190 bytes (0 switches on core 0)
+{address space usage: 160763904 bytes/153MB} {rss usage: 35975168 bytes/34MB} [pid: 1048|app: 0|req: 3/10] 46.10.204.54 () {56 vars in 1024 bytes} [Thu Aug  1 16:49:13 2024] GET / => generated 1642 bytes in 78 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 159354880 bytes/151MB} {rss usage: 29167616 bytes/27MB} [pid: 1045|app: 0|req: 3/11] 46.10.204.54 () {54 vars in 996 bytes} [Thu Aug  1 16:49:13 2024] GET /static/images/qr/qr_code.png => generated 307 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 7 headers in 266 bytes (0 switches on core 0)
+{address space usage: 159354880 bytes/151MB} {rss usage: 28958720 bytes/27MB} [pid: 1047|app: 0|req: 3/12] 46.10.204.54 () {54 vars in 940 bytes} [Thu Aug  1 16:49:13 2024] GET /static/styles/style.css => generated 360 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 279 bytes (0 switches on core 0)
+{address space usage: 159354880 bytes/151MB} {rss usage: 28958720 bytes/27MB} [pid: 1047|app: 0|req: 4/13] 46.10.204.54 () {54 vars in 1006 bytes} [Thu Aug  1 16:49:13 2024] GET /static/images/favicon/favicon.ico => generated 15406 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 1)
+{address space usage: 160763904 bytes/153MB} {rss usage: 35975168 bytes/34MB} [pid: 1048|app: 0|req: 4/14] 46.10.204.54 () {54 vars in 955 bytes} [Thu Aug  1 16:49:13 2024] GET /static/images/favicon/site.webmanifest => generated 263 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 288 bytes (0 switches on core 1)
+{address space usage: 160428032 bytes/152MB} {rss usage: 35753984 bytes/34MB} [pid: 1045|app: 0|req: 4/15] 46.10.204.54 () {58 vars in 1100 bytes} [Thu Aug  1 16:49:15 2024] GET /weather?city= => generated 2638 bytes in 449 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 159399936 bytes/152MB} {rss usage: 30031872 bytes/28MB} [pid: 1044|app: 0|req: 5/16] 46.10.204.54 () {58 vars in 1065 bytes} [Thu Aug  1 16:49:15 2024] GET /static/styles/style.css => generated 0 bytes in 4 msecs (HTTP/1.1 304) 4 headers in 183 bytes (0 switches on core 1)
+{address space usage: 159399936 bytes/152MB} {rss usage: 30031872 bytes/28MB} [pid: 1044|app: 0|req: 5/17] 46.10.204.54 () {58 vars in 1120 bytes} [Thu Aug  1 16:49:15 2024] GET /static/images/qr/qr_code.png => generated 304 bytes in 6 msecs via sendfile() (HTTP/1.1 200) 7 headers in 267 bytes (0 switches on core 0)
+{address space usage: 160763904 bytes/153MB} {rss usage: 35975168 bytes/34MB} [pid: 1048|app: 0|req: 5/18] 46.10.204.54 () {58 vars in 1080 bytes} [Thu Aug  1 16:49:15 2024] GET /static/images/favicon/site.webmanifest => generated 0 bytes in 1 msecs (HTTP/1.1 304) 4 headers in 190 bytes (0 switches on core 0)
