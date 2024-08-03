@@ -7294,3 +7294,109 @@ spawned uWSGI worker 4 (pid: 1196, cores: 2)
 {address space usage: 159399936 bytes/152MB} {rss usage: 29200384 bytes/27MB} [pid: 1196|app: 0|req: 2/7] 207.154.208.64 () {36 vars in 545 bytes} [Sat Aug  3 09:29:06 2024] GET /teorema505?t=1 => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
 {address space usage: 159399936 bytes/152MB} {rss usage: 29179904 bytes/27MB} [pid: 1195|app: 0|req: 2/8] 83.97.73.245 () {36 vars in 576 bytes} [Sat Aug  3 09:34:11 2024] GET /actuator/gateway/routes => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
 >>>>>>> b1ded1a (Tunes in fact just fine)
+*** Starting uWSGI 2.0.26 (64bit) on [Sat Aug  3 09:38:48 2024] ***
+compiled with version: 11.4.0 on 03 August 2024 06:32:53
+os: Linux-5.15.0-117-generic #127-Ubuntu SMP Fri Jul 5 20:13:28 UTC 2024
+nodename: landscape.predictorian.online
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22969
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Jul 29 2024, 16:56:48) [GCC 11.4.0]
+Python main interpreter initialized at 0x55da33252b30
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 13 seconds on interpreter 0x55da33252b30 pid: 756 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 756)
+spawned uWSGI worker 1 (pid: 1066, cores: 2)
+spawned uWSGI worker 2 (pid: 1068, cores: 2)
+spawned uWSGI worker 3 (pid: 1069, cores: 2)
+spawned uWSGI worker 4 (pid: 1070, cores: 2)
+{address space usage: 159531008 bytes/152MB} {rss usage: 28917760 bytes/27MB} [pid: 1066|app: 0|req: 1/1] 46.10.204.54 () {60 vars in 1090 bytes} [Sat Aug  3 09:39:06 2024] GET / => generated 1642 bytes in 62 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 159494144 bytes/152MB} {rss usage: 29106176 bytes/27MB} [pid: 1069|app: 0|req: 1/2] 46.10.204.54 () {62 vars in 1178 bytes} [Sat Aug  3 09:39:06 2024] GET /static/images/qr/qr_code.png => generated 307 bytes in 40 msecs via sendfile() (HTTP/1.1 200) 7 headers in 267 bytes (0 switches on core 0)
+{address space usage: 159494144 bytes/152MB} {rss usage: 29130752 bytes/27MB} [pid: 1070|app: 0|req: 1/3] 46.10.204.54 () {62 vars in 1122 bytes} [Sat Aug  3 09:39:06 2024] GET /static/styles/style.css => generated 0 bytes in 54 msecs (HTTP/1.1 304) 4 headers in 183 bytes (0 switches on core 0)
+{address space usage: 159494144 bytes/152MB} {rss usage: 29130752 bytes/27MB} [pid: 1070|app: 0|req: 2/4] 46.10.204.54 () {58 vars in 1075 bytes} [Sat Aug  3 09:39:06 2024] GET /static/images/favicon/site.webmanifest => generated 0 bytes in 1 msecs (HTTP/1.1 304) 4 headers in 190 bytes (0 switches on core 1)
+{address space usage: 160567296 bytes/153MB} {rss usage: 35348480 bytes/33MB} [pid: 1069|app: 0|req: 2/5] 46.10.204.54 () {58 vars in 1108 bytes} [Sat Aug  3 09:39:08 2024] GET /weather?city= => generated 1712 bytes in 434 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 159490048 bytes/152MB} {rss usage: 29540352 bytes/28MB} [pid: 1068|app: 0|req: 2/6] 46.10.204.54 () {58 vars in 1073 bytes} [Sat Aug  3 09:39:08 2024] GET /static/styles/style.css => generated 0 bytes in 41 msecs (HTTP/1.1 304) 4 headers in 183 bytes (0 switches on core 0)
+{address space usage: 159490048 bytes/152MB} {rss usage: 29540352 bytes/28MB} [pid: 1068|app: 0|req: 2/7] 46.10.204.54 () {58 vars in 1129 bytes} [Sat Aug  3 09:39:08 2024] GET /static/images/qr/qr_code.png => generated 304 bytes in 43 msecs via sendfile() (HTTP/1.1 200) 7 headers in 266 bytes (1 switches on core 1)
+{address space usage: 159531008 bytes/152MB} {rss usage: 29982720 bytes/28MB} [pid: 1066|app: 0|req: 2/8] 46.10.204.54 () {58 vars in 1088 bytes} [Sat Aug  3 09:39:08 2024] GET /static/images/favicon/site.webmanifest => generated 0 bytes in 33 msecs (HTTP/1.1 304) 4 headers in 190 bytes (0 switches on core 1)
+{address space usage: 162164736 bytes/154MB} {rss usage: 35770368 bytes/34MB} [pid: 1066|app: 0|req: 3/9] 46.10.204.54 () {58 vars in 1121 bytes} [Sat Aug  3 09:39:10 2024] GET /weather?city= => generated 1712 bytes in 483 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 160567296 bytes/153MB} {rss usage: 35586048 bytes/33MB} [pid: 1069|app: 0|req: 3/10] 46.10.204.54 () {58 vars in 1073 bytes} [Sat Aug  3 09:39:10 2024] GET /static/styles/style.css => generated 0 bytes in 1 msecs (HTTP/1.1 304) 4 headers in 183 bytes (0 switches on core 0)
+{address space usage: 159494144 bytes/152MB} {rss usage: 29130752 bytes/27MB} [pid: 1070|app: 0|req: 3/11] 46.10.204.54 () {58 vars in 1128 bytes} [Sat Aug  3 09:39:10 2024] GET /static/images/qr/qr_code.png => generated 304 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 7 headers in 266 bytes (0 switches on core 0)
+{address space usage: 159494144 bytes/152MB} {rss usage: 29130752 bytes/27MB} [pid: 1070|app: 0|req: 4/12] 46.10.204.54 () {58 vars in 1088 bytes} [Sat Aug  3 09:39:11 2024] GET /static/images/favicon/site.webmanifest => generated 0 bytes in 3 msecs (HTTP/1.1 304) 4 headers in 190 bytes (0 switches on core 1)
+{address space usage: 160567296 bytes/153MB} {rss usage: 36012032 bytes/34MB} [pid: 1069|app: 0|req: 4/13] 46.10.204.54 () {58 vars in 1141 bytes} [Sat Aug  3 09:39:13 2024] GET /weather?city=las+palmas => generated 1712 bytes in 328 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 159490048 bytes/152MB} {rss usage: 29540352 bytes/28MB} [pid: 1068|app: 0|req: 4/14] 46.10.204.54 () {58 vars in 1083 bytes} [Sat Aug  3 09:39:13 2024] GET /static/styles/style.css => generated 0 bytes in 1 msecs (HTTP/1.1 304) 4 headers in 183 bytes (0 switches on core 0)
+{address space usage: 159490048 bytes/152MB} {rss usage: 29540352 bytes/28MB} [pid: 1068|app: 0|req: 4/15] 46.10.204.54 () {58 vars in 1138 bytes} [Sat Aug  3 09:39:13 2024] GET /static/images/qr/qr_code.png => generated 360 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 7 headers in 267 bytes (0 switches on core 1)
+{address space usage: 162164736 bytes/154MB} {rss usage: 35770368 bytes/34MB} [pid: 1066|app: 0|req: 4/16] 46.10.204.54 () {58 vars in 1098 bytes} [Sat Aug  3 09:39:13 2024] GET /static/images/favicon/site.webmanifest => generated 0 bytes in 1 msecs (HTTP/1.1 304) 4 headers in 190 bytes (0 switches on core 1)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /var/www/weather/weather.sock removed.
+*** Starting uWSGI 2.0.26 (64bit) on [Sat Aug  3 09:41:43 2024] ***
+compiled with version: 11.4.0 on 03 August 2024 06:32:53
+os: Linux-5.15.0-117-generic #127-Ubuntu SMP Fri Jul 5 20:13:28 UTC 2024
+nodename: landscape.predictorian.online
+machine: x86_64
+clock source: unix
+pcre jit enabled
+detected number of CPU cores: 3
+current working directory: /home/dinamitrii/python-check-weather
+detected binary path: /home/dinamitrii/python-check-weather/.venv/bin/uwsgi
+chdir() to /home/dinamitrii/python-check-weather/
+your processes number limit is 22969
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /var/www/weather/weather.sock fd 3
+Python version: 3.10.12 (main, Jul 29 2024, 16:56:48) [GCC 11.4.0]
+Python main interpreter initialized at 0x560c4811cb30
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416720 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 13 seconds on interpreter 0x560c4811cb30 pid: 758 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 758)
+spawned uWSGI worker 1 (pid: 1088, cores: 2)
+spawned uWSGI worker 2 (pid: 1089, cores: 2)
+spawned uWSGI worker 3 (pid: 1091, cores: 2)
+spawned uWSGI worker 4 (pid: 1092, cores: 2)
+{address space usage: 159531008 bytes/152MB} {rss usage: 28983296 bytes/27MB} [pid: 1092|app: 0|req: 1/1] 46.10.204.54 () {58 vars in 1059 bytes} [Sat Aug  3 09:42:01 2024] GET / => generated 1642 bytes in 70 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 159490048 bytes/152MB} {rss usage: 28987392 bytes/27MB} [pid: 1088|app: 0|req: 1/2] 46.10.204.54 () {54 vars in 1014 bytes} [Sat Aug  3 09:42:01 2024] GET /static/images/favicon/favicon.ico => generated 15406 bytes in 101 msecs via sendfile() (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+{address space usage: 159490048 bytes/152MB} {rss usage: 28987392 bytes/27MB} [pid: 1088|app: 0|req: 2/3] 46.10.204.54 () {58 vars in 1116 bytes} [Sat Aug  3 09:42:01 2024] GET /static/images/qr/qr_code.png => generated 307 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 7 headers in 267 bytes (1 switches on core 1)
+{address space usage: 159490048 bytes/152MB} {rss usage: 29192192 bytes/27MB} [pid: 1089|app: 0|req: 2/5] 46.10.204.54 () {58 vars in 1060 bytes} [Sat Aug  3 09:42:01 2024] GET /static/styles/style.css => generated 0 bytes in 6 msecs (HTTP/1.1 304) 4 headers in 183 bytes (0 switches on core 1)
+{address space usage: 159490048 bytes/152MB} {rss usage: 29192192 bytes/27MB} [pid: 1089|app: 0|req: 2/5] 46.10.204.54 () {54 vars in 1026 bytes} [Sat Aug  3 09:42:01 2024] GET /static/images/favicon/favicon-32x32.png => generated 3043 bytes in 16 msecs via sendfile() (HTTP/1.1 200) 7 headers in 275 bytes (0 switches on core 0)
+{address space usage: 159490048 bytes/152MB} {rss usage: 29499392 bytes/28MB} [pid: 1091|app: 0|req: 2/6] 46.10.204.54 () {54 vars in 1014 bytes} [Sat Aug  3 09:42:01 2024] GET /static/images/favicon/favicon.ico => generated 15406 bytes in 23 msecs via sendfile() (HTTP/1.1 200) 7 headers in 286 bytes (0 switches on core 0)
+{address space usage: 159490048 bytes/152MB} {rss usage: 29499392 bytes/28MB} [pid: 1091|app: 0|req: 2/7] 46.10.204.54 () {54 vars in 963 bytes} [Sat Aug  3 09:42:01 2024] GET /static/images/favicon/site.webmanifest => generated 263 bytes in 18 msecs via sendfile() (HTTP/1.1 200) 7 headers in 288 bytes (0 switches on core 1)
+{address space usage: 159555584 bytes/152MB} {rss usage: 35401728 bytes/33MB} [pid: 1092|app: 0|req: 2/8] 46.10.204.54 () {58 vars in 1128 bytes} [Sat Aug  3 09:42:06 2024] GET /weather?city=las+palmas => generated 2639 bytes in 635 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 159490048 bytes/152MB} {rss usage: 28987392 bytes/27MB} [pid: 1088|app: 0|req: 3/9] 46.10.204.54 () {58 vars in 1139 bytes} [Sat Aug  3 09:42:06 2024] GET /static/images/qr/qr_code.png => generated 360 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 7 headers in 266 bytes (0 switches on core 0)
+{address space usage: 159555584 bytes/152MB} {rss usage: 35852288 bytes/34MB} [pid: 1092|app: 0|req: 3/10] 46.10.204.54 () {58 vars in 1083 bytes} [Sat Aug  3 09:42:06 2024] GET /static/styles/style.css => generated 0 bytes in 11 msecs (HTTP/1.1 304) 4 headers in 183 bytes (0 switches on core 0)
+{address space usage: 159490048 bytes/152MB} {rss usage: 29188096 bytes/27MB} [pid: 1088|app: 0|req: 4/11] 46.10.204.54 () {58 vars in 1098 bytes} [Sat Aug  3 09:42:07 2024] GET /static/images/favicon/site.webmanifest => generated 0 bytes in 2 msecs (HTTP/1.1 304) 4 headers in 190 bytes (0 switches on core 1)
+{address space usage: 159490048 bytes/152MB} {rss usage: 29323264 bytes/27MB} [pid: 1089|app: 0|req: 3/12] 66.249.72.104 () {38 vars in 568 bytes} [Sat Aug  3 09:50:48 2024] GET /robots.txt => generated 207 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 1)
+{address space usage: 159825920 bytes/152MB} {rss usage: 30121984 bytes/28MB} [pid: 1089|app: 0|req: 4/13] 66.249.72.104 () {42 vars in 830 bytes} [Sat Aug  3 09:50:48 2024] GET / => generated 1642 bytes in 45 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 159490048 bytes/152MB} {rss usage: 29499392 bytes/28MB} [pid: 1091|app: 0|req: 3/14] 66.249.72.106 () {44 vars in 828 bytes} [Sat Aug  3 09:52:27 2024] GET /static/styles/style.css => generated 360 bytes in 13 msecs via sendfile() (HTTP/1.1 200) 7 headers in 279 bytes (0 switches on core 0)
+{address space usage: 160563200 bytes/153MB} {rss usage: 35966976 bytes/34MB} [pid: 1091|app: 0|req: 4/15] 46.10.204.54 () {58 vars in 1151 bytes} [Sat Aug  3 10:08:25 2024] GET /weather?city=Pazardzhik => generated 2651 bytes in 395 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 159555584 bytes/152MB} {rss usage: 35852288 bytes/34MB} [pid: 1092|app: 0|req: 4/16] 46.10.204.54 () {58 vars in 1083 bytes} [Sat Aug  3 10:08:25 2024] GET /static/styles/style.css => generated 0 bytes in 1 msecs (HTTP/1.1 304) 4 headers in 183 bytes (0 switches on core 1)
+{address space usage: 159490048 bytes/152MB} {rss usage: 29188096 bytes/27MB} [pid: 1088|app: 0|req: 5/17] 46.10.204.54 () {58 vars in 1138 bytes} [Sat Aug  3 10:08:25 2024] GET /static/images/qr/qr_code.png => generated 354 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 7 headers in 267 bytes (0 switches on core 0)
+{address space usage: 159555584 bytes/152MB} {rss usage: 35852288 bytes/34MB} [pid: 1092|app: 0|req: 5/18] 46.10.204.54 () {58 vars in 1098 bytes} [Sat Aug  3 10:08:25 2024] GET /static/images/favicon/site.webmanifest => generated 0 bytes in 3 msecs (HTTP/1.1 304) 4 headers in 190 bytes (0 switches on core 0)
+{address space usage: 159490048 bytes/152MB} {rss usage: 29978624 bytes/28MB} [pid: 1088|app: 0|req: 6/19] 147.185.132.33 () {32 vars in 641 bytes} [Sat Aug  3 11:09:21 2024] GET / => generated 1642 bytes in 88 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 159825920 bytes/152MB} {rss usage: 30212096 bytes/28MB} [pid: 1089|app: 0|req: 5/20] 94.156.66.116 () {38 vars in 562 bytes} [Sat Aug  3 11:35:59 2024] GET / => generated 1642 bytes in 55 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+{address space usage: 159825920 bytes/152MB} {rss usage: 30212096 bytes/28MB} [pid: 1089|app: 0|req: 6/21] 165.22.236.49 () {38 vars in 565 bytes} [Sat Aug  3 11:36:36 2024] GET / => generated 1642 bytes in 55 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
