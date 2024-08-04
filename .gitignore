@@ -2,3 +2,11 @@
 .env
 __pycache__
 .idea
+
+
+# Ignore env
+.env
+# Ignore weather venv
+/weather-venv/
+# Ignore qr code
+static/images/qr/qr_code.png
