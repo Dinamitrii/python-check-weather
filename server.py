@@ -26,7 +26,8 @@ def get_weather():
     if not bool(city.strip()):
         city = "Sofia"
 
-    weather_data = get_current_weather(city)
+    # Check for dots in city name, when receiving the city name from the client side
+    weather_data = get_current_weather(city.strip().replace('.', ''))
 
     link_to_qr_code("https://www.predictorian.online/weather" + "?city=" + city)
 
