@@ -1,9 +1,8 @@
 from flask import Flask, render_template, request, url_for
 from datetime import datetime
-import segno
 from weather import get_current_weather
+from qr_code import generate_qr
 from waitress import serve
-from qr_code_generator import link_to_qr_code
 from dotenv import load_dotenv
 
 
@@ -15,7 +14,7 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index")
 def index():
-    link_to_qr_code("https://www.predictorian.online/index")
+    generate_qr("https://www.predictorian.online/index")
 
     return render_template("index.html")
 
@@ -30,13 +29,20 @@ def get_weather():
 
     weather_data = get_current_weather(city)
 
-    link_to_qr_code("https://www.predictorian.online/weather" + "?city=" + city)
+    lat = str(weather_data["coord"]["lat"])
+    lon = str(weather_data["coord"]["lon"])
+
+    generate_qr("https://www.predictorian.online/weather" + "?city=" + city)
 
     # If city not found by API
     if weather_data["cod"] != 200:
-        link_to_qr_code("https://www.predictorian.online/city-not-found" + "?city=" + city)
 
-        return render_template("city-not-found.html")
+        lat = str(weather_data["coord"]["lat"])
+        lon = str(weather_data["coord"]["lon"])
+
+        generate_qr("https://www.predictorian.online/city-not-found" + "?city=" + city)
+
+        return render_template("city-not-found.html"), lat, lon
 
     # If city is found by API
     sunrise_timestamp = weather_data['sys']['sunrise']
@@ -48,7 +54,7 @@ def get_weather():
     targets_date = datetime.fromtimestamp(targets_dt_timestamp)
     targets_tz_human_readable_format = int(targets_tz / 3600)
 
-    link_to_qr_code("https://www.predictorian.online/weather" + "?city=" + city)
+    generate_qr("https://www.predictorian.online/weather" + "?city=" + city)
 
     return render_template(
         "weather.html",
@@ -68,14 +74,18 @@ def get_weather():
         targets_tz=targets_tz_human_readable_format,
         geo_latitude=weather_data["coord"]["lat"],
         geo_longitude=weather_data["coord"]["lon"]
-    )
+    ), lat, lon
 
 
-# @app.route("/forecast")
-# def get_forecast():
-# 
-#     return render_template("forecast.html")
-# 
+@app.route("/forecast")
+def get_forecast(lat, lon):
+
+    x = str(lat)
+    y = str(lon)
+
+    return render_template("forecast.html"), x, y
+
+
 @app.route("/favicon.ico")
 def favicon():
     return (url_for('static', filename='images/favicon/favicon.ico'),

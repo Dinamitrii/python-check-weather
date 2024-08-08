@@ -1,7 +1,7 @@
 import segno
 
 
-def generate(link):
+def generate_qr(link):
 
     link = segno.make(link)
-    link.save('static/images/qr/qr_code.png', scale=6)
+    link.save('static/images/qr/qr_code.png', scale=4)

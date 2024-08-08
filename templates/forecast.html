@@ -40,26 +40,24 @@
 
 <body>
 
-<h1>The Weather Forecast Info Is....</h1>
+<h1>The Weather Forecast Is....</h1>
 <p>*** {{ timezone }} ***</p>
 <p>*** {{ timezone_offset }} ***</p>
 <p>*** {{ sea_level }} ***</p>
 
-    <form action="/forecast">
-        <label for="lat"></label>
-        <input type="text" name="lat_textbox" id="lat"
-                                             placeholder="Enter a latitude" />
+{#    <form action="/forecast">#}
+{#        <label for="lat"></label>#}
+{#        <input type="text" name="lat_textbox" id="lat"#}
+{#                                             placeholder="Enter a latitude" />#}
+{##}
+{##}
+{#        <label for="lon"></label>#}
+{#        <input type="text" name="long_textbox" id="lon"#}
+{#                                        placeholder="Enter a longitude" />#}
+{##}
+{#        <button type="submit">Request Weather Forecast Info</button>#}
+{#    </form>#}
 
-
-        <label for="lon"></label>
-        <input type="text" name="long_textbox" id="lon"
-                                        placeholder="Enter a longitude" />
-
-        <button type="submit">Request Weather Forecast Info</button>
-    </form>
-
-<!-- Invoke your consent function when a user interacts with your banner -->
-<button onClick="allConsentGranted()">Yes</button>
 
 </body>
 
