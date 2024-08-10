@@ -6,8 +6,8 @@ import os
 load_dotenv()
 
 
-def get_current_weather(city="Sofia"):
-    request_url = (f'https://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={city}&lang=bg'
+def get_current_weather(town=""):
+    request_url = (f'https://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={town}&lang=bg'
                    f'&units=metric')
 
     return requests.get(request_url).json()
@@ -24,6 +24,9 @@ if __name__ == "__main__":
         city = "Sofia"
 
     weather_data = get_current_weather(city)
+
+    lat = str(weather_data["coord"]["lat"])
+    lon = str(weather_data["coord"]["lon"])
 
     print("\n")
     pprint(weather_data)
