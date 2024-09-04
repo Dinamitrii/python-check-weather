@@ -14,7 +14,7 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index")
 def index():
-    generate_qr("https://www.predictorian.online/index")
+    generate_qr("https://www.predictorian.xyz/index")
 
     return render_template("index.html")
 
@@ -32,7 +32,7 @@ def get_weather():
     lat = str(weather_data["coord"]["lat"])
     lon = str(weather_data["coord"]["lon"])
 
-    generate_qr("https://www.predictorian.online/weather" + "?city=" + city)
+    generate_qr("https://www.predictorian.xyz/weather" + "?city=" + city)
 
     # If city not found by API
     if weather_data["cod"] != 200:
@@ -40,7 +40,7 @@ def get_weather():
         lat = str(weather_data["coord"]["lat"])
         lon = str(weather_data["coord"]["lon"])
 
-        generate_qr("https://www.predictorian.online/city-not-found" + "?city=" + city)
+        generate_qr("https://www.predictorian.xyz/city-not-found" + "?city=" + city)
 
         return render_template("city-not-found.html"), lat, lon
 
@@ -54,7 +54,7 @@ def get_weather():
     targets_date = datetime.fromtimestamp(targets_dt_timestamp)
     targets_tz_human_readable_format = int(targets_tz / 3600)
 
-    generate_qr("https://www.predictorian.online/weather" + "?city=" + city)
+    generate_qr("https://www.predictorian.xyz/weather" + "?city=" + city)
 
     return render_template(
         "weather.html",
