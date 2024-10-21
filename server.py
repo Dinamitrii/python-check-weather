@@ -88,5 +88,11 @@ def sitemap():
     return url_for('static', filename='sitemap/sitemap.xml')
 
 
+@app.route('/robots.txt')
+def robots():
+    return url_for("robots",filename='robots.txt')
+
+
+
 if __name__ == "__main__":
     serve(app.run(host="0.0.0.0", port=8000))
