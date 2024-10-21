@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, url_for
-from datetime import datetime
+from _datetime import datetime
 from weather import get_current_weather
 from waitress import serve
 from qr_code_generator import link_to_qr_code
@@ -69,11 +69,6 @@ def get_weather():
     )
 
 
-# @app.route("/forecast")
-# def get_forecast():
-# 
-#     return render_template("forecast.html")
-# 
 @app.route("/favicon.ico")
 def favicon():
     return (url_for('static', filename='images/favicon/favicon.ico'),
@@ -86,6 +81,11 @@ def favicon():
             url_for('static', filename='images/favicon/mstile-150x150.png'),
             url_for('static', filename='images/favicon/browserconfig.xml'),
             url_for('static', filename='images/favicon/site.webmanifest'))
+
+
+@app.route('/sitemap.xml')
+def sitemap():
+    return url_for('static', filename='sitemap/sitemap.xml')
 
 
 if __name__ == "__main__":
