@@ -90,7 +90,7 @@ def sitemap():
 
 @app.route('/robots.txt')
 def robots():
-    return url_for("static", filename='static/robots.txt')
+    return url_for("static", filename='robots.txt')
 
 
 
