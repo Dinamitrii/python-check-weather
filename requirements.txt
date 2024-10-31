@@ -1,6 +1,15 @@
+blinker==1.8.2
+certifi==2024.8.30
+charset-normalizer==3.4.0
+click==8.1.7
 Flask==3.0.3
+idna==3.10
+itsdangerous==2.2.0
+Jinja2==3.1.4
+MarkupSafe==3.0.2
 python-dotenv==1.0.1
 requests==2.31.0
+segno==1.6.1
+urllib3==2.2.3
 waitress==3.0.0
-
-segno~=1.6.1
+Werkzeug==3.1.0

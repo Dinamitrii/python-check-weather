@@ -83,12 +83,12 @@ def favicon():
             url_for('static', filename='images/favicon/site.webmanifest'))
 
 
-@app.route('/sitemap.xml')
+@app.route('/sitemap')
 def sitemap():
     return url_for('static', filename='sitemap/sitemap.xml')
 
 
-@app.route('/robots.txt')
+@app.route('/robots')
 def robots():
     return app.send_static_file('robots.txt')
 
