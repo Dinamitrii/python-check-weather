@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, send_from_directory
 from _datetime import datetime
 from weather import get_current_weather
 from waitress import serve
@@ -82,16 +82,10 @@ def favicon():
             url_for('static', filename='images/favicon/browserconfig.xml'),
             url_for('static', filename='images/favicon/site.webmanifest'))
 
-
-@app.route('/sitemap')
-def sitemap():
-    return url_for('static', filename='sitemap/sitemap.xml')
-
-
-@app.route('/robots')
-def robots():
-    return app.send_static_file('robots.txt')
-
+@app.route('/robots.txt')
+@app.route('/sitemap.xml')
+def static_from_root():
+    return send_from_directory(app.static_folder, request.path[1:])
 
 
 
