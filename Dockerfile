@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM node:20
+FROM node:21
 WORKDIR /python-check-weather/
 COPY . .
 RUN yarn install --production
