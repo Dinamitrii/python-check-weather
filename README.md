@@ -10,23 +10,25 @@ Be sure to check out the supported_languages.txt file for the list of supported 
 ###
 Important to do first!!!
 ###
-1.
-sudo apt install gcc g++ cmake cmake-doc ccache
-sudo apt install build-essential python3-dev python3-pip libpcre3-dev
-2.
-cd to/project/directory/
-3.
-source .venv/bin/activate
 
-in e.g .venv here is for your virtual environment on your project whatever you named it
-and with source in fact you`re activating it.
-Afterwards since it`s activated you can install the requirements and dependencies with pip 
-and last step is to install uwsgi with pip also 
-e.g pip install uwsgi
+1. sudo apt install gcc g++ cmake cmake-doc ccache
+
+2. sudo apt install build-essential python3-dev python3-pip python3-venv libpcre3-dev
+
+3. in shell (bash) use python3 -m venv .venv to create virtual environment after you changed 
+to root directory of the project e.g. /home/$USER/python-check-weather 
+
+4. source .venv/bin/activate to activate your environment 
+
+e.g .venv here is for your virtual environment on your project whatever you named it
+and with source in fact you're activating it.
+Afterward since it's activated you can install the requirements and dependencies with pip 
+and last step is to [install uwsgi with pip also (IMPORTANT) e.g. pip install uwsgi].
 If the steps are successfully completed in that order you`re closing the final
 
-You`ll need to proper configure the nginx web server using the example .txt file given for virtual server block
+You`ll need to properly configure the nginx web server using the example file given for 
+virtual server block
 
 after that you`ll got access to the website but with no ssl/tls encryption you can choose
 from a plenty free and paid Certificate Authorities or Issuers or you can use ACME services which are free with much info and support 
-on that task [also supports wildcards (*.example.com) ] 
+on that task [also supports wildcards (*.example.com)] 
