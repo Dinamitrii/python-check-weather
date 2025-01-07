@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="en-BG">
 
 <head>
     <meta charset="UTF-8">
@@ -9,16 +9,9 @@
 
     <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet"/>
 
-    <title>Проверете времето в избран от вас град</title>
+    <title>Tova e geo kartata na izbranata lokaciq</title>
 
-    <link rel="canonical" href="https://www.predictorian.online/index">
-
-    <form action="/geo_map">
-        <label for="map"></label>
-
-            <button type="submit">Request Map</button>
-
-    </form>
+    <link rel="canonical" href="https://www.predictorian.online/">
 
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}"/>
@@ -35,19 +28,28 @@
 </head>
 
 <body>
-    <h1>Get Weather Conditions</h1>
-    
-    <form action="/weather">
-        <label for="city"></label>
 
-        <input type="text" name="city" id="city"
-                                         placeholder="Enter a city" />
+<form action="/geo_map" method="POST"></form>
 
-        <button type="submit">Request Info</button>
-    </form>
+<div class="map-container">
+            <div id="map">
+
+                <embed src="{{ url_for('static', filename='geo-map/gen-map') }}" type="hidden"/>
+
+                    <address class="address">
+                    <a href="tel:+380979123456">+380979123456</a>
+                    </address>
+
+            </div>
+        </div>
 
 </body>
-<footer>
-     <img src="{{ url_for('static', filename='images/qr/qr_code.png') }}" alt="qr_code"/>
-</footer>
+
 </html>
+{#<footer>#}
+{#    <div class="footer-content">#}
+{#        <div class="footer-text">#}
+{#            <img src= "{{url_for('static', filename='images/qr/qr_code.png')}}"  alt="qr_code_on_page"/>            #}
+{#        </div>#}
+{#    </div>#}
+{#</footer>#}

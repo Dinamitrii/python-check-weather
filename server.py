@@ -14,7 +14,7 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index")
 def index():
-    generate_qr("https://www.predictorian.xyz/index")
+    generate_qr("https://www.predictorian.online/index")
 
     return render_template("index.html")
 
@@ -24,25 +24,23 @@ def get_weather():
     city = request.args.get("city")
 
     # Check for empty strings or string with only spaces
-    if not bool(city.strip()):
+    if None in [city]:
+        city = "Sofia"
+    elif not bool(city.strip()):
         city = "Sofia"
 
     weather_data = get_current_weather(city)
 
-    lat = str(weather_data["coord"]["lat"])
-    lon = str(weather_data["coord"]["lon"])
 
-    generate_qr("https://www.predictorian.xyz/weather" + "?city=" + city)
+    generate_qr("https://www.predictorian.online/weather" + "?city=" + city)
 
     # If city not found by API
     if weather_data["cod"] != 200:
 
-        lat = str(weather_data["coord"]["lat"])
-        lon = str(weather_data["coord"]["lon"])
 
-        generate_qr("https://www.predictorian.xyz/city-not-found" + "?city=" + city)
+        generate_qr("https://www.predictorian.online/city-not-found")
 
-        return render_template("city-not-found.html"), lat, lon
+        return render_template("city-not-found.html")
 
     # If city is found by API
     sunrise_timestamp = weather_data['sys']['sunrise']
@@ -54,7 +52,7 @@ def get_weather():
     targets_date = datetime.fromtimestamp(targets_dt_timestamp)
     targets_tz_human_readable_format = int(targets_tz / 3600)
 
-    generate_qr("https://www.predictorian.xyz/weather" + "?city=" + city)
+    generate_qr("https://www.predictorian.online/weather" + "?city=" + city)
 
     return render_template(
         "weather.html",
@@ -74,7 +72,7 @@ def get_weather():
         targets_tz=targets_tz_human_readable_format,
         geo_latitude=weather_data["coord"]["lat"],
         geo_longitude=weather_data["coord"]["lon"]
-    ), lat, lon
+    )
 
 
 @app.route("/forecast")
