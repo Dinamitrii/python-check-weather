@@ -1,2 +1,2 @@
 FLASK_APP=server:app
-FLASK_DEBUG=True
+FLASK_DEBUG=False
