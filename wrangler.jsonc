@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "predictorian-weather",
+  "main": "src/worker.py",
+  "compatibility_date": "2026-10-23",
+  "compatibility_flags": ["python_workers"],
+  // Files in ./public are served directly (css, js, images, robots.txt, sitemap.xml)
+  "assets": {
+    "directory": "./public/"
+  },
+  "routes": [
+    { "pattern": "predictorian.site", "custom_domain": true },
+    { "pattern": "www.predictorian.site", "custom_domain": true }
+  ]
+}
