@@ -1,30 +1,31 @@
-from dotenv import load_dotenv
-from pprint import pprint
-import segno
-import requests
 import os
+from pprint import pprint
+
+import requests
+from dotenv import load_dotenv
 
 load_dotenv()
 
+API_URL = "https://api.openweathermap.org/data/2.5/weather"
+
 
 def get_current_weather(city="Sofia"):
-    request_url = (f'https://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={city}&lang=bg'
-                   f'&units=metric')
-    weather_data = requests.get(request_url).json()
-    return weather_data
+    params = {
+        "appid": os.getenv("API_KEY"),
+        "q": city,
+        "lang": "bg",
+        "units": "metric",
+    }
+    try:
+        response = requests.get(API_URL, params=params, timeout=5)
+        return response.json()
+    except (requests.RequestException, ValueError):
+        # Network problem or bad JSON -> treated as "not found" by the caller
+        return {"cod": 500}
 
 
 if __name__ == "__main__":
-
     print("\n*** Get Current Weather Conditions ***\n")
-
-    city = input("\nPlease enter a city name: ")
-
-    # Check for empty strings or string with only spaces
-    if not bool(city.strip()):
-        city = "Sofia"
-
-    weather_data = get_current_weather(city)
-
+    city = input("\nPlease enter a city name: ").strip() or "Sofia"
     print("\n")
-    pprint(weather_data)
+    pprint(get_current_weather(city))

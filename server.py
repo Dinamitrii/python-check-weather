@@ -1,11 +1,16 @@
-from flask import Flask, render_template, request, url_for, send_from_directory
-from _datetime import datetime
-from weather import get_current_weather
-from waitress import serve
-from qr_code_generator import link_to_qr_code
+from datetime import datetime, timezone, timedelta
+from urllib.parse import quote
+
 from dotenv import load_dotenv
+from flask import Flask, render_template, request, send_from_directory
+from waitress import serve
 
 load_dotenv()
+
+from weather import get_current_weather
+from qr_code_generator import link_to_qr_code
+
+BASE_URL = "https://www.predictorian.online"
 
 app = Flask(__name__)
 
@@ -13,40 +18,28 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index")
 def index():
-    link_to_qr_code("https://www.predictorian.online/index")
-
+    link_to_qr_code(f"{BASE_URL}/index")
     return render_template("index.html")
 
 
 @app.route("/weather")
 def get_weather():
+    # Empty field or missing parameter -> Sofia
     city = (request.args.get("city") or "").strip() or "Sofia"
 
-    # Check for empty strings or string with only spaces
-    if not bool(city.strip()):
-        city = "Sofia"
+    link_to_qr_code(f"{BASE_URL}/weather?city={quote(city)}")
 
     weather_data = get_current_weather(city)
 
-    link_to_qr_code("https://www.predictorian.online/weather" + "?city=" + city)
-
-    # If city not found by API
-    if weather_data["cod"] != 200:
-        link_to_qr_code("https://www.predictorian.online/weather" + "?city=" + city)
-
+    # City not found (or API problem)
+    if weather_data.get("cod") != 200:
         return render_template("city-not-found.html")
 
-    # If city is found by API
-    sunrise_timestamp = weather_data['sys']['sunrise']
-    sunset_timestamp = weather_data['sys']['sunset']
-    targets_dt_timestamp = weather_data["dt"]
-    targets_tz = weather_data["timezone"]
-    sunrise_date = datetime.fromtimestamp(sunrise_timestamp)
-    sunset_date = datetime.fromtimestamp(sunset_timestamp)
-    targets_date = datetime.fromtimestamp(targets_dt_timestamp)
-    targets_tz_human_readable_format = int(targets_tz / 3600)
-
-    link_to_qr_code("https://www.predictorian.online/weather" + "?city=" + city)
+    # Times in the target city's own timezone, not the server's
+    tz = timezone(timedelta(seconds=weather_data["timezone"]))
+    sunrise_date = datetime.fromtimestamp(weather_data["sys"]["sunrise"], tz)
+    sunset_date = datetime.fromtimestamp(weather_data["sys"]["sunset"], tz)
+    targets_date = datetime.fromtimestamp(weather_data["dt"], tz)
 
     return render_template(
         "weather.html",
@@ -59,35 +52,30 @@ def get_weather():
         humidity=f"{weather_data['main']['humidity']}",
         atmos_pressure=f"{weather_data['main']['pressure']}",
         wind=f"{weather_data['wind']['speed']:.1f}",
-        country_code=weather_data["sys"]["country"],
+        country_code=weather_data["sys"].get("country", ""),
         sunrise=sunrise_date.isoformat(),
         sunset=sunset_date.isoformat(),
         targets_daytime=targets_date.isoformat(),
-        targets_tz=targets_tz_human_readable_format,
+        targets_tz=int(weather_data["timezone"] / 3600),
         geo_latitude=weather_data["coord"]["lat"],
-        geo_longitude=weather_data["coord"]["lon"]
+        geo_longitude=weather_data["coord"]["lon"],
     )
 
 
 @app.route("/favicon.ico")
 def favicon():
-    return (url_for('static', filename='images/favicon/favicon.ico'),
-            url_for('static', filename='images/favicon/favicon-16x16.png'),
-            url_for('static', filename='images/favicon/favicon-32x32.png'),
-            url_for('static', filename='images/favicon/android-chrome-192x192.png'),
-            url_for('static', filename='images/favicon/android-chrome-256x256.png'),
-            url_for('static', filename='images/favicon/apple-touch-icon.png'),
-            url_for('static', filename='images/favicon/safari-pinned-tab.svg'),
-            url_for('static', filename='images/favicon/mstile-150x150.png'),
-            url_for('static', filename='images/favicon/browserconfig.xml'),
-            url_for('static', filename='images/favicon/site.webmanifest'))
+    return send_from_directory(app.static_folder, "images/favicon/favicon.ico")
 
-@app.route('/robots.txt')
-@app.route('/sitemap.xml')
+
+@app.route("/robots.txt")
+@app.route("/sitemap.xml")
 def static_from_root():
     return send_from_directory(app.static_folder, request.path[1:])
 
 
-
 if __name__ == "__main__":
-    serve(app.run(host="0.0.0.0", port=8000))
+    import logging
+
+    logging.basicConfig(level=logging.INFO)
+
+    serve(app, host="0.0.0.0", port=8000)

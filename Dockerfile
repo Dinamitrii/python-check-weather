@@ -1,8 +1,7 @@
-# syntax=docker/dockerfile:1
-
-FROM node:21
-WORKDIR /python-check-weather/
+FROM python:3.12-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
-RUN yarn install --production
-CMD ["node", "src/index.js"]
 EXPOSE 8000
+CMD ["waitress-serve", "--port=8000", "wsgi:app"]
