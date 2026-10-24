@@ -1,0 +1,5 @@
+<form action="{{ url_for('get_weather') }}" method="get">
+    <label for="city" class="visually-hidden">Град</label>
+    <input type="text" name="city" id="city" placeholder="Въведете град" maxlength="100" required>
+    <button type="submit">Покажи времето</button>
+</form>
