@@ -10,7 +10,7 @@ load_dotenv()
 from qr_code_generator import link_to_qr_code  # noqa: E402
 from weather import get_current_weather  # noqa: E402
 
-BASE_URL = os.getenv("BASE_URL", "https://www.predictorian.site").rstrip("/")
+BASE_URL = os.getenv("BASE_URL", "https://predictorian.site").rstrip("/")
 MAX_CITY_LEN = 100
 
 app = Flask(__name__)
