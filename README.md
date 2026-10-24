@@ -5,7 +5,7 @@ Start the server with "python server.py" open the browser and navigate to http:/
 
 Just type in your city name in the search bar, and you will get the weather details of that city.
 
-Be sure to check out the supported_languages.txt file for the list of supported languages and matching codes.Language can be changed in the weather.py file in particular in the get_current_weather() function in the API call (&lang=bg&units=metric).Units can be three types of metric(Celsius),imperial(Fahrenheit) or standard(Kalvin).In this example we have used metric units and Bulgarian(bg) language. You can adjust it accordingly.
+Be sure to check out the supported_languages_by_API_SERVICE.txt file for the list of supported languages and matching codes.Language can be changed in the weather.py file in particular in the get_current_weather() function in the API call (&lang=bg&units=metric).Units can be three types of metric(Celsius),imperial(Fahrenheit) or standard(Kalvin).In this example we have used metric units and Bulgarian(bg) language. You can adjust it accordingly.
 
 ###
 Important to do first!!!
@@ -32,3 +32,10 @@ virtual server block
 after that you`ll got access to the website but with no ssl/tls encryption you can choose
 from a plenty free and paid Certificate Authorities or Issuers or you can use ACME services which are free with much info and support 
 on that task [also supports wildcards (*.example.com)] 
+
+## Configuration
+Copy `.env.example` to `.env` and set `API_KEY` (and optionally `BASE_URL`).
+`uWSGI` is intentionally not in `requirements.txt` (it needs a compiler); install it separately with `pip install uwsgi` for the systemd/nginx setup.
+
+## Tests
+`pip install -r requirements-dev.txt && pytest`

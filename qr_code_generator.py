@@ -1,7 +1,6 @@
 import segno
 
 
-def link_to_qr_code(link):
-    # link make to qr here
-    qr_code = segno.make(link)
-    qr_code.save('static/images/qr/qr_code.png', scale=4)
+def link_to_qr_code(link: str) -> str:
+    """Return the QR code for *link* as a PNG data URI (nothing is written to disk)."""
+    return segno.make(link).png_data_uri(scale=4)
