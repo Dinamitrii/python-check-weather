@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>Времето</title>
+  <defs>
+    <clipPath id="r"><rect width="64" height="64" rx="12"/></clipPath>
+  </defs>
+  <g clip-path="url(#r)">
+    <rect width="64" height="22" fill="#ffffff"/>
+    <rect y="21" width="64" height="22" fill="#00966e"/>
+    <rect y="42" width="64" height="22" fill="#d62612"/>
+  </g>
+  <circle cx="32" cy="32" r="10" fill="#fcc200" stroke="#ffffff" stroke-width="2.5"/>
+  <g stroke="#fcc200" stroke-width="3" stroke-linecap="round">
+    <path d="M32 14v4M32 46v4M14 32h4M46 32h4M19.3 19.3l2.8 2.8M41.9 41.9l2.8 2.8M44.7 19.3l-2.8 2.8M22.1 41.9l-2.8 2.8"/>
+  </g>
+</svg>

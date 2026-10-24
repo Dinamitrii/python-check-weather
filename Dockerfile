@@ -1,8 +1,8 @@
 FROM python:3.12-slim
 WORKDIR /app
 ENV PYTHONUNBUFFERED=1
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements-server.txt .
+RUN pip install --no-cache-dir -r requirements-server.txt
 COPY . .
 RUN useradd --system --no-create-home app && chown -R app /app
 USER app

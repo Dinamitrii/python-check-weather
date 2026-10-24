@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% if country_code %} ({{ country_code }}){% endif %} – времето{% endblock %}
+{% block description %}Текущо време в {{ title }}: {{ status }}, {{ temp }} °C{% endblock %}
+{% block canonical %}/weather?city={{ title|urlencode }}{% endblock %}
+{% block content %}
+    <h1>В {{ title }}{% if country_code %} [{{ country_code }}]{% endif %} времето към момента е…</h1>
+
+    <section>
+        <p>{{ status }} при {{ temp }} °C</p>
+        <p>Усеща се като {{ feels_like }} °C</p>
+        <p>Минимална {{ temp_min }} °C, максимална {{ temp_max }} °C</p>
+        <p>Влажност {{ humidity }}%</p>
+        <p>Вятър {{ wind }} m/s</p>
+        <p>Атмосферно налягане {{ atmos_pressure }} hPa</p>
+    </section>
+
+    <hr>
+    {% include "_search_form.html" %}
+    <hr>
+
+    <section>
+        <p>Слънцето изгрява в {{ sunrise }} и залязва в {{ sunset }} (местно време)</p>
+        <p>Часова зона: {{ tz_label }}</p>
+        <p>Местно време при обновяването: {{ local_time }}</p>
+        <p class="coords">
+            Географска ширина: {{ geo_latitude }}<br>
+            Географска дължина: {{ geo_longitude }}
+        </p>
+    </section>
+{% endblock %}

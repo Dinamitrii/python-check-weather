@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Камен Караиванов, Вестерос БГ ЕООД">
+    <meta name="description" content="{% block description %}Проверете времето в избран от вас град{% endblock %}">
+    <meta name="theme-color" content="#333333">
+    <title>{% block title %}Проверете времето в избран от вас град{% endblock %}</title>
+    <link rel="canonical" href="{{ base_url }}{% block canonical %}/{% endblock %}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon/favicon.ico') }}">
+</head>
+<body>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <img src="{{ qr_code }}" alt="QR код към тази страница" width="148" height="148">
+    </footer>
+</body>
+</html>

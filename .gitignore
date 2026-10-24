@@ -88,3 +88,6 @@ fabric.properties
 etc/aau_token
 logfile.log
 *.log
+
+.dev.vars
+.wrangler/

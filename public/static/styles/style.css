@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    padding: 2rem;
+    background-color: #333;
+    color: whitesmoke;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2rem;
+}
+
+input, button {
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.coords {
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+hr {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #666;
+}
+
+footer img {
+    width: 148px;
+    height: 148px;
+    image-rendering: pixelated;
+}
+
+footer {
+    text-align: center;
+}
+
+footer p {
+    margin: 1rem 0 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}

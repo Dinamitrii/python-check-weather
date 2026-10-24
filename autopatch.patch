@@ -1,0 +1,571 @@
+diff --git a/.env.example b/.env.example
+index 0ec322a..ae42cc7 100644
+--- a/.env.example
++++ b/.env.example
+@@ -1,4 +1,4 @@
+ # Get a key from https://openweathermap.org and copy this file to .env
+-API_KEY=f7e79c61a68bf3d9ed8cb30a46d4e3a8
++API_KEY=your_openweathermap_key_here
+ # Public base URL used for canonical links and the QR code
+ BASE_URL=https://predictorian.site
+diff --git a/.gitignore b/.gitignore
+index bc5746a..7b8a171 100755
+--- a/.gitignore
++++ b/.gitignore
+@@ -88,3 +88,6 @@ fabric.properties
+ etc/aau_token
+ logfile.log
+ *.log
++
++.dev.vars
++.wrangler/
+diff --git a/static/robots.txt b/public/robots.txt
+similarity index 100%
+rename from static/robots.txt
+rename to public/robots.txt
+diff --git a/static/sitemap.xml b/public/sitemap.xml
+similarity index 100%
+rename from static/sitemap.xml
+rename to public/sitemap.xml
+diff --git a/static/images/favicon/android-chrome-192x192.png b/public/static/images/favicon/android-chrome-192x192.png
+similarity index 100%
+rename from static/images/favicon/android-chrome-192x192.png
+rename to public/static/images/favicon/android-chrome-192x192.png
+diff --git a/static/images/favicon/android-chrome-512x512.png b/public/static/images/favicon/android-chrome-512x512.png
+similarity index 100%
+rename from static/images/favicon/android-chrome-512x512.png
+rename to public/static/images/favicon/android-chrome-512x512.png
+diff --git a/static/images/favicon/apple-touch-icon.png b/public/static/images/favicon/apple-touch-icon.png
+similarity index 100%
+rename from static/images/favicon/apple-touch-icon.png
+rename to public/static/images/favicon/apple-touch-icon.png
+diff --git a/static/images/favicon/favicon-16x16.png b/public/static/images/favicon/favicon-16x16.png
+similarity index 100%
+rename from static/images/favicon/favicon-16x16.png
+rename to public/static/images/favicon/favicon-16x16.png
+diff --git a/static/images/favicon/favicon-32x32.png b/public/static/images/favicon/favicon-32x32.png
+similarity index 100%
+rename from static/images/favicon/favicon-32x32.png
+rename to public/static/images/favicon/favicon-32x32.png
+diff --git a/static/images/favicon/favicon.ico b/public/static/images/favicon/favicon.ico
+similarity index 100%
+rename from static/images/favicon/favicon.ico
+rename to public/static/images/favicon/favicon.ico
+diff --git a/static/images/favicon/site.webmanifest b/public/static/images/favicon/site.webmanifest
+similarity index 100%
+rename from static/images/favicon/site.webmanifest
+rename to public/static/images/favicon/site.webmanifest
+diff --git a/static/styles/style.css b/public/static/styles/style.css
+similarity index 89%
+rename from static/styles/style.css
+rename to public/static/styles/style.css
+index c8e6a2a..f31f008 100755
+--- a/static/styles/style.css
++++ b/public/static/styles/style.css
+@@ -49,3 +49,9 @@ hr {
+     border: 0;
+     border-top: 1px solid #666;
+ }
++
++footer img {
++    width: 148px;
++    height: 148px;
++    image-rendering: pixelated;
++}
+diff --git a/pyproject.toml b/pyproject.toml
+index aa81e67..3eded90 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -1,27 +1,25 @@
+ [project]
+ name = "python-check-weather"
+ version = "0.1.0"
+-description = "Add your description here"
++description = "Flask weather app (Cloudflare Workers, uWSGI or Docker)"
+ readme = "README.md"
+ authors = [
+     { name = "dinamitrii", email = "k_karaivanov@abv.bg" }
+ ]
+-requires-python = ">=3.13"
++requires-python = ">=3.12"
++# Runtime packages that pywrangler vendors into the Worker
+ dependencies = [
+-    "bcc==0.1.10",
+-    "flake8==7.4.1",
+     "flask>=3.1.3",
++    "segno>=1.6.6",
++]
++
++[dependency-groups]
++# Local development only (not used on Cloudflare Workers)
++dev = [
++    "flake8==7.4.1",
+     "pytest==9.1.1",
+     "python-dotenv>=1.2.4",
+     "pywrangler>=0.0.2",
+     "requests==2.34.2",
+-    "segno>=1.6.6",
+     "waitress>=3.0.2",
+ ]
+-
+-[project.scripts]
+-python-check-weather = "python_check_weather:main"
+-
+-[build-system]
+-requires = ["uv_build>=0.13.5,<0.14.0"]
+-build-backend = "uv_build"
+diff --git a/requirements.txt b/requirements.txt
+index 97a871c..0c93b0a 100755
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -1,164 +1,5 @@
+-argcomplete==3.1.4
+-asgiref==3.7.2
+-async-timeout==4.0.3
+-attrs==23.2.0
+-Babel==2.10.3
+-bcc==0.29.1
+-bcrypt==3.2.2
+-beautifulsoup4==4.12.3
+-blinker==1.7.0
+-boolean.py==4.0
+-Brlapi==0.8.5
+-build==1.0.3
+-CacheControl==0.14.0
+-Cerberus==1.3.2
+-certifi==2023.11.17
+-chardet==5.2.0
+-charset-normalizer==3.3.2
+-cleo==2.1.0
+-click==8.1.6
+-cloud-init==26.2
+-cmake-annotate==0.6.13
+-cmake-format==0.6.13
+-cmake-lint==0.6.13
+-cmake-parse==0.6.13
+-cmakelang==0.6.13
+-colorama==0.4.6
+-command-not-found==0.3
+-configobj==5.0.8
+-crashtest==0.4.1
+-cryptography==41.0.7
+-cssselect==1.2.0
+-cupshelpers==1.0
+-dbus-python==1.3.2
+-defer==1.0.6
+-defusedxml==0.7.1
+-Deprecated==1.2.14
+-distlib==0.3.8
+-distro==1.9.0
+-distro-info==1.7+build1
+-dnspython==2.6.1
+-dulwich==0.21.6
+-duplicity==2.1.4
+-editables==0.5
+-fasteners==0.18
+-fastimport==0.9.14
+-fastjsonschema==2.19.0
+-filelock==3.13.1
+-Flask==3.0.2
+-greenbone-feed-sync==23.10.0
+-gvm-tools==23.11.0
+-html5lib==1.1
+-httplib2==0.20.4
+-idna==3.6
+-impacket==0.11.0
+-importlib-metadata==4.12.0
+-installer==0.7.0
+-itsdangerous==2.1.2
+-jaraco.classes==3.2.1
+-jeepney==0.8.0
+-Jinja2==3.1.2
+-jsonpatch==1.32
+-jsonpointer==2.0
+-jsonschema==4.10.3
+-keyring==24.3.1
+-language-selector==0.1
+-launchpadlib==1.11.0
+-lazr.restfulclient==0.14.6
+-lazr.uri==1.0.6
+-ldap3==2.9.1
+-ldapdomaindump==0.9.4
+-license-expression==30.1.1
+-lockfile==0.12.2
+-louis==3.29.0
+-lxml==5.2.1
+-Mako==1.3.2.dev0
+-markdown-it-py==3.0.0
+-MarkupSafe==2.1.5
+-mdurl==0.1.2
+-monotonic==1.6
+-more-itertools==10.2.0
+-msgpack==1.0.3
+-netaddr==0.8.0
+-netifaces==0.11.0
+-notus-scanner==22.6.2
+-oauthlib==3.2.2
+-olefile==0.46
+-ospd-openvas==22.6.2
+-packaging==24.0
+-paho-mqtt==1.6.1
+-paramiko==2.12.0
+-pdm-backend==2.1.8
+-pdm-pep517==1.1.4
+-pexpect==4.9.0
+-pillow==10.2.0
+-pipx==1.4.3
+-pkginfo==1.9.6
+-platformdirs==4.2.0
+-poetry==1.8.2
+-poetry-core==1.9.0
+-poetry-plugin-export==1.6.0
+-polib==1.1.1
+-psutil==5.9.8
+-ptyprocess==0.7.0
+-pyasn1==0.4.8
+-pyasyncore==1.0.2
+-pycairo==1.25.1
+-pycryptodomex==3.20.0
+-pycups==2.0.1
+-Pygments==2.17.2
+-PyGObject==3.48.2
+-pyinotify==0.9.6
+-PyJWT==2.7.0
+-pylev==1.4.0
+-PyNaCl==1.5.0
+-pyOpenSSL==23.2.0
+-pyparsing==3.1.1
+-pyproject-metadata==0.7.1
+-pyproject_hooks==1.0.0
+-pyrsistent==0.20.0
+-pyserial==3.5
+-python-apt==2.7.7+ubuntu5.3
+-python-dateutil==2.8.2
+-python-debian==0.1.49+ubuntu2
+-python-gnupg==0.5.2
+-python-gvm==23.11.0
+-pytz==2024.1
+-pyxdg==0.28
+-PyYAML==6.0.1
+-redis==4.3.4
+-requests==2.31.0
+-requests-toolbelt==1.0.0
+-rich==13.7.1
+-screen-resolution-extra==0.0.0
+-SecretStorage==3.3.3
+-setuptools==68.1.2
+-shellingham==1.5.4
+-simplejson==3.19.2
+-six==1.16.0
+-soupsieve==2.5
+-systemd-python==235
+-terminaltables==3.1.10
+-toml==0.10.2
+-tomli==2.0.1
+-tomli_w==1.0.0
+-tomlkit==0.12.4
+-trove-classifiers==2024.1.31
+-typing_extensions==4.10.0
+-ubuntu-drivers-common==0.0.0
+-ubuntu-pro-client==8001
+-ufw==0.36.2
+-unattended-upgrades==0.1
+-urllib3==2.0.7
+-usb-creator==0.3.16
+-userpath==1.9.1
+-validate-pyproject==0.0.0
+-virtualenv==20.25.0+ds
+-wadllib==1.3.6
+-webencodings==0.5.1
+-Werkzeug==3.0.1
+-wheel==0.42.0
+-wrapt==1.15.0
+-xdg==5
+-xkit==0.0.0
+-zipp==1.0.0
++Flask>=3.1.3
++segno>=1.6.6
++requests>=2.32
++python-dotenv>=1.0
++waitress>=3.0
+diff --git a/src/python_check_weather/__init__.py b/src/python_check_weather/__init__.py
+deleted file mode 100644
+index d63d11a..0000000
+--- a/src/python_check_weather/__init__.py
++++ /dev/null
+@@ -1,2 +0,0 @@
+-def main() -> None:
+-    print("Hello from python-check-weather!")
+diff --git a/qr_code_generator.py b/src/qr_code_generator.py
+similarity index 100%
+rename from qr_code_generator.py
+rename to src/qr_code_generator.py
+diff --git a/server.py b/src/server.py
+similarity index 78%
+rename from server.py
+rename to src/server.py
+index 684122c..2fc5b20 100644
+--- a/server.py
++++ b/src/server.py
+@@ -2,10 +2,14 @@ import os
+ from datetime import datetime, timedelta, timezone
+ from urllib.parse import quote
+ 
+-from dotenv import load_dotenv
+ from flask import Flask, render_template, request, send_from_directory
+ 
+-load_dotenv()
++try:  # local development only; Cloudflare Workers has no .env file
++    from dotenv import load_dotenv
++
++    load_dotenv()
++except ImportError:
++    pass
+ 
+ from qr_code_generator import link_to_qr_code  # noqa: E402
+ from weather import get_current_weather  # noqa: E402
+@@ -13,7 +17,19 @@ from weather import get_current_weather  # noqa: E402
+ BASE_URL = os.getenv("BASE_URL", "https://predictorian.site").rstrip("/")
+ MAX_CITY_LEN = 100
+ 
+-app = Flask(__name__)
++# ./public is served directly by Workers Static Assets on Cloudflare;
++# locally Flask serves the same folder, so the URLs are identical.
++PUBLIC_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "public")
++
++app = Flask(__name__, static_folder=os.path.join(PUBLIC_DIR, "static"))
++
++
++def get_api_key():
++    """Cloudflare secret on Workers, .env / environment variable elsewhere."""
++    env = request.environ.get("workers.env")
++    if env is not None:
++        return str(env.API_KEY)
++    return os.getenv("API_KEY")
+ 
+ 
+ def _format_offset(seconds: int) -> str:
+@@ -39,7 +55,7 @@ def get_weather():
+     city = (request.args.get("city") or "").strip()[:MAX_CITY_LEN] or "Sofia"
+     qr_code = link_to_qr_code(f"{BASE_URL}/weather?city={quote(city)}")
+ 
+-    weather_data = get_current_weather(city)
++    weather_data = get_current_weather(city, get_api_key())
+     cod = weather_data.get("cod")
+ 
+     if cod == 404:
+@@ -93,7 +109,7 @@ def favicon():
+ @app.route("/robots.txt")
+ @app.route("/sitemap.xml")
+ def static_from_root():
+-    return send_from_directory(app.static_folder, request.path[1:])
++    return send_from_directory(PUBLIC_DIR, request.path[1:])
+ 
+ 
+ if __name__ == "__main__":
+diff --git a/templates/_search_form.html b/src/templates/_search_form.html
+similarity index 100%
+rename from templates/_search_form.html
+rename to src/templates/_search_form.html
+diff --git a/templates/base.html b/src/templates/base.html
+similarity index 100%
+rename from templates/base.html
+rename to src/templates/base.html
+diff --git a/templates/city-not-found.html b/src/templates/city-not-found.html
+similarity index 100%
+rename from templates/city-not-found.html
+rename to src/templates/city-not-found.html
+diff --git a/templates/index.html b/src/templates/index.html
+similarity index 100%
+rename from templates/index.html
+rename to src/templates/index.html
+diff --git a/templates/service-error.html b/src/templates/service-error.html
+similarity index 100%
+rename from templates/service-error.html
+rename to src/templates/service-error.html
+diff --git a/templates/weather.html b/src/templates/weather.html
+similarity index 100%
+rename from templates/weather.html
+rename to src/templates/weather.html
+diff --git a/weather.py b/src/weather.py
+similarity index 54%
+rename from weather.py
+rename to src/weather.py
+index 36fd2e8..f968e7e 100644
+--- a/weather.py
++++ b/src/weather.py
+@@ -2,14 +2,20 @@ import os
+ import threading
+ import time
+ from pprint import pprint
++from urllib.parse import urlencode
+ 
+-import requests
+-from dotenv import load_dotenv
++try:  # Cloudflare Workers (Pyodide)
++    from pyodide.ffi import run_sync
++    from pyodide.http import pyfetch
+ 
+-load_dotenv()
++    ON_WORKERS = True
++except ImportError:  # local / uWSGI / Docker
++    import requests
++
++    ON_WORKERS = False
+ 
+ API_URL = "https://api.openweathermap.org/data/2.5/weather"
+-CACHE_TTL = 600  # seconds
++CACHE_TTL = 600  # seconds (per Worker isolate on Cloudflare, per process elsewhere)
+ _CACHE_MAX = 500
+ 
+ _cache = {}
+@@ -32,7 +38,16 @@ def _cache_set(key, value):
+         _cache[key] = (time.monotonic(), value)
+ 
+ 
+-def get_current_weather(city="Sofia"):
++def _fetch_json(params):
++    """Return (status_code, json_dict). Raises on network/JSON problems."""
++    if ON_WORKERS:
++        response = run_sync(pyfetch(f"{API_URL}?{urlencode(params)}"))
++        return response.status, run_sync(response.json())
++    response = requests.get(API_URL, params=params, timeout=5)
++    return response.status_code, response.json()
++
++
++def get_current_weather(city="Sofia", api_key=None):
+     """Return the OpenWeather payload with an int ``cod``.
+ 
+     cod 200 -> success, 404 -> city not found, anything else -> service problem
+@@ -43,21 +58,20 @@ def get_current_weather(city="Sofia"):
+     if cached is not None:
+         return cached
+ 
+-    api_key = os.getenv("API_KEY")
++    api_key = api_key or os.getenv("API_KEY")
+     if not api_key:
+         return {"cod": 500, "message": "API_KEY is not configured"}
+ 
+     params = {"appid": api_key, "q": city, "lang": "bg", "units": "metric"}
+     try:
+-        response = requests.get(API_URL, params=params, timeout=5)
+-        data = response.json()
+-    except (requests.RequestException, ValueError):
++        status, data = _fetch_json(params)
++    except Exception:  # network problem or bad JSON
+         return {"cod": 502, "message": "weather service unavailable"}
+ 
+     try:
+-        data["cod"] = int(data.get("cod", response.status_code))
+-    except (TypeError, ValueError):
+-        data["cod"] = response.status_code
++        data["cod"] = int(data.get("cod", status))
++    except (TypeError, ValueError, AttributeError):
++        return {"cod": status if status != 200 else 502}
+ 
+     if data["cod"] in (200, 404):
+         _cache_set(key, data)
+@@ -65,6 +79,12 @@ def get_current_weather(city="Sofia"):
+ 
+ 
+ if __name__ == "__main__":
++    try:
++        from dotenv import load_dotenv
++
++        load_dotenv()
++    except ImportError:
++        pass
+     print("\n*** Get Current Weather Conditions ***\n")
+     city = input("\nPlease enter a city name: ").strip() or "Sofia"
+     print("\n")
+diff --git a/src/worker.py b/src/worker.py
+new file mode 100644
+index 0000000..fd12a4e
+--- /dev/null
++++ b/src/worker.py
+@@ -0,0 +1,5 @@
++from workers import wsgi
++
++from server import app
++
++Default = wsgi.entrypoint(app)
+diff --git a/tests/conftest.py b/tests/conftest.py
+new file mode 100644
+index 0000000..d956842
+--- /dev/null
++++ b/tests/conftest.py
+@@ -0,0 +1,4 @@
++import os
++import sys
++
++sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
+diff --git a/tests/test_app.py b/tests/test_app.py
+index 351e9ac..75f8305 100644
+--- a/tests/test_app.py
++++ b/tests/test_app.py
+@@ -31,7 +31,7 @@ def test_index(client):
+ 
+ 
+ def test_weather_ok(client, monkeypatch):
+-    monkeypatch.setattr(server, "get_current_weather", lambda c: SAMPLE)
++    monkeypatch.setattr(server, "get_current_weather", lambda c, k=None: SAMPLE)
+     r = client.get("/weather?city=Sofia")
+     html = r.get_data(as_text=True)
+     assert r.status_code == 200
+@@ -40,24 +40,24 @@ def test_weather_ok(client, monkeypatch):
+ 
+ def test_empty_city_defaults_to_sofia(client, monkeypatch):
+     seen = []
+-    monkeypatch.setattr(server, "get_current_weather", lambda c: seen.append(c) or SAMPLE)
++    monkeypatch.setattr(server, "get_current_weather", lambda c, k=None: seen.append(c) or SAMPLE)
+     client.get("/weather?city=%20%20")
+     assert seen == ["Sofia"]
+ 
+ 
+ def test_city_not_found(client, monkeypatch):
+-    monkeypatch.setattr(server, "get_current_weather", lambda c: {"cod": 404})
++    monkeypatch.setattr(server, "get_current_weather", lambda c, k=None: {"cod": 404})
+     assert client.get("/weather?city=zzz").status_code == 404
+ 
+ 
+ def test_service_error(client, monkeypatch):
+-    monkeypatch.setattr(server, "get_current_weather", lambda c: {"cod": 401})
++    monkeypatch.setattr(server, "get_current_weather", lambda c, k=None: {"cod": 401})
+     assert client.get("/weather?city=Sofia").status_code == 503
+ 
+ 
+ def test_city_is_escaped(client, monkeypatch):
+     data = dict(SAMPLE, name="<script>alert(1)</script>")
+-    monkeypatch.setattr(server, "get_current_weather", lambda c: data)
++    monkeypatch.setattr(server, "get_current_weather", lambda c, k=None: data)
+     assert "<script>alert(1)</script>" not in client.get("/weather?city=x").get_data(as_text=True)
+ 
+ 
+diff --git a/wrangler.jsonc b/wrangler.jsonc
+index 5839818..4f917c5 100644
+--- a/wrangler.jsonc
++++ b/wrangler.jsonc
+@@ -4,7 +4,7 @@
+   "main": "src/worker.py",
+   "compatibility_date": "2026-10-23",
+   "compatibility_flags": ["python_workers"],
+-  // Files in ./public are served directly (css, js, images, robots.txt, sitemap.xml)
++  // Files in ./public are served directly (static/, robots.txt, sitemap.xml)
+   "assets": {
+     "directory": "./public/"
+   },
+diff --git a/wsgi.py b/wsgi.py
+index 3cf1caf..21f8f31 100644
+--- a/wsgi.py
++++ b/wsgi.py
+@@ -1,7 +1,10 @@
++import sys
+ from pathlib import Path
+ 
+ from dotenv import load_dotenv
+ 
++sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
++
+ # Load .env next to this file regardless of the working directory (before importing server)
+ load_dotenv(dotenv_path=Path(__file__).resolve().parent / ".env")
+ 

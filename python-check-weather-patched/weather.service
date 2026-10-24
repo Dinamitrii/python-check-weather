@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI Instance to serve my project python-check-weather
+After=network.target
+
+[Service]
+User=dinamitrii
+Group=www-data
+WorkingDirectory=/home/dinamitrii/python-check-weather
+Environment="PATH=/home/dinamitrii/python-check-weather/.venv/bin"
+ExecStart=/home/dinamitrii/python-check-weather/.venv/bin/uwsgi --ini server.ini
+
+[Install]
+WantedBy=multi-user.target

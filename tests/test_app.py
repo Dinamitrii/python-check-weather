@@ -28,10 +28,11 @@ def test_index(client):
     assert r.status_code == 200
     assert 'name="city"' in r.get_data(as_text=True)
     assert "data:image/png;base64" in r.get_data(as_text=True)
+    assert "&copy; 2026 Vesteros BG Ltd." in r.get_data(as_text=True)
 
 
 def test_weather_ok(client, monkeypatch):
-    monkeypatch.setattr(server, "get_current_weather", lambda c: SAMPLE)
+    monkeypatch.setattr(server, "get_current_weather", lambda c, k=None: SAMPLE)
     r = client.get("/weather?city=Sofia")
     html = r.get_data(as_text=True)
     assert r.status_code == 200
@@ -40,24 +41,24 @@ def test_weather_ok(client, monkeypatch):
 
 def test_empty_city_defaults_to_sofia(client, monkeypatch):
     seen = []
-    monkeypatch.setattr(server, "get_current_weather", lambda c: seen.append(c) or SAMPLE)
+    monkeypatch.setattr(server, "get_current_weather", lambda c, k=None: seen.append(c) or SAMPLE)
     client.get("/weather?city=%20%20")
     assert seen == ["Sofia"]
 
 
 def test_city_not_found(client, monkeypatch):
-    monkeypatch.setattr(server, "get_current_weather", lambda c: {"cod": 404})
+    monkeypatch.setattr(server, "get_current_weather", lambda c, k=None: {"cod": 404})
     assert client.get("/weather?city=zzz").status_code == 404
 
 
 def test_service_error(client, monkeypatch):
-    monkeypatch.setattr(server, "get_current_weather", lambda c: {"cod": 401})
+    monkeypatch.setattr(server, "get_current_weather", lambda c, k=None: {"cod": 401})
     assert client.get("/weather?city=Sofia").status_code == 503
 
 
 def test_city_is_escaped(client, monkeypatch):
     data = dict(SAMPLE, name="<script>alert(1)</script>")
-    monkeypatch.setattr(server, "get_current_weather", lambda c: data)
+    monkeypatch.setattr(server, "get_current_weather", lambda c, k=None: data)
     assert "<script>alert(1)</script>" not in client.get("/weather?city=x").get_data(as_text=True)
 
 

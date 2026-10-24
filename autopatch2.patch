@@ -1,0 +1,65 @@
+diff --git a/public/robots.txt b/public/robots.txt
+index d42f385..5312c8d 100755
+--- a/public/robots.txt
++++ b/public/robots.txt
+@@ -2,3 +2,4 @@ User-agent: *
+ Allow: /
+ 
+ Sitemap: https://predictorian.site/sitemap.xml
++Sitemap: https://www.predictorian.site/sitemap.xml
+diff --git a/public/sitemap.xml b/public/sitemap.xml
+index 642feeb..de1e11a 100644
+--- a/public/sitemap.xml
++++ b/public/sitemap.xml
+@@ -1,5 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
++  <url>
++    <loc>https://predictorian.site/</loc>
++    <lastmod>2026-10-24</lastmod>
++  </url>
+   <url>
+     <loc>https://www.predictorian.site/</loc>
+     <lastmod>2026-10-24</lastmod>
+diff --git a/public/static/styles/style.css b/public/static/styles/style.css
+index f31f008..c1a6458 100755
+--- a/public/static/styles/style.css
++++ b/public/static/styles/style.css
+@@ -55,3 +55,13 @@ footer img {
+     height: 148px;
+     image-rendering: pixelated;
+ }
++
++footer {
++    text-align: center;
++}
++
++footer p {
++    margin: 1rem 0 0;
++    font-size: 0.9rem;
++    opacity: 0.8;
++}
+diff --git a/src/templates/base.html b/src/templates/base.html
+index b6228e5..72af87a 100644
+--- a/src/templates/base.html
++++ b/src/templates/base.html
+@@ -21,6 +21,7 @@
+     </main>
+     <footer>
+         <img src="{{ qr_code }}" alt="QR код към тази страница" width="148" height="148">
++        <p>&copy; 2026 Vesteros BG Ltd.</p>
+     </footer>
+ </body>
+ </html>
+diff --git a/tests/test_app.py b/tests/test_app.py
+index 75f8305..d9c3417 100644
+--- a/tests/test_app.py
++++ b/tests/test_app.py
+@@ -28,6 +28,7 @@ def test_index(client):
+     assert r.status_code == 200
+     assert 'name="city"' in r.get_data(as_text=True)
+     assert "data:image/png;base64" in r.get_data(as_text=True)
++    assert "&copy; 2026 Vesteros BG Ltd." in r.get_data(as_text=True)
+ 
+ 
+ def test_weather_ok(client, monkeypatch):

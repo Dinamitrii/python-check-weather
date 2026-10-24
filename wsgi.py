@@ -1,6 +1,9 @@
+import sys
 from pathlib import Path
 
 from dotenv import load_dotenv
+
+sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
 
 # Load .env next to this file regardless of the working directory (before importing server)
 load_dotenv(dotenv_path=Path(__file__).resolve().parent / ".env")
