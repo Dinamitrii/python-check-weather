@@ -1,0 +1,311 @@
+import http.client
+from collections.abc import Iterator, Mapping, Sequence
+from contextlib import contextmanager
+from typing import Any
+
+import _pyodide_entrypoint_helper
+import js
+from pyodide.ffi import (
+    JsException,
+    create_proxy,
+    destroy_proxies,
+    to_js,
+)
+
+from .workflows import NonRetryableError
+
+try:
+    from pyodide.ffi import jsnull
+except ImportError:
+    jsnull = None
+
+
+RESPONSE_ACCEPTED_TYPES = {
+    # BufferSource types
+    "Blob",
+    "ArrayBuffer",
+    "TypedArray",
+    "DataView",
+    "Uint8Array",
+    "Uint8ClampedArray",
+    "Int8Array",
+    "Uint16Array",
+    "Int16Array",
+    "Uint32Array",
+    "Int32Array",
+    "Float16Array",
+    "Float32Array",
+    "Float64Array",
+    "BigInt64Array",
+    "BigUint64Array",
+    # Other types
+    "FormData",
+    "ReadableStream",
+    "URLSearchParams",
+    "Response",
+}
+
+# JS built-in types that should NOT be wrapped in _BindingWrapper.
+# These have their own Python-side semantics (e.g. passed directly to Response())
+# and wrapping them breaks property access like `.constructor.name`.
+_JS_PASSTHROUGH_TYPES = RESPONSE_ACCEPTED_TYPES | {
+    "Headers",
+}
+
+
+@contextmanager
+def _get_js_body(body):
+    from .formdata import FormData
+
+    if isinstance(body, bytes):
+        proxy_bytes = create_proxy(body)
+        proxy_buffer = proxy_bytes.getBuffer()
+        try:
+            yield proxy_buffer.data
+            return
+        finally:
+            proxy_buffer.release()
+            proxy_bytes.destroy()
+    if isinstance(body, FormData):
+        yield body.js_object
+        return
+    yield body
+
+
+def _jsnull_to_none(x):
+    if x is jsnull:
+        return None
+    return x
+
+
+def import_from_javascript(module_name: str) -> Any:
+    """
+    Import a JavaScript ES module from Python.
+
+    Args:
+        module_name: The name of the module to import. This can be a module name or a path.
+
+    Returns:
+        The imported module object.
+
+    Example:
+        cloudflare_workers = import_from_javascript("cloudflare:workers")
+        env = cloudflare_workers.env
+
+    Note:
+        Behind the scenes import_from_javascript uses JSPI to do imports but that means we need an
+        async context. To enable importing cloudflare:workers and cloudflare:sockets in the global
+        scope we specifically imported them in the global scope and exposed them here.
+    """
+    # Special case for global scope available modules
+    # JSPI won't work in the global scope in 0.26.0a2 so we need modules importable in the global
+    # scope to be imported beforehand.
+    if module_name == "cloudflare:workers":
+        return _pyodide_entrypoint_helper.cloudflareWorkersModule
+    elif module_name == "cloudflare:sockets":
+        return _pyodide_entrypoint_helper.cloudflareSocketsModule
+
+    try:
+        from pyodide.ffi import run_sync
+
+        # Call the JavaScript import function
+        return run_sync(_pyodide_entrypoint_helper.doAnImport(module_name))
+    except JsException as e:
+        raise ImportError(f"Failed to import '{module_name}': {e}") from e
+    except RuntimeError as e:
+        if e.args[0] == "No suspender":
+            raise ImportError(
+                f"Failed to import '{module_name}': Only 'cloudflare:workers' and 'cloudflare:sockets' are available in the global scope."
+            ) from e
+        raise
+    except ImportError as e:
+        if e.args[0].startswith("cannot import name 'run_sync' from 'pyodide.ffi'"):
+            raise ImportError(
+                f"Failed to import '{module_name}': Only 'cloudflare:workers' and 'cloudflare:sockets' are available until the next python runtime version."
+            ) from e
+        raise
+
+
+# Directory, relative to the worker bundle root, that `pywrangler sync` vendors Python packages
+# into. wrangler registers `.js`/`.mjs` files found under `python_modules/workers/` as ES modules
+# (everything else in `python_modules/` is opaque data), which is what lets them be imported via
+# `import_from_javascript`.
+_SDK_JS_MODULE_PREFIX = "python_modules/workers/"
+
+
+async def import_sdk_javascript_module_async(name: str) -> Any:
+    """
+    Asynchronous function to import an sdk js module
+
+    This does not rely on JSPI, so it also works with Pyodide 0.26.0a2.
+    """
+    try:
+        return await _pyodide_entrypoint_helper.doAnImport(_SDK_JS_MODULE_PREFIX + name)
+    except JsException as e:
+        raise ImportError(f"Failed to import '{name}': {e}") from e
+
+
+@contextmanager
+def patch_env(
+    d: dict[str, Any] | Sequence[tuple[str, Any]] | None = None, **kwds: dict[str, Any]
+) -> Iterator[None]:
+    if d:
+        kwds = dict(d) | kwds
+    yield from _pyodide_entrypoint_helper.patch_env_helper(to_js(kwds))
+
+
+def _to_python_exception(exc: JsException) -> Exception:
+    if exc.name == "RangeError":
+        return ValueError(exc.message)
+    elif exc.name == "TypeError":
+        return TypeError(exc.message)
+    else:
+        return exc
+
+
+_NON_RETRYABLE_ERROR_NAME = "NonRetryableError"
+
+
+def _from_js_error(exc: JsException) -> Exception:
+    # convert into Python exception after a full round trip
+    # Python - JS - Python
+    message = exc.message or ""
+
+    # A NonRetryableError raised inside a workflow step is translated by the
+    # runtime into a JS error named "NonRetryableError" before it reaches the
+    # Workflows engine, which is how the engine knows not to retry the step.
+    # When the engine rethrows it back to us the name either survives, or is
+    # folded into the message as a prefix.
+    if getattr(exc, "name", None) == _NON_RETRYABLE_ERROR_NAME:
+        return NonRetryableError(message)
+    if message == _NON_RETRYABLE_ERROR_NAME:
+        return NonRetryableError()
+    if message.startswith(_NON_RETRYABLE_ERROR_NAME + ": "):
+        return NonRetryableError(message[len(_NON_RETRYABLE_ERROR_NAME) + 2 :])
+
+    # A Python exception that escaped to JS is a Pyodide `PythonError` whose
+    # message is the formatted traceback. Depending on how it was serialized
+    # over RPC it either keeps its name or arrives as a plain `Error` with
+    # "PythonError: " folded into the message
+    if getattr(exc, "name", None) != "PythonError" and not message.startswith(
+        "PythonError"
+    ):
+        return _to_python_exception(exc)
+
+    # extract the Python exception type from the last line of the traceback. The
+    # message may have been stripped down to just "PythonError" when crossing an RPC
+    # boundary, in which case there is no traceback to inspect.
+    lines = message.rstrip().split("\n")
+    if len(lines) < 2:
+        return _to_python_exception(exc)
+    error_message_last_line = lines[-1]
+    if error_message_last_line.startswith("TypeError"):
+        return TypeError(error_message_last_line)
+    elif error_message_last_line.startswith("ValueError"):
+        return ValueError(error_message_last_line)
+    elif error_message_last_line.startswith("workers.workflows.NonRetryableError"):
+        return NonRetryableError(error_message_last_line)
+    else:
+        return _to_python_exception(exc)
+
+
+@contextmanager
+def _manage_pyproxies():
+    proxies = js.Array.new()
+    try:
+        yield proxies
+    finally:
+        destroy_proxies(proxies)
+
+
+def _is_js_instance(val, js_cls_names: str | set[str]):
+    if not hasattr(val, "constructor"):
+        return False
+    name = val.constructor.name
+    if isinstance(js_cls_names, set):
+        return name in js_cls_names
+    return name == js_cls_names
+
+
+try:
+    import _cloudflare_compat_flags
+except ImportError:
+    _cloudflare_compat_flags = object()
+
+
+def get_compat_flag(flag: str) -> bool:
+    return getattr(_cloudflare_compat_flags, flag, False)
+
+
+def _to_js_headers(headers):
+    if isinstance(headers, list):
+        # We should have a list[tuple[str, str]]
+        return js.Headers.new(headers)
+    elif isinstance(headers, dict):
+        return js.Headers.new(headers.items())
+    elif _is_js_instance(headers, "Headers"):
+        return headers
+    else:
+        raise TypeError("Received unexpected type for headers argument")
+
+
+class HTTPMessageMapping(http.client.HTTPMessage, Mapping):
+    pass
+
+
+def _js_headers_to_http_message(
+    js_headers: dict[str, str],
+):
+    # Newer Pyodide versions already expose headers as an http.client.HTTPMessage,
+    # in which case there is nothing to convert.
+    if isinstance(js_headers, HTTPMessageMapping):
+        return js_headers
+
+    result = HTTPMessageMapping()
+    if not get_compat_flag("python_request_headers_preserve_commas"):
+        for key, val in js_headers:
+            result[key] = val.strip()
+
+        return result
+
+    # With the exception of Set-Cookie, duplicate headers can and are combined with a comma
+    # in the JS Headers API. We do the same when returning the headers to Python.
+    #
+    # See https://httpwg.org/specs/rfc9110.html#rfc.section.5.3.
+    set_cookie_headers = js_headers.getSetCookie()
+    if set_cookie_headers:
+        for value in set_cookie_headers:
+            result.add_header("Set-Cookie", value.strip())
+
+    for key, val in js_headers:
+        if key.lower() == "set-cookie":
+            continue
+        result.add_header(key, val.strip())
+
+    return result
+
+
+def _get_js_constructor_name(obj) -> str | None:
+    if hasattr(obj, "constructor"):
+        return obj.constructor.name
+    return None
+
+
+def _supports_buffer_protocol(o):
+    try:
+        # memoryview used only for testing type; 'with' releases the view instantly
+        with memoryview(o):
+            return True
+    except TypeError:
+        return False
+
+
+def _is_iterable(obj):
+    if isinstance(obj, (str, bytes)):
+        return False
+    try:
+        iter(obj)
+    except TypeError:
+        return False
+    else:
+        return True
