@@ -1,21 +1,92 @@
 <!DOCTYPE html>
 <html lang="bg">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Камен Караиванов, Вестерос БГ ЕООД">
-    <meta name="description" content="{% block description %}Проверете времето в избран от вас град{% endblock %}">
-    <meta name="theme-color" content="#333333">
-    <title>{% block title %}Проверете времето в избран от вас град{% endblock %}</title>
-    <link rel="canonical" href="{{ base_url }}{% block canonical %}/{% endblock %}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+
+  <title>Времето във всеки град – актуална прогноза | Predictorian</title>
+  <meta name="description" content="Проверете бързо времето в избран от вас град. Въведете името на града и вижте актуалната температура и прогноза – безплатно и без регистрация.">
+  <link rel="canonical" href="https://predictorian.site/">
+  <meta name="author" content="Камен Dinamitrii Караиванов, Вестерос БГ ЕООД">
+  <meta name="theme-color" content="#333333">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Predictorian">
+  <meta property="og:locale" content="bg_BG">
+  <meta property="og:url" content="https://predictorian.site/">
+  <meta property="og:title" content="Времето във всеки град | Predictorian">
+  <meta property="og:description" content="Изберете град и вижте актуалното време и прогнозата за него.">
+  <meta property="og:image" content="https://predictorian.site/static/images/og/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Времето във всеки град | Predictorian">
+  <meta name="twitter:description" content="Изберете град и вижте актуалното време и прогнозата за него.">
+  <meta name="twitter:image" content="https://predictorian.site/images/og/og-image.png">
+
+  <!-- Икони -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='images/favicon/favicon.svg') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon/favicon.ico') }}">
+
+
+{#  <link rel="icon" href="/static/images/favicon/favicon.ico" sizes="any">#}
+{#  <link rel="icon" type="image/svg+xml" href="/static/images/favicon/favicon.svg">#}
+{#  <link rel="apple-touch-icon" href="/static/images/favicon/apple-touch-icon.png">#}
+
+  <!-- Структурирани данни -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Predictorian",
+    "url": "https://predictorian.site/",
+    "description": "Проверете времето в избран от вас град.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "inLanguage": "bg",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BGN" },
+    "author": {
+      "@type": "Person",
+      "name": "Камен Dinamitrii Караиванов"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Вестерос БГ ЕООД"
+    }
+  }
+  </script>
+
+
+
 </head>
+
+
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#    <meta name="author" content="Камен Караиванов, Вестерос БГ ЕООД">#}
+{#    <meta name="description" content="{% block description %}Проверете времето в избран от вас град{% endblock %}">#}
+{#    <meta name="theme-color" content="#333333">#}
+{#    <title>{% block title %}Проверете времето в избран от вас град{% endblock %}</title>#}
+{#    <link rel="canonical" href="{{ base_url }}{% block canonical %}/{% endblock %}">#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">#}
+{#    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">#}
+{#    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='images/favicon/favicon.svg') }}">#}
+{#    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}">#}
+{#    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon/favicon-16x16.png') }}">#}
+{#    <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">#}
+{#    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon/favicon.ico') }}">#}
+{#</head>#}
 <body>
     <main>
         {% block content %}{% endblock %}

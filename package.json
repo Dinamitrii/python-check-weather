@@ -1,0 +1,8 @@
+{
+  "name": "python-check-weather",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Dinamitrii/python-check-weather.git",
+  "author": "dinamitrii <k_karaivanov@abv.bg>",
+  "license": "MIT"
+}
