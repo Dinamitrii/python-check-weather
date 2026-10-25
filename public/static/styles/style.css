@@ -63,5 +63,7 @@ footer {
 footer p {
     margin: 1rem 0 0;
     font-size: 0.9rem;
-    opacity: 0.8;
 }
+footer .f-white { color: #ffffff; }
+footer .f-green { color: #2ecc71; }
+footer .f-red   { color: #880808; }

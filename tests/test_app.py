@@ -28,11 +28,13 @@ def test_index(client):
     assert r.status_code == 200
     assert 'name="city"' in r.get_data(as_text=True)
     assert "data:image/png;base64" in r.get_data(as_text=True)
-    assert "&copy; 2026 Vesteros BG Ltd." in r.get_data(as_text=True)
-
+    body = r.get_data(as_text=True)
+    assert "&copy; 2026" in body
+    assert "Vesteros BG" in body
+    assert "Ltd." in body
 
 def test_weather_ok(client, monkeypatch):
-    monkeypatch.setattr(server, "get_current_weather", lambda c, k=None: SAMPLE)
+    monkeypatch.setattr(server, get_current_weather, lambda c, k=None: SAMPLE)
     r = client.get("/weather?city=Sofia")
     html = r.get_data(as_text=True)
     assert r.status_code == 200
