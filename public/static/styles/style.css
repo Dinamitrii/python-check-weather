@@ -63,6 +63,6 @@ footer p {
     margin: 1rem 0 0;
     font-size: 0.9rem;
 }
-footer .f-white { color: #ffffff; }
-footer .f-green { color: #2ecc71; }
-footer .f-red   { color: #DC143C; }
+.f-white { color: #ffffff; }
+.f-green { color: #2ecc71; }
+.f-red   { color: #DC143C; }
