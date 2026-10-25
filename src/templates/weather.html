@@ -21,10 +21,14 @@
     <section>
         <p>Слънцето изгрява в {{ sunrise }} и залязва в {{ sunset }} (местно време)</p>
         <p>Часова зона: {{ tz_label }}</p>
-        <p>Местно време при обновяването: {{ local_time }}</p>
+
+
+    </section>
+    <section>
+        <p><span class="f-white">Местно време при обновяването:</span> {{ local_time }}</p>
         <p class="coords">
-            Географска ширина: {{ geo_latitude }}<br>
-            Географска дължина: {{ geo_longitude }}
+            <span class="f-green">Географска ширина:</span> {{ geo_latitude }}<br>
+            <span class="f-red">Географска дължина:</span> {{ geo_longitude }}
         </p>
     </section>
 {% endblock %}
