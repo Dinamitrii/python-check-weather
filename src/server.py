@@ -15,8 +15,8 @@ from mcp_routes import mcp_bp  # noqa: E402
 from qr_code_generator import link_to_qr_code  # noqa: E402
 from weather import get_current_weather  # noqa: E402
 
-BASE_URL = os.getenv("BASE_URL", "https://predictorian.site").rstrip("/")
-MAX_CITY_LEN = 100
+BASE_URL = os.getenv("APP_BASE_URL", "https://predictorian.site").rstrip("/")
+# MAX_CITY_LEN = 100
 
 # ./public is served directly by Workers Static Assets on Cloudflare;
 # locally Flask serves the same folder, so the URLs are identical.
@@ -31,7 +31,7 @@ def get_api_key():
     env = request.environ.get("workers.env")
     if env is not None:
         return str(env.API_KEY)
-    return os.getenv("API_KEY")
+    return os.getenv("APP_API_KEY")
 
 
 def _format_offset(seconds: int) -> str:
@@ -54,7 +54,7 @@ def index():
 @app.route("/weather")
 def get_weather():
     # Empty field or missing parameter -> Sofia
-    city = (request.args.get("city") or "").strip()[:MAX_CITY_LEN] or "Sofia"
+    city = (request.args.get("city") or "").strip() or "Sofia"
     qr_code = link_to_qr_code(f"{BASE_URL}/weather?city={quote(city)}")
 
     weather_data = get_current_weather(city, get_api_key())

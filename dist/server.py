@@ -11,6 +11,7 @@ try:  # local development only; Cloudflare Workers has no .env file
 except ImportError:
     pass
 
+from mcp_routes import mcp_bp  # noqa: E402
 from qr_code_generator import link_to_qr_code  # noqa: E402
 from weather import get_current_weather  # noqa: E402
 
@@ -22,6 +23,7 @@ MAX_CITY_LEN = 100
 PUBLIC_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "public")
 
 app = Flask(__name__, static_folder=os.path.join(PUBLIC_DIR, "static"))
+app.register_blueprint(mcp_bp)
 
 
 def get_api_key():

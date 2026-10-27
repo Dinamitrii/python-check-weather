@@ -10,6 +10,17 @@
   },
   "routes": [
     { "pattern": "predictorian.site", "custom_domain": true },
-    { "pattern": "www.predictorian.site", "custom_domain": true }
-  ]
-}
+    { "pattern": "www.predictorian.site", "custom_domain": true },
+    
+  ],
+ 
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": false
+    }
+  }
+  }

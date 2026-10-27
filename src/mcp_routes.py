@@ -17,7 +17,7 @@ from mcp_tools import TOOLS
 mcp_bp = Blueprint("mcp", __name__)
 
 PROTOCOL_VERSION = "2025-06-18"
-SERVER_INFO = {"name": "predictorian-weather", "version": "1.0.0"}
+SERVER_INFO = {"name": "predictorian-weather", "version": "1.1.1"}
 
 
 def _rpc_result(req_id, result):

@@ -20,7 +20,7 @@ from weather import get_current_weather
 
 api = Blueprint("api", __name__, url_prefix="/api")
 
-MAX_CITY_LEN = 100
+# MAX_CITY_LEN = 100
 
 
 def _valid_api_key() -> bool:
@@ -41,7 +41,7 @@ def _require_api_key():
 
 @api.get("/weather")
 def api_weather():
-    city = (request.args.get("city") or "").strip()[:MAX_CITY_LEN] or "Sofia"
+    city = (request.args.get("city") or "").strip() or "Sofia"
     weather_data = get_current_weather(city)
     cod = weather_data.get("cod")
 
