@@ -1,0 +1,48 @@
+diff --git a/.env.example b/.env.example
+index ae42cc7..07a0dae 100644
+--- a/.env.example
++++ b/.env.example
+@@ -2,3 +2,11 @@
+ API_KEY=your_openweathermap_key_here
+ # Public base URL used for canonical links and the QR code
+ BASE_URL=https://predictorian.site
++
++# Key that machine clients (the AEO MCP server, other integrations) must
++# send as the X-API-Key header to use /api/weather and /api/popular.
++# Generate one with: python -c "import secrets; print(secrets.token_urlsafe(32))"
++APP_API_KEY=generate_a_long_random_value_here
++
++# Optional: override where the query-log SQLite file is written.
++# QUERY_LOG_DB=/var/lib/predictorian/query_log.sqlite3
+diff --git a/.gitignore b/.gitignore
+index 7b8a171..2b00b12 100755
+--- a/.gitignore
++++ b/.gitignore
+@@ -91,3 +91,7 @@ logfile.log
+ 
+ .dev.vars
+ .wrangler/
++-e 
++# query logging DB (local analytics, not for version control)
++query_log.sqlite3
++*.sqlite3
+diff --git a/server.py b/server.py
+index 684122c..07550bf 100644
+--- a/server.py
++++ b/server.py
+@@ -7,6 +7,7 @@ from flask import Flask, render_template, request, send_from_directory
+ 
+ load_dotenv()
+ 
++from api_routes import api as api_blueprint  # noqa: E402
+ from qr_code_generator import link_to_qr_code  # noqa: E402
+ from weather import get_current_weather  # noqa: E402
+ 
+@@ -14,6 +15,7 @@ BASE_URL = os.getenv("BASE_URL", "https://predictorian.site").rstrip("/")
+ MAX_CITY_LEN = 100
+ 
+ app = Flask(__name__)
++app.register_blueprint(api_blueprint)
+ 
+ 
+ def _format_offset(seconds: int) -> str:

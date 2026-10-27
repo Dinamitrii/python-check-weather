@@ -1,0 +1,280 @@
+diff --git a/src/mcp_routes.py b/src/mcp_routes.py
+new file mode 100644
+index 0000000..9e13252
+--- /dev/null
++++ b/src/mcp_routes.py
+@@ -0,0 +1,124 @@
++"""Minimal MCP (Model Context Protocol) server, mounted at /mcp.
++
++Implements the handful of JSON-RPC 2.0 methods a plain "tools" server
++needs: initialize, tools/list, tools/call. No resources, no sampling,
++no server-initiated messages — so every request is answered directly,
++which the Streamable HTTP transport (MCP spec 2025-03-26+) allows for
++servers that never need to push a message on their own. This keeps the
++whole thing inside the existing Flask/WSGI app, so it deploys with the
++same `wrangler deploy` as the rest of the site, no extra Worker needed.
++"""
++import uuid
++
++from flask import Blueprint, jsonify, request
++
++from mcp_tools import TOOLS
++
++mcp_bp = Blueprint("mcp", __name__)
++
++PROTOCOL_VERSION = "2025-06-18"
++SERVER_INFO = {"name": "predictorian-weather", "version": "1.0.0"}
++
++
++def _rpc_result(req_id, result):
++    return {"jsonrpc": "2.0", "id": req_id, "result": result}
++
++
++def _rpc_error(req_id, code, message):
++    return {"jsonrpc": "2.0", "id": req_id, "error": {"code": code, "message": message}}
++
++
++def _tools_list_payload():
++    return {
++        "tools": [
++            {
++                "name": name,
++                "description": spec["description"],
++                "inputSchema": spec["inputSchema"],
++            }
++            for name, spec in TOOLS.items()
++        ]
++    }
++
++
++def _call_tool(name, arguments):
++    spec = TOOLS.get(name)
++    if spec is None:
++        raise KeyError(name)
++    text = spec["fn"](**(arguments or {}))
++    return {"content": [{"type": "text", "text": text}], "isError": False}
++
++
++@mcp_bp.after_request
++def _cors(resp):
++    resp.headers["Access-Control-Allow-Origin"] = "*"
++    resp.headers["Access-Control-Allow-Headers"] = "Content-Type, Mcp-Session-Id"
++    resp.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
++    return resp
++
++
++@mcp_bp.route("/mcp", methods=["OPTIONS"])
++def mcp_preflight():
++    return "", 204
++
++
++@mcp_bp.route("/mcp", methods=["GET"])
++def mcp_info():
++    # Some clients probe with GET before POSTing JSON-RPC; this server
++    # never streams unsolicited messages, so plain info is enough here.
++    return jsonify({"server": SERVER_INFO, "protocolVersion": PROTOCOL_VERSION})
++
++
++@mcp_bp.route("/mcp", methods=["POST"])
++def mcp_endpoint():
++    try:
++        body = request.get_json(force=True, silent=False)
++    except Exception:
++        return jsonify(_rpc_error(None, -32700, "Parse error")), 400
++
++    if not isinstance(body, dict):
++        return jsonify(_rpc_error(None, -32600, "Invalid Request")), 400
++
++    method = body.get("method")
++    req_id = body.get("id")
++
++    # Notifications carry no "id" and get no JSON-RPC response body.
++    if method == "notifications/initialized":
++        return "", 202
++
++    if method == "initialize":
++        payload = {
++            "protocolVersion": PROTOCOL_VERSION,
++            "capabilities": {"tools": {}},
++            "serverInfo": SERVER_INFO,
++        }
++        resp = jsonify(_rpc_result(req_id, payload))
++        resp.headers["Mcp-Session-Id"] = uuid.uuid4().hex
++        return resp
++
++    if method == "tools/list":
++        return jsonify(_rpc_result(req_id, _tools_list_payload()))
++
++    if method == "tools/call":
++        params = body.get("params") or {}
++        name = params.get("name")
++        arguments = params.get("arguments") or {}
++        try:
++            result = _call_tool(name, arguments)
++        except KeyError:
++            return jsonify(_rpc_error(req_id, -32601, f"Unknown tool: {name}")), 404
++        except TypeError as exc:
++            return jsonify(_rpc_error(req_id, -32602, f"Invalid params: {exc}")), 400
++        except Exception as exc:  # tool crashed; report as a tool-level error
++            return jsonify(
++                _rpc_result(
++                    req_id,
++                    {
++                        "content": [{"type": "text", "text": f"Tool error: {exc}"}],
++                        "isError": True,
++                    },
++                )
++            )
++        return jsonify(_rpc_result(req_id, result))
++
++    return jsonify(_rpc_error(req_id, -32601, f"Unknown method: {method}")), 404
+diff --git a/src/mcp_tools.py b/src/mcp_tools.py
+new file mode 100644
+index 0000000..77151f8
+--- /dev/null
++++ b/src/mcp_tools.py
+@@ -0,0 +1,124 @@
++"""Weather MCP tools: alerts and forecasts from api.weather.gov (NWS).
++
++Runs both on Cloudflare Workers (Pyodide) and locally, mirroring the
++dual fetch pattern already used in weather.py — Workers has no raw
++sockets, so httpx/requests only work outside Workers.
++"""
++from typing import Any
++
++try:  # Cloudflare Workers (Pyodide)
++    from pyodide.ffi import run_sync
++    from pyodide.http import pyfetch
++
++    ON_WORKERS = True
++except ImportError:  # local / uWSGI / Docker
++    import requests
++
++    ON_WORKERS = False
++
++NWS_API_BASE = "https://api.weather.gov"
++USER_AGENT = "predictorian-weather-mcp/1.0 (+https://predictorian.site)"
++
++
++def _nws_get(url: str) -> dict[str, Any] | None:
++    """GET an NWS endpoint and return parsed JSON, or None on any failure."""
++    headers = {"User-Agent": USER_AGENT, "Accept": "application/geo+json"}
++    try:
++        if ON_WORKERS:
++            response = run_sync(pyfetch(url, headers=headers))
++            if response.status >= 400:
++                return None
++            return run_sync(response.json())
++        response = requests.get(url, headers=headers, timeout=10)
++        response.raise_for_status()
++        return response.json()
++    except Exception:
++        return None
++
++
++def _format_alert(feature: dict) -> str:
++    props = feature["properties"]
++    return (
++        f"Event: {props.get('event', 'Unknown')}\n"
++        f"Area: {props.get('areaDesc', 'Unknown')}\n"
++        f"Severity: {props.get('severity', 'Unknown')}\n"
++        f"Description: {props.get('description', 'No description available')}\n"
++        f"Instructions: {props.get('instruction', 'No specific instructions provided')}"
++    )
++
++
++def get_alerts(state: str) -> str:
++    """Active weather alerts for a two-letter US state code (e.g. CA, NY)."""
++    state = (state or "").strip().upper()
++    if len(state) != 2 or not state.isalpha():
++        return "Invalid state code. Use a two-letter US state code, e.g. CA or NY."
++
++    data = _nws_get(f"{NWS_API_BASE}/alerts/active/area/{state}")
++    if not data or "features" not in data:
++        return "Unable to fetch alerts or no alerts found."
++    if not data["features"]:
++        return "No active alerts for this state."
++    return "\n---\n".join(_format_alert(f) for f in data["features"])
++
++
++def get_forecast(latitude: float, longitude: float) -> str:
++    """Next 5 forecast periods for a US location given its lat/long."""
++    points = _nws_get(f"{NWS_API_BASE}/points/{latitude},{longitude}")
++    if not points:
++        return "Unable to fetch forecast data for this location."
++
++    forecast_url = points.get("properties", {}).get("forecast")
++    if not forecast_url:
++        return "Unable to fetch forecast data for this location."
++
++    forecast = _nws_get(forecast_url)
++    if not forecast:
++        return "Unable to fetch detailed forecast."
++
++    periods = forecast["properties"]["periods"][:5]
++    out = []
++    for p in periods:
++        out.append(
++            f"{p['name']}:\n"
++            f"Temperature: {p['temperature']}\u00b0{p['temperatureUnit']}\n"
++            f"Wind: {p['windSpeed']} {p['windDirection']}\n"
++            f"Forecast: {p['detailedForecast']}"
++        )
++    return "\n---\n".join(out)
++
++
++# Tool registry consumed by mcp_routes.py (tools/list + tools/call).
++TOOLS = {
++    "get_alerts": {
++        "description": "Get active weather alerts for a US state.",
++        "inputSchema": {
++            "type": "object",
++            "properties": {
++                "state": {
++                    "type": "string",
++                    "description": "Two-letter US state code (e.g. CA, NY)",
++                }
++            },
++            "required": ["state"],
++        },
++        "fn": get_alerts,
++    },
++    "get_forecast": {
++        "description": "Get the weather forecast for a US location.",
++        "inputSchema": {
++            "type": "object",
++            "properties": {
++                "latitude": {
++                    "type": "number",
++                    "description": "Latitude of the location",
++                },
++                "longitude": {
++                    "type": "number",
++                    "description": "Longitude of the location",
++                },
++            },
++            "required": ["latitude", "longitude"],
++        },
++        "fn": get_forecast,
++    },
++}
+diff --git a/src/server.py b/src/server.py
+index 2bd86e1..9c5159e 100644
+--- a/src/server.py
++++ b/src/server.py
+@@ -11,6 +11,7 @@ try:  # local development only; Cloudflare Workers has no .env file
+ except ImportError:
+     pass
+ 
++from mcp_routes import mcp_bp  # noqa: E402
+ from qr_code_generator import link_to_qr_code  # noqa: E402
+ from weather import get_current_weather  # noqa: E402
+ 
+@@ -22,6 +23,7 @@ MAX_CITY_LEN = 100
+ PUBLIC_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "public")
+ 
+ app = Flask(__name__, static_folder=os.path.join(PUBLIC_DIR, "static"))
++app.register_blueprint(mcp_bp)
+ 
+ 
+ def get_api_key():

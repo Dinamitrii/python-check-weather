@@ -1,0 +1,19 @@
+[project]
+name = "python-check-weather"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "dinamitrii", email = "k_karaivanov@abv.bg" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]>=2.3.0",
+]
+
+[project.scripts]
+python-check-weather = "python_check_weather:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
