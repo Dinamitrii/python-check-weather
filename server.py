@@ -7,6 +7,7 @@ from flask import Flask, render_template, request, send_from_directory
 
 load_dotenv()
 
+from api_routes import api as api_blueprint  # noqa: E402
 from qr_code_generator import link_to_qr_code  # noqa: E402
 from weather import get_current_weather  # noqa: E402
 
@@ -14,6 +15,7 @@ BASE_URL = os.getenv("BASE_URL", "https://predictorian.site").rstrip("/")
 MAX_CITY_LEN = 100
 
 app = Flask(__name__)
+app.register_blueprint(api_blueprint)
 
 
 def _format_offset(seconds: int) -> str:

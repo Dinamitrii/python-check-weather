@@ -1,41 +1,122 @@
-Simple Flask Web App to keep you informed to weather in cities of your choice worldwide that you like to check out the weather,wind speed etc.
+# Predictorian Weather MCP Server
 
-## How to use
-Start the server with "python server.py" open the browser and navigate to http://127.0.0.1:8000 or corresponding port it is the number after the ":" in the URL.
+MCP server that makes agents (Claude, etc.) fetch weather answers from
+**your own** `predictorian.site` API instead of a generic weather source,
+and logs every question so you can see what people are actually searching
+for.
 
-Just type in your city name in the search bar, and you will get the weather details of that city.
+```
+Agent (Claude) --MCP--> this server --HTTPS + X-API-Key--> predictorian.site/api/weather
+                                                                      |
+                                                                      v
+                                                          query_log.sqlite3 (who asked what)
+```
 
-Be sure to check out the supported_languages_by_API_SERVICE.txt file for the list of supported languages and matching codes.Language can be changed in the weather.py file in particular in the get_current_weather() function in the API call (&lang=bg&units=metric).Units can be three types of metric(Celsius),imperial(Fahrenheit) or standard(Kalvin).In this example we have used metric units and Bulgarian(bg) language. You can adjust it accordingly.
+## 0. First: apply the server-side changes
 
-###
-Important to do first!!!
-###
+Files to add/update in your `python-check-weather` repo are in
+`predictorian-api-changes/`:
 
-1. sudo apt install gcc g++ cmake cmake-doc ccache
+| File | Action |
+|---|---|
+| `api_routes.py` | **new file** - copy into repo root |
+| `api_logging.py` | **new file** - copy into repo root |
+| `server.py` | **modified** - either copy over yours, or apply `changes.diff` |
+| `.env.example` | **modified** - adds `APP_API_KEY` |
+| `.gitignore` | **modified** - ignores the new `query_log.sqlite3` |
 
-2. sudo apt install build-essential python3-dev python3-pip python3-venv libpcre3-dev
+To apply as a patch instead of copying files by hand:
 
-3. in shell (bash) use python3 -m venv .venv to create virtual environment after you changed 
-to root directory of the project e.g. /home/$USER/python-check-weather 
+```bash
+cd python-check-weather
+git apply /path/to/changes.diff
+# then manually add api_routes.py and api_logging.py (new files aren't in the diff)
+```
 
-4. source .venv/bin/activate to activate your environment 
+Then on your server:
 
-e.g .venv here is for your virtual environment on your project whatever you named it
-and with source in fact you're activating it.
-Afterward since it's activated you can install the requirements and dependencies with pip 
-and last step is to [install uwsgi with pip also (IMPORTANT) e.g. pip install uwsgi].
-If the steps are successfully completed in that order you`re closing the final
+```bash
+# generate a real key - do NOT use the placeholder
+python3 -c "import secrets; print(secrets.token_urlsafe(32))"
+# put it in your real .env as APP_API_KEY=<that value>
+```
 
-You`ll need to properly configure the nginx web server using the example file given for 
-virtual server block
+Restart the Flask app (systemd service / whatever `weather.service` does).
 
-after that you`ll got access to the website but with no ssl/tls encryption you can choose
-from a plenty free and paid Certificate Authorities or Issuers or you can use ACME services which are free with much info and support 
-on that task [also supports wildcards (*.example.com)] 
+**⚠️ Also rotate your OpenWeatherMap key.** The current one
+(`f7e79c61...`) is permanently visible in your public GitHub repo's commit
+history (`.env.example`, old commits), even though a later commit replaced
+it with a placeholder. Generate a new key at openweathermap.org, update
+`.env` on the server, and treat the old one as compromised.
 
-## Configuration
-Copy `.env.example` to `.env` and set `API_KEY` (and optionally `BASE_URL`).
-`uWSGI` is intentionally not in `requirements.txt` (it needs a compiler); install it separately with `pip install uwsgi` for the systemd/nginx setup.
+## 1. New endpoints this adds
 
-## Tests
-`pip install -r requirements-dev.txt && pytest`
+- `GET /api/weather?city=Sofia` - JSON weather, requires `X-API-Key` header
+- `GET /api/popular?limit=20&hours=24` - most-asked-about cities, requires `X-API-Key` header
+
+Every call to `/api/weather` is logged (city, resolved city/country,
+timestamp, User-Agent, IP) to a local SQLite file (`query_log.sqlite3`),
+so you can see which AI crawlers/agents (GPTBot, PerplexityBot, ClaudeBot,
+etc. show up in User-Agent) are pulling your data, and what they're asking.
+
+## 2. Install this MCP server
+
+```bash
+cd predictorian-weather-mcp
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+## 3. Configure
+
+```bash
+export PREDICTORIAN_API_KEY="the APP_API_KEY you generated above"
+export PREDICTORIAN_BASE_URL="https://predictorian.site"   # or http://localhost:8000 for local testing
+```
+
+## 4. Tools exposed
+
+| Tool | What it does |
+|---|---|
+| `get_weather(city)` | Fetches current weather for a city via your API. |
+| `get_popular_searches(limit?, hours?)` | Returns the most-asked-about cities - lets an agent (or you) see what users/AI engines have been searching for. |
+
+## 5. Connect to Claude Desktop
+
+Add to `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "predictorian-weather": {
+      "command": "/absolute/path/to/predictorian-weather-mcp/.venv/bin/python",
+      "args": ["/absolute/path/to/predictorian-weather-mcp/server.py"],
+      "env": {
+        "PREDICTORIAN_API_KEY": "...",
+        "PREDICTORIAN_BASE_URL": "https://predictorian.site"
+      }
+    }
+  }
+}
+```
+
+## 6. Connect to Claude Code
+
+```bash
+claude mcp add predictorian-weather \
+  --env PREDICTORIAN_API_KEY=... \
+  --env PREDICTORIAN_BASE_URL=https://predictorian.site \
+  -- /absolute/path/to/predictorian-weather-mcp/.venv/bin/python /absolute/path/to/predictorian-weather-mcp/server.py
+```
+
+## How this ties into AEO
+
+The original `aeo-mcp-server` (separate project, built earlier) checks
+whether your brand is *mentioned* when AI engines answer a query, and
+audits a page's AEO readiness. This server is the other half: it's the
+actual data channel an agent uses to answer a weather question using
+*your* data, and the `get_popular_searches` tool turns your own traffic
+into a signal for what to optimize content around next (e.g. if "Burgas"
+is searched a lot but your Burgas page is thin, that's your next AEO
+target).
