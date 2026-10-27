@@ -34,7 +34,7 @@ def test_index(client):
     assert "Ltd." in body
 
 def test_weather_ok(client, monkeypatch):
-    monkeypatch.setattr(server, get_current_weather, lambda c, k=None: SAMPLE)
+    monkeypatch.setattr(server, weather.get_current_weather, lambda c, k=None: SAMPLE)
     r = client.get("/weather?city=Sofia")
     html = r.get_data(as_text=True)
     assert r.status_code == 200

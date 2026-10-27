@@ -12,7 +12,7 @@ from qr_code_generator import link_to_qr_code  # noqa: E402
 from weather import get_current_weather  # noqa: E402
 
 BASE_URL = os.getenv("BASE_URL", "https://predictorian.site").rstrip("/")
-MAX_CITY_LEN = 100
+# MAX_CITY_LEN = 100
 
 app = Flask(__name__)
 app.register_blueprint(api_blueprint)
@@ -38,7 +38,7 @@ def index():
 @app.route("/weather")
 def get_weather():
     # Empty field or missing parameter -> Sofia
-    city = (request.args.get("city") or "").strip()[:MAX_CITY_LEN] or "Sofia"
+    city = (request.args.get("city") or "").strip() or "Sofia"
     qr_code = link_to_qr_code(f"{BASE_URL}/weather?city={quote(city)}")
 
     weather_data = get_current_weather(city)
