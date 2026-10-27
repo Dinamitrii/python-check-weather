@@ -91,3 +91,7 @@ logfile.log
 
 .dev.vars
 .wrangler/
+-e 
+# query logging DB (local analytics, not for version control)
+query_log.sqlite3
+*.sqlite3
