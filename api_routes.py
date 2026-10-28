@@ -37,6 +37,7 @@ def _valid_api_key() -> bool:
 def _require_api_key():
     if not _valid_api_key():
         return jsonify({"error": "unauthorized", "message": "missing or invalid X-API-Key header"}), 401
+    return None
 
 
 @api.get("/weather")

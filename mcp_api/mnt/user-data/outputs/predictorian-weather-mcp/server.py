@@ -15,19 +15,19 @@ import os
 import json
 
 import httpx
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer
 
-mcp = FastMCP("predictorian-weather")
+mcp = MCPServer("predictorian-weather")
 
-BASE_URL = os.getenv("PREDICTORIAN_BASE_URL", "https://predictorian.site").rstrip("/")
-API_KEY = os.getenv("PREDICTORIAN_API_KEY")
+BASE_URL = os.getenv("APP_BASE_URL", "https://predictorian.site").rstrip("/")
+API_KEY = os.getenv("OWM_API_KEY")
 HTTP_TIMEOUT = 10.0
 
 
 def _headers() -> dict:
     if not API_KEY:
         raise RuntimeError(
-            "PREDICTORIAN_API_KEY is not set. Add it to your environment or MCP client config."
+            "APP_API_KEY is not set. Add it to your environment or MCP client config."
         )
     return {"X-API-Key": API_KEY}
 

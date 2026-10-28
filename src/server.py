@@ -31,7 +31,7 @@ def get_api_key():
     env = request.environ.get("workers.env")
     if env is not None:
         return str(env.API_KEY)
-    return os.getenv("APP_API_KEY")
+    return os.getenv("OWM_API_KEY")
 
 
 def _format_offset(seconds: int) -> str:

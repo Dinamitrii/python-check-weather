@@ -17,5 +17,9 @@
   },
   "allowScripts": {
     "esbuild@0.28.2": true
+  },
+  "dependencies": {
+    "flask": "^0.2.10",
+    "workerd": "^1.20261028.1"
   }
 }

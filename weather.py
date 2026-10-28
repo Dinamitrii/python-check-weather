@@ -6,7 +6,7 @@ from pprint import pprint
 import requests
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(".env")
 
 API_URL = "https://api.openweathermap.org/data/2.5/weather"
 CACHE_TTL = 600  # seconds
@@ -43,7 +43,7 @@ def get_current_weather(city="Sofia"):
     if cached is not None:
         return cached
 
-    api_key = os.getenv("API_KEY")
+    api_key = os.getenv("OWM_API_KEY")
     if not api_key:
         return {"cod": 500, "message": "API_KEY is not configured"}
 
