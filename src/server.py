@@ -30,7 +30,7 @@ def get_api_key():
     """Cloudflare secret on Workers, .env / environment variable elsewhere."""
     env = request.environ.get("workers.env")
     if env is not None:
-        return str(env.API_KEY)
+        return str(env.OWM_API_KEY)
     return os.getenv("OWM_API_KEY")
 
 
